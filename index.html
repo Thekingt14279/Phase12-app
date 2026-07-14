@@ -344,6 +344,8 @@
     </div>
   </aside>
 
+  <input type="file" id="importFileInput" accept="application/json,.json" style="display:none">
+
   <main class="main">
 
     <!-- DASHBOARD -->
@@ -989,6 +991,11 @@ function renderDashboard(){
   html += '<li>Buổi tập/tuần: <span class="num">'+p.days+'</span></li>';
   html += '<li>Lối sống: '+lifestyleLabel(p.lifestyle)+'</li>';
   html += '</ul><button class="btn ghost small" style="margin-top:8px" onclick="P12.goto(\'profile\')">Chỉnh sửa hồ sơ</button></div>';
+
+  html += '<div class="card"><h3 style="font-size:15px;margin-bottom:8px">Sao lưu dữ liệu</h3>';
+  html += '<p style="font-size:12.5px;color:var(--text-muted);margin-bottom:10px">Dữ liệu chỉ lưu trên thiết bị này. Xuất file để phòng mất dữ liệu, hoặc chuyển sang máy/trình duyệt khác.</p>';
+  html += '<div class="row-gap"><button type="button" class="btn small secondary" onclick="P12.exportData()">⬇ Xuất dữ liệu</button><button type="button" class="btn small secondary" onclick="document.getElementById(\'importFileInput\').click()">⬆ Nhập dữ liệu</button></div>';
+  html += '</div>';
   html += '</div>';
 
   el.innerHTML = html;
@@ -1306,6 +1313,40 @@ function renderProgram(){
 }
 window.P12 = window.P12 || {};
 P12.goto = showPage;
+P12.exportData = function(){
+  var payload = JSON.stringify(STATE, null, 2);
+  var blob = new Blob([payload], {type:'application/json'});
+  var url = URL.createObjectURL(blob);
+  var d = new Date();
+  var pad = function(n){ return n<10?'0'+n:''+n; };
+  var a = document.createElement('a');
+  a.href = url;
+  a.download = 'phase12-backup-'+d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())+'.json';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+};
+document.getElementById('importFileInput').addEventListener('change', function(ev){
+  var file = ev.target.files[0];
+  ev.target.value = '';
+  if(!file) return;
+  var reader = new FileReader();
+  reader.onload = function(e){
+    var data;
+    try{ data = JSON.parse(e.target.result); }
+    catch(err){ alert('Không đọc được file. Hãy chắc chắn đây là file JSON xuất từ PHASE12.'); return; }
+    if(!data || typeof data!=='object' || !Array.isArray(data.cycles)){
+      alert('File không đúng định dạng dữ liệu PHASE12.');
+      return;
+    }
+    if(!confirm('Việc này sẽ THAY THẾ toàn bộ dữ liệu hiện tại (hồ sơ, chu kỳ, log) bằng dữ liệu trong file sao lưu. Tiếp tục?')) return;
+    STATE = data;
+    saveState(STATE);
+    location.reload();
+  };
+  reader.readAsText(file);
+});
 P12.setWeek = function(w){ activeWeek=w; activeDay=0; renderProgram(); };
 P12.setDay = function(i){ activeDay=i; renderProgram(); };
 P12.setMealDay = function(i){ mealPlanDay=i; renderNutrition(); };
