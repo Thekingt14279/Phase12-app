@@ -1,2 +1,2014 @@
-<!doctype html><html lang="en" data-frame-uuid="7e5a7804-291c-4359-9c97-2fc1bad99e71"><head><meta property="og:title" content="Claude Artifact"><meta name="twitter:title" content="Claude Artifact"><meta name="description" content="Try out Artifacts created by Claude users"><meta property="og:description" content="Try out Artifacts created by Claude users"><meta name="twitter:description" content="Try out Artifacts created by Claude users"><meta property="og:image" content="https://claude.ai/images/claude_ogimage.png"><meta name="twitter:image" content="https://claude.ai/images/claude_ogimage.png"><meta property="og:image:width" content="1138"><meta property="og:image:height" content="640"><meta property="og:image:alt" content="Claude Artifact"><meta name="twitter:card" content="summary"><meta name="robots" content="noindex, nofollow"><meta name="build-timestamp" content="1783977049"><meta name="build-git-hash" content="f70e6eb3c5970ef667718929d0290d0cf5392ef1"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><meta name="referrer" content="no-referrer"><title>Claude Artifact</title><script nonce="vATNMSohe99PAmNnW5kuTA==">!function(e,t,r){if(t?.embedded&&(e.embedded=""),parent!==window){var o=location.origin,d=location.ancestorOrigins;if(d)d[0]===o&&d[d.length-1]===o&&(e.embedded="");else if(parent===top&&document.referrer)try{new URL(document.referrer).origin===o&&(e.embedded="")}catch{}}"embedded"in e&&"none"===(t?.chrome??r.get("chrome"))&&(e.chrome="none");var n={mode:["light","dark","system"],platform:["web","desktop"],font:["anthropic","system"]};for(var a of Object.keys(n)){var c=t?.[a]??r.get(a[0]);if("mode"===a&&null==t?.mode&&!("embedded"in e))try{var m=localStorage.getItem("frame-theme");"light"!==m&&"dark"!==m||(c=m)}catch(e){}n[a].includes(c)&&(e[a]=c)}}(document.documentElement.dataset,window.claudeDesktopArtifactPane,new URLSearchParams(location.search))</script><script nonce="vATNMSohe99PAmNnW5kuTA==">!function(){try{var e=document.documentElement.dataset.frameUuid;if(!e)return;var t=/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/,a=new URLSearchParams(location.search),n=a.get("org"),r=(document.cookie.match(/(?:^|;\s*)lastActiveOrg=([^;]*)/)||[])[1],o=n&&t.test(n)?n:r&&t.test(r)?r:null;if(!o)return;var s=self===top&&!("embedded"in document.documentElement.dataset),i=a.get("via"),c=null!==i?i:s?"user_open":"",d=a.get("sk"),l=new URLSearchParams;l.set("org",o),c&&l.set("via",c),d&&/^[A-Za-z0-9_-]{16,64}$/.test(d)&&l.set("sk",d);var u="/api/frame/"+e+"?"+l.toString(),m=function(e,t){var a=null==e?null:e.toLowerCase();return null!==a&&-1!==t.indexOf(a)?a:null},f=navigator.userAgent,g={"X-Frame-CP":"go","X-Frame-Platform":m(a.get("platform"),["web","desktop","ios","android","cli"])||(f.includes(" Electron/")?"desktop":/Android/.test(f)?"android":/iPad|iPhone|iPod/.test(f)||f.includes("Macintosh")&&navigator.maxTouchPoints>1?"ios":"web")},h=m(a.get("surface"),["chat","cowork","code","slack","teams","standalone"])||(s?"standalone":"");h&&(g["X-Frame-Surface"]=h);var v=fetch(u,{credentials:"same-origin",headers:g,signal:AbortSignal.timeout(2e4)});v.catch(function(){}),window.__frameBootPrefetch={url:u,res:v}}catch(e){}}()</script><link rel="preload" as="font" type="font/woff2" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/cc27851ad-DDVos-BJ.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c0f671921-_JGacpB2.woff2"><link rel="preconnect" href="https://js.stripe.com"><link rel="preconnect" href="https://m.stripe.network"><script type="module" crossorigin src="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/frame-shell-CVOdw2dx.js" nonce="vATNMSohe99PAmNnW5kuTA=="></script><link rel="modulepreload" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/frame-shell-chrome-CYW0rk3R.js" crossorigin><link rel="modulepreload" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-react-RSDKEZ60.js" crossorigin><link rel="modulepreload" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-frame-shell-gates-16SIjvEd.js" crossorigin><link rel="modulepreload" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-ant-cds-BT31to-O.js" crossorigin><link rel="modulepreload" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-base-ui-5mMQ8bi9.js" crossorigin><link rel="modulepreload" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-radix-pchnwgdt.js" crossorigin><link rel="modulepreload" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-base-5_f7mmWg.js" crossorigin><link rel="modulepreload" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-virtual-Dv6zxMze.js" crossorigin><link rel="modulepreload" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/frame-shell-deferred-DOXKSGIJ.js" crossorigin><style nonce="vATNMSohe99PAmNnW5kuTA==">:root{--bg: #f9f9f7;--fg: #0b0b0b;--mut: #52514e;--line: rgba(11, 11, 11, .1);--bord: rgba(11, 11, 11, .2);--hov: rgba(11, 11, 11, .05);--surf: #ffffff;--brand: #c6613f;--primary: #0b0b0b;--on-primary: #ffffff;--danger-bg: #fad6d6;--danger-bord: #f09595;--danger-fg: #8e2626}html[data-embedded]{--bg: #ffffff;--surf: #ffffff}@media (prefers-color-scheme: dark){html:not([data-mode]){--bg: #0d0d0d;--fg: #ffffff;--mut: #c3c2b7;--line: rgba(255, 255, 255, .1);--bord: rgba(255, 255, 255, .2);--hov: rgba(255, 255, 255, .05);--surf: #2c2c2a;--primary: #ffffff;--on-primary: #0b0b0b;--danger-bg: #3c0e0e;--danger-bord: #641919;--danger-fg: #ec7e7e}html:not([data-mode])[data-embedded]{--bg: #2c2c2a;--surf: #383835}}html[data-mode=light]{color-scheme:light}html[data-mode=dark]{--bg: #0d0d0d;--fg: #ffffff;--mut: #c3c2b7;--line: rgba(255, 255, 255, .1);--bord: rgba(255, 255, 255, .2);--hov: rgba(255, 255, 255, .05);--surf: #2c2c2a;--primary: #ffffff;--on-primary: #0b0b0b;--danger-bg: #3c0e0e;--danger-bord: #641919;--danger-fg: #ec7e7e;color-scheme:dark}html[data-mode=dark][data-embedded]{--bg: #2c2c2a;--surf: #383835}@font-face{font-family:"Anthropic Serif";src:url(https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c66fc489e-2VcCjn5t.woff2) format("woff2");font-weight:300 800;font-style:normal;font-display:swap}@font-face{font-family:Anthropic Sans;src:url(https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/cc27851ad-DDVos-BJ.woff2) format("woff2");font-weight:300 800;font-style:normal;font-display:swap}@font-face{font-family:Anthropicons-Variable;src:url(https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c0f671921-_JGacpB2.woff2) format("woff2-variations");font-weight:400 700;font-display:block}.ico{font-family:Anthropicons-Variable;font-size:16px;line-height:1;font-weight:400;-webkit-font-smoothing:auto;-webkit-user-select:none;user-select:none}:root{--bar: 36px;color-scheme:light dark}@layer{*{box-sizing:border-box;margin:0;padding:0}button{font:inherit;border:0;background:none;cursor:pointer;color:inherit}}html,body{height:100%;overflow:hidden;overscroll-behavior:none;background:var(--bg);color:var(--fg);font:13px/1.4 Anthropic Sans,-apple-system,BlinkMacSystemFont,system-ui,sans-serif}#hdr{position:relative;height:var(--bar);display:flex;align-items:center;justify-content:space-between;padding:0 12px}.l,.r{display:flex;align-items:center;gap:10px}.l{flex:1 1 0%;min-width:0}.r{flex:none}.logo{width:24px;height:24px;flex-shrink:0;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;background:var(--surf);border:.5px solid var(--bord);color:var(--fg);text-decoration:none}a.logo:hover{background:var(--hov)}.byline{font-size:var(--cds-font-size-caption, 12px);color:var(--mut);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex-shrink:0;max-width:24rem}.l>button[data-title-menu]{margin-left:-6px;flex-shrink:1000;min-width:0;overflow:hidden}.l button[data-title-menu]>span,.l button[data-title-menu] .truncate{min-width:0}.skel{display:inline-block;background:var(--hov);border-radius:4px}.skel-logo{width:24px;height:24px;border-radius:8px}.skel-title{width:8em;height:1em}.skel-avatar{width:24px;height:24px;border-radius:50%}.degraded-title{font-size:14px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}#hdr-degraded,body.chrome-degraded #hdr{display:none}body.chrome-degraded #hdr-degraded{display:flex;align-items:center;gap:10px;height:var(--bar);padding:0 12px}@media (max-width: 768px){:root{--bar: 50px}#hdr{padding-left:4px}.logo,.skel-logo{display:none}.l{flex-direction:column;align-items:flex-start;justify-content:center;gap:0}.l>button[data-title-menu]{margin-left:0;max-width:100%}.byline{margin:-2px 0 0 6px;max-width:100%}.skel-avatar{width:32px;height:32px}}html[data-embedded]{--bar: 42px}html[data-embedded] #hdr{padding:0 8px}html[data-embedded] .byline{flex-shrink:1;max-width:100%}html[data-embedded] .skel-logo,html[data-embedded] .skel-title,html[data-embedded] .skel-avatar,html[data-embedded] .logo,html[data-embedded][data-chrome=none] #hdr,html[data-embedded][data-chrome=none] #hdr-degraded,html[data-header-hidden] #hdr,html[data-header-hidden] #hdr-degraded{display:none}html[data-embedded][data-chrome=none],html[data-header-hidden]{--bar: 0px}main{position:absolute;inset:var(--bar) 0 0 0;display:flex}#frame-slot{flex:1;min-width:0;position:relative}#loading{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}#loading.slow{flex-direction:column;gap:12px;text-align:center;color:var(--mut);font-size:13px;padding:0 24px}#loading:after{content:"";width:24px;height:24px;border:2px solid var(--line);border-top-color:var(--mut);border-radius:50%;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}#frame-content{position:absolute;inset:0;width:100%;height:100%;border:0;box-shadow:0 0 0 .5px var(--line),0 2px 4px #0b0b0b12,0 6px 16px #0b0b0b14;border-radius:8px 8px 0 0;opacity:0;transition:opacity .12s}html[data-embedded] #frame-content,html[data-header-hidden] #frame-content,body.embed #frame-content{border-radius:0;box-shadow:none}#frame-content.ready{opacity:1}@media (prefers-reduced-motion: reduce){#loading:after{animation:none}#frame-content{transition:none}}body.err #hdr,body.err #hdr-degraded,#err[hidden]{display:none}#err{position:absolute;inset:0;display:grid;place-content:safe center;gap:8px;padding:96px 16px 128px;overflow-y:auto;text-align:center;color:var(--fg)}
-</style><meta name="robots" content="noindex, nofollow"><link rel="preconnect" href="https://7e5a7804-291c-4359-9c97-2fc1bad99e71.frame.claudeusercontent.com"></head><body><header id="hdr"><div class="l" aria-hidden="true"><span class="skel skel-logo"></span> <span class="skel skel-title"></span></div><div class="r" aria-hidden="true"><span class="skel skel-avatar"></span></div></header><div id="hdr-degraded"><a class="logo" href="/code/artifacts" aria-label="Your artifacts"><span class="ico" aria-hidden="true">&#xE017;</span></a> <span class="degraded-title"></span> <span class="byline">Content is user-generated and unverified.</span></div><main><div id="frame-slot" data-frame-uuid="7e5a7804-291c-4359-9c97-2fc1bad99e71" data-frame-uchost="7e5a7804-291c-4359-9c97-2fc1bad99e71.frame.claudeusercontent.com"><div id="loading" role="status" aria-label="Loading"></div></div></main><div id="err" hidden></div></body></html>
+<meta charset="utf-8">
+<title>PHASE12 — Chu Kỳ Tập Luyện Cá Nhân Hoá</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="PHASE12">
+<meta name="theme-color" content="#14181B">
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxODAgMTgwIiB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCI+CjxyZWN0IHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIiBmaWxsPSIjMTQxODFCIi8+Cjx0ZXh0IHg9IjkwIiB5PSIxMTIiIGZvbnQtZmFtaWx5PSJBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjYwIiBmb250LXdlaWdodD0iODAwIiBmaWxsPSIjRkY3QTQ3IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5QPHRzcGFuIGZpbGw9IiNFREU5REYiPjEyPC90c3Bhbj48L3RleHQ+Cjwvc3ZnPgo=">
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxODAgMTgwIiB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCI+CjxyZWN0IHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIiBmaWxsPSIjMTQxODFCIi8+Cjx0ZXh0IHg9IjkwIiB5PSIxMTIiIGZvbnQtZmFtaWx5PSJBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjYwIiBmb250LXdlaWdodD0iODAwIiBmaWxsPSIjRkY3QTQ3IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5QPHRzcGFuIGZpbGw9IiNFREU5REYiPjEyPC90c3Bhbj48L3RleHQ+Cjwvc3ZnPgo=">
+<style>
+  /* ===== Tokens ===== */
+  :root{
+    --ink:#1C1A16;
+    --paper:#F6F3EC;
+    --bg:#F6F3EC;
+    --bg-elevated:#FFFDF8;
+    --surface-card:#FFFFFF;
+    --text:#1C1A16;
+    --text-muted:#6B6558;
+    --text-faint:#948E7E;
+    --border:#E4DFD2;
+    --border-strong:#D2CBB8;
+    --accent:#C94A22;
+    --accent-ink:#FFFFFF;
+    --accent-soft:#F3DDD2;
+    --accent-2:#3F6657;
+    --accent-2-soft:#DCE8E2;
+    --warn:#A8701F;
+    --warn-soft:#F1E1C6;
+    --danger:#B23A3A;
+    --danger-soft:#F3DCDC;
+    --shadow:0 1px 2px rgba(28,26,22,0.06), 0 8px 24px -12px rgba(28,26,22,0.18);
+    --radius-s:6px;
+    --radius-m:10px;
+    --radius-l:16px;
+    --font-display: -apple-system, "SF Pro Display", "Segoe UI Semibold", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-body: -apple-system, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-mono: ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#14181B;
+      --bg-elevated:#1B2023;
+      --surface-card:#1E2427;
+      --text:#EDE9DF;
+      --text-muted:#A19B8C;
+      --text-faint:#6F6A5E;
+      --border:#2B3134;
+      --border-strong:#3A4145;
+      --accent:#FF7A47;
+      --accent-ink:#1C1A16;
+      --accent-soft:#3A2A22;
+      --accent-2:#74AB97;
+      --accent-2-soft:#233530;
+      --warn:#E0A94B;
+      --warn-soft:#3A2F1C;
+      --danger:#E07A7A;
+      --danger-soft:#3A2323;
+      --shadow:0 1px 2px rgba(0,0,0,0.3), 0 8px 24px -12px rgba(0,0,0,0.5);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#14181B; --bg-elevated:#1B2023; --surface-card:#1E2427;
+    --text:#EDE9DF; --text-muted:#A19B8C; --text-faint:#6F6A5E;
+    --border:#2B3134; --border-strong:#3A4145;
+    --accent:#FF7A47; --accent-ink:#1C1A16; --accent-soft:#3A2A22;
+    --accent-2:#74AB97; --accent-2-soft:#233530;
+    --warn:#E0A94B; --warn-soft:#3A2F1C;
+    --danger:#E07A7A; --danger-soft:#3A2323;
+    --shadow:0 1px 2px rgba(0,0,0,0.3), 0 8px 24px -12px rgba(0,0,0,0.5);
+  }
+  :root[data-theme="light"]{
+    --bg:#F6F3EC; --bg-elevated:#FFFDF8; --surface-card:#FFFFFF;
+    --text:#1C1A16; --text-muted:#6B6558; --text-faint:#948E7E;
+    --border:#E4DFD2; --border-strong:#D2CBB8;
+    --accent:#C94A22; --accent-ink:#FFFFFF; --accent-soft:#F3DDD2;
+    --accent-2:#3F6657; --accent-2-soft:#DCE8E2;
+    --warn:#A8701F; --warn-soft:#F1E1C6;
+    --danger:#B23A3A; --danger-soft:#F3DCDC;
+    --shadow:0 1px 2px rgba(28,26,22,0.06), 0 8px 24px -12px rgba(28,26,22,0.18);
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--font-body);
+    font-size:15px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{font-family:var(--font-display);text-wrap:balance;margin:0;letter-spacing:-0.01em;}
+  p{margin:0;}
+  ::selection{background:var(--accent-soft);}
+  a{color:var(--accent);}
+  button{font-family:var(--font-body);}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+  .num{font-family:var(--font-mono);font-variant-numeric:tabular-nums;}
+  .eyebrow{
+    font-family:var(--font-display);
+    font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;
+    color:var(--accent);
+  }
+
+  /* ===== App shell ===== */
+  .app{display:flex;min-height:100vh;}
+  .sidebar{
+    width:232px;flex:0 0 232px;
+    background:var(--bg-elevated);
+    border-right:1px solid var(--border);
+    display:flex;flex-direction:column;
+    padding:22px 16px;
+    position:sticky;top:0;height:100vh;
+  }
+  .brand{display:flex;align-items:baseline;gap:8px;padding:0 8px 22px 8px;border-bottom:1px solid var(--border);margin-bottom:16px;}
+  .brand-mark{
+    font-family:var(--font-display);font-weight:800;font-size:19px;letter-spacing:-0.02em;
+    color:var(--text);
+  }
+  .brand-mark span{color:var(--accent);}
+  .brand-sub{font-size:10px;color:var(--text-faint);letter-spacing:0.08em;text-transform:uppercase;}
+  nav.navlist{display:flex;flex-direction:column;gap:2px;flex:1;}
+  .navitem{
+    display:flex;align-items:center;gap:10px;width:100%;text-align:left;
+    padding:9px 10px;border-radius:var(--radius-s);
+    color:var(--text-muted);font-size:13.5px;font-weight:600;font-family:inherit;
+    cursor:pointer;border:1px solid transparent;background:transparent;
+    appearance:none;-webkit-appearance:none;
+    transition:background .12s ease, color .12s ease;
+  }
+  .navitem:hover{background:var(--accent-soft);color:var(--text);}
+  .navitem.active{background:var(--accent);color:var(--accent-ink);}
+  .navitem .ic{width:16px;text-align:center;font-size:14px;}
+  .navfoot{display:flex;flex-direction:column;gap:8px;padding-top:12px;border-top:1px solid var(--border);margin-top:8px;}
+  .theme-toggle{
+    display:flex;align-items:center;justify-content:space-between;width:100%;
+    font-size:12px;color:var(--text-muted);font-family:inherit;
+    background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-s);
+    padding:7px 10px;cursor:pointer;appearance:none;-webkit-appearance:none;
+  }
+  .disclaimer-mini{font-size:10.5px;color:var(--text-faint);line-height:1.4;padding:0 4px;}
+
+  .main{flex:1;min-width:0;padding:28px 36px 64px;max-width:1180px;}
+  .page{display:none;}
+  .page.active{display:block;animation:fadein .18s ease;}
+  @keyframes fadein{from{opacity:0;transform:translateY(3px);}to{opacity:1;transform:none;}}
+  .page-head{margin-bottom:22px;}
+  .page-head h1{font-size:26px;font-weight:800;margin-top:4px;}
+  .page-head .desc{color:var(--text-muted);font-size:13.5px;margin-top:6px;max-width:62ch;}
+
+  /* ===== Cards & grids ===== */
+  .card{
+    background:var(--surface-card);border:1px solid var(--border);
+    border-radius:var(--radius-l);padding:18px 20px;box-shadow:var(--shadow);
+  }
+  .grid{display:grid;gap:14px;}
+  .grid-3{grid-template-columns:repeat(3,1fr);}
+  .grid-2{grid-template-columns:repeat(2,1fr);}
+  @media(max-width:900px){.grid-3,.grid-2{grid-template-columns:1fr;}}
+
+  .stat{display:flex;flex-direction:column;gap:4px;}
+  .stat .label{font-size:11px;color:var(--text-faint);text-transform:uppercase;letter-spacing:.08em;font-weight:700;}
+  .stat .value{font-family:var(--font-mono);font-size:24px;font-weight:600;font-variant-numeric:tabular-nums;}
+  .stat .sub{font-size:12px;color:var(--text-muted);}
+
+  /* ===== Buttons/forms ===== */
+  .btn{
+    display:inline-flex;align-items:center;gap:6px;justify-content:center;
+    background:var(--accent);color:var(--accent-ink);border:none;
+    padding:10px 18px;border-radius:var(--radius-s);font-weight:700;font-size:13.5px;
+    cursor:pointer;transition:filter .12s ease, transform .06s ease;
+  }
+  .btn:hover{filter:brightness(1.06);}
+  .btn:active{transform:translateY(1px);}
+  .btn.secondary{background:var(--bg);color:var(--text);border:1px solid var(--border-strong);}
+  .btn.ghost{background:transparent;color:var(--accent);border:1px solid var(--accent);}
+  .btn:disabled{opacity:.5;cursor:not-allowed;}
+  .btn.small{padding:6px 12px;font-size:12px;}
+
+  label.field{display:flex;flex-direction:column;gap:6px;font-size:12.5px;font-weight:600;color:var(--text-muted);}
+  input[type=text],input[type=number],select,textarea{
+    font-family:var(--font-body);font-size:14px;color:var(--text);
+    background:var(--bg);border:1px solid var(--border-strong);border-radius:var(--radius-s);
+    padding:9px 11px;width:100%;
+  }
+  input:focus,select:focus,textarea:focus{border-color:var(--accent);}
+  .js-swap-select{width:auto;min-width:150px;max-width:220px;padding:6px 8px;font-size:12px;}
+  .form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 16px;}
+  @media(max-width:640px){.form-grid{grid-template-columns:1fr;}}
+  .chip-group{display:flex;flex-wrap:wrap;gap:8px;}
+  .chip{
+    padding:8px 13px;border-radius:999px;border:1px solid var(--border-strong);
+    font-size:12.5px;font-weight:600;color:var(--text-muted);cursor:pointer;background:var(--bg);
+    font-family:inherit;appearance:none;-webkit-appearance:none;
+    user-select:none;
+  }
+  .chip.selected{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);}
+  .chip.warn.selected{background:var(--warn);border-color:var(--warn);color:#1C1A16;}
+  fieldset{border:none;padding:0;margin:0;}
+  legend{font-size:12.5px;font-weight:600;color:var(--text-muted);margin-bottom:8px;padding:0;}
+
+  /* ===== Phase timeline ===== */
+  .timeline{display:flex;gap:4px;margin:14px 0 6px;}
+  .tl-block{flex:1;display:flex;flex-direction:column;gap:6px;}
+  .tl-weeks{display:flex;gap:3px;}
+  .tl-week{
+    flex:1;height:26px;border-radius:4px;background:var(--border);
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--font-mono);font-size:10px;color:var(--text-faint);font-weight:600;
+    cursor:pointer;border:1px solid transparent;
+  }
+  .tl-week.done{background:var(--accent-2);color:#fff;}
+  .tl-week.current{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);}
+  .tl-week.deload{background:var(--warn-soft);}
+  .tl-label{font-size:10.5px;color:var(--text-muted);font-weight:700;text-transform:uppercase;letter-spacing:.04em;text-align:center;}
+
+  /* ===== Session/exercise table ===== */
+  .day-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px;}
+  .day-tab{
+    padding:8px 14px;border-radius:var(--radius-s);border:1px solid var(--border);
+    background:var(--bg);font-size:12.5px;font-weight:700;cursor:pointer;color:var(--text-muted);
+    font-family:inherit;appearance:none;-webkit-appearance:none;
+  }
+  .day-tab.active{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);}
+  table.ex-table{width:100%;border-collapse:collapse;font-size:13px;}
+  table.ex-table th{
+    text-align:left;font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;
+    color:var(--text-faint);font-weight:700;padding:6px 10px;border-bottom:1px solid var(--border-strong);
+  }
+  table.ex-table td{padding:10px;border-bottom:1px solid var(--border);vertical-align:top;}
+  table.ex-table tr:last-child td{border-bottom:none;}
+  .ex-name{font-weight:700;}
+  .ex-cue{color:var(--text-muted);font-size:12px;margin-top:2px;}
+  .tag{display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:999px;background:var(--accent-2-soft);color:var(--accent-2);margin-right:4px;text-transform:uppercase;letter-spacing:.03em;}
+  .tag.corr{background:var(--warn-soft);color:var(--warn);}
+  .overflow-x{overflow-x:auto;}
+  .scrollwrap{overflow-x:auto;}
+
+  .callout{border-left:3px solid var(--accent);background:var(--accent-soft);padding:12px 14px;border-radius:0 var(--radius-s) var(--radius-s) 0;font-size:12.5px;color:var(--text);}
+  .callout.warn{border-color:var(--warn);background:var(--warn-soft);}
+  .callout.calm{border-color:var(--accent-2);background:var(--accent-2-soft);}
+
+  .empty-state{text-align:center;padding:60px 20px;color:var(--text-muted);}
+  .empty-state h3{font-size:17px;margin-bottom:8px;}
+
+  /* ===== Glossary/research ===== */
+  .search-box{width:100%;max-width:380px;margin-bottom:18px;}
+  .term-card{padding:0;overflow:hidden;}
+  .term-card-toggle{
+    display:block;width:100%;text-align:left;background:transparent;border:none;
+    appearance:none;-webkit-appearance:none;font-family:inherit;cursor:pointer;
+    padding:14px 16px;
+  }
+  .term-en{font-family:var(--font-mono);font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.04em;}
+  .term-vi{font-weight:700;font-size:14.5px;margin:2px 0 6px;color:var(--text);}
+  .term-def{font-size:13px;color:var(--text-muted);}
+  .term-toggle-hint{font-size:11px;font-weight:700;color:var(--accent);margin-top:8px;letter-spacing:.01em;}
+  .term-detail{padding:0 16px 16px;border-top:1px solid var(--border);margin-top:0;padding-top:12px;}
+  .term-extended{font-size:13px;color:var(--text);line-height:1.6;margin-bottom:10px;}
+  .term-refs-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text-faint);margin-bottom:6px;}
+  .term-ref-link{display:block;font-size:12px;color:var(--accent-2);text-decoration:none;padding:6px 0;border-top:1px dashed var(--border);}
+  .term-ref-link:first-of-type{border-top:none;}
+  .term-ref-link:hover{text-decoration:underline;}
+  .term-ref-plain{font-size:12px;color:var(--text-muted);padding:6px 0;border-top:1px dashed var(--border);}
+  .term-ref-plain:first-of-type{border-top:none;}
+  .article-card{padding:16px 18px;}
+  .article-tag{font-size:10px;font-weight:700;text-transform:uppercase;color:var(--accent-2);letter-spacing:.05em;}
+  .article-title{font-size:15px;font-weight:700;margin:5px 0 6px;}
+  .article-body{font-size:13px;color:var(--text-muted);}
+  .article-src{font-size:11px;color:var(--text-faint);margin-top:8px;font-style:italic;}
+
+  /* ===== Sources (Nguồn tri thức) ===== */
+  .source-card{padding:18px 20px;display:flex;flex-direction:column;gap:10px;}
+  .source-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap;}
+  .source-name{font-size:16px;font-weight:800;}
+  .source-focus{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--accent-2);background:var(--accent-2-soft);padding:3px 9px;border-radius:999px;white-space:nowrap;}
+  .source-basis{font-size:12.5px;color:var(--text-muted);line-height:1.55;}
+  .source-insights{margin:2px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:5px;}
+  .source-insights li{font-size:12.5px;color:var(--text);line-height:1.5;}
+  .source-link{font-size:12px;font-weight:700;color:var(--accent);text-decoration:none;margin-top:4px;align-self:flex-start;}
+  .source-link:hover{text-decoration:underline;}
+
+  /* ===== Meal plan (Dinh dưỡng theo tuần) ===== */
+  .meal-slot{display:grid;grid-template-columns:90px 1fr auto;gap:14px;padding:14px 0;border-bottom:1px solid var(--border);align-items:start;}
+  .meal-slot:last-child{border-bottom:none;}
+  .meal-slot-label{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text-faint);padding-top:2px;}
+  .meal-slot-name{font-weight:700;font-size:13.5px;margin-bottom:3px;}
+  .meal-slot-items{font-size:12px;color:var(--text-muted);line-height:1.5;}
+  .meal-slot-scale{font-size:10.5px;color:var(--accent-2);margin-top:4px;font-weight:600;}
+  .meal-slot-macros{text-align:right;font-family:var(--font-mono);font-size:12px;white-space:nowrap;font-variant-numeric:tabular-nums;}
+  .meal-slot-kcal{font-weight:700;font-size:14px;}
+  .meal-day-summary{display:flex;gap:18px;flex-wrap:wrap;padding:12px 16px;background:var(--bg);border-radius:var(--radius-s);margin-top:14px;border:1px solid var(--border);}
+  .meal-day-summary .item{font-size:12px;color:var(--text-muted);}
+  .meal-day-summary .item b{color:var(--text);font-family:var(--font-mono);}
+
+  /* checkin history */
+  .hist-row{display:grid;grid-template-columns:70px 1fr 1fr 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--border);font-size:12.5px;align-items:center;}
+  .hist-row:last-child{border-bottom:none;}
+  .hist-row.head{color:var(--text-faint);font-weight:700;text-transform:uppercase;font-size:10.5px;letter-spacing:.05em;}
+
+  .badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px;}
+  .badge.ok{background:var(--accent-2-soft);color:var(--accent-2);}
+  .badge.warn{background:var(--warn-soft);color:var(--warn);}
+  .badge.accent{background:var(--accent-soft);color:var(--accent);}
+
+  ul.plain{margin:0;padding-left:18px;}
+  ul.plain li{margin-bottom:4px;font-size:13px;color:var(--text-muted);}
+
+  .divider{height:1px;background:var(--border);margin:20px 0;}
+  .flex-between{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+  .row-gap{display:flex;gap:10px;flex-wrap:wrap;}
+
+  @media(max-width:820px){
+    .app{flex-direction:column;}
+    .sidebar{width:100%;flex:none;position:relative;height:auto;flex-direction:row;overflow-x:auto;-webkit-overflow-scrolling:touch;padding:10px 12px;}
+    .brand{display:none;}
+    nav.navlist{flex-direction:row;gap:4px;}
+    .navitem{flex:0 0 auto;white-space:nowrap;padding:8px 10px;font-size:12.5px;}
+    .navfoot{display:none;}
+    .main{padding:20px 16px 48px;}
+  }
+</style>
+
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">PHASE<span>12</span></div>
+    </div>
+    <nav class="navlist" id="navlist">
+      <button type="button" class="navitem" data-page="dashboard"><span class="ic">◆</span>Tổng quan</button>
+      <button type="button" class="navitem" data-page="profile"><span class="ic">◇</span>Hồ sơ &amp; Mục tiêu</button>
+      <button type="button" class="navitem" data-page="program"><span class="ic">▤</span>Chu kỳ tập luyện</button>
+      <button type="button" class="navitem" data-page="checkin"><span class="ic">◈</span>Check-in &amp; Tiến độ</button>
+      <button type="button" class="navitem" data-page="nutrition"><span class="ic">◐</span>Dinh dưỡng</button>
+      <button type="button" class="navitem" data-page="glossary"><span class="ic">§</span>Thuật ngữ</button>
+      <button type="button" class="navitem" data-page="research"><span class="ic">✦</span>Nghiên cứu</button>
+      <button type="button" class="navitem" data-page="sources"><span class="ic">☰</span>Nguồn tri thức</button>
+    </nav>
+    <div class="navfoot">
+      <button type="button" class="theme-toggle" id="themeToggle"><span>Giao diện</span><span id="themeLabel">Hệ thống</span></button>
+      <div class="disclaimer-mini">PHASE12 mang tính tham khảo, không thay thế chẩn đoán/điều trị y khoa. Có bệnh lý nền hãy hỏi bác sĩ trước khi tập.</div>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <!-- DASHBOARD -->
+    <section class="page" id="page-dashboard">
+      <div class="page-head">
+        <div class="eyebrow">Tổng quan</div>
+        <h1>Chào mừng trở lại</h1>
+        <div class="desc">Theo dõi chu kỳ hiện tại, tuần đang tập và các chỉ số chính của bạn.</div>
+      </div>
+      <div id="dashContent"></div>
+    </section>
+
+    <!-- PROFILE -->
+    <section class="page" id="page-profile">
+      <div class="page-head">
+        <div class="eyebrow">Bước 1</div>
+        <h1>Hồ sơ &amp; Mục tiêu</h1>
+        <div class="desc">Nhập thông tin để hệ thống thiết kế chu kỳ 12 tuần theo mô hình OPT (NASM) phù hợp với bạn. Cập nhật hồ sơ này bất cứ khi nào cơ thể hoặc mục tiêu thay đổi.</div>
+      </div>
+      <form class="card" id="profileForm">
+        <div class="form-grid">
+          <label class="field">Tên gọi (không bắt buộc)
+            <input type="text" id="f_name" placeholder="VD: Minh">
+          </label>
+          <label class="field">Nghề nghiệp / lối sống
+            <select id="f_lifestyle">
+              <option value="office">Nhân viên văn phòng / ít vận động</option>
+              <option value="onfeet">Công việc đứng/di chuyển nhiều</option>
+              <option value="active">Vận động viên / lao động chân tay</option>
+            </select>
+          </label>
+          <label class="field">Tuổi
+            <input type="number" id="f_age" min="14" max="85" value="30">
+          </label>
+          <label class="field">Giới tính (để tính BMR/TDEE)
+            <select id="f_gender">
+              <option value="male">Nam</option>
+              <option value="female">Nữ</option>
+            </select>
+          </label>
+          <label class="field">Chiều cao (cm)
+            <input type="number" id="f_height" min="130" max="230" value="170">
+          </label>
+          <label class="field">Cân nặng hiện tại (kg)
+            <input type="number" id="f_weight" min="30" max="200" step="0.1" value="65">
+          </label>
+        </div>
+
+        <div class="divider"></div>
+        <fieldset>
+          <legend>Mục tiêu chính</legend>
+          <div class="chip-group" id="goalChips">
+            <button type="button" class="chip" data-val="fat_loss" aria-pressed="false">Giảm mỡ / thon gọn</button>
+            <button type="button" class="chip" data-val="muscle_gain" aria-pressed="false">Tăng cân, tăng cơ</button>
+            <button type="button" class="chip" data-val="strength" aria-pressed="false">Tăng sức mạnh</button>
+            <button type="button" class="chip" data-val="competition" aria-pressed="false">Siết cơ thi đấu</button>
+            <button type="button" class="chip" data-val="general_health" aria-pressed="false">Tăng cường sức khoẻ</button>
+            <button type="button" class="chip" data-val="functional_fitness" aria-pressed="false">Thể lực chức năng</button>
+          </div>
+        </fieldset>
+
+        <div class="divider"></div>
+        <div class="form-grid">
+          <label class="field">Kinh nghiệm tập luyện
+            <select id="f_exp">
+              <option value="beginner">Mới bắt đầu (&lt;6 tháng)</option>
+              <option value="intermediate">Trung bình (6 tháng–2 năm)</option>
+              <option value="advanced">Nâng cao (&gt;2 năm đều đặn)</option>
+            </select>
+          </label>
+          <label class="field">Số buổi tập / tuần
+            <select id="f_days">
+              <option value="2">2 buổi</option>
+              <option value="3" selected>3 buổi</option>
+              <option value="4">4 buổi</option>
+              <option value="5">5 buổi</option>
+              <option value="6">6 buổi</option>
+            </select>
+          </label>
+          <label class="field">Thiết bị sẵn có
+            <select id="f_equip">
+              <option value="full_gym">Phòng gym đầy đủ (tạ đòn, máy...)</option>
+              <option value="home_basic">Tại nhà: tạ đơn/kettlebell + dây kháng lực</option>
+              <option value="dumbbell_only">Chỉ có tạ đơn</option>
+              <option value="bodyweight_only">Chỉ tập với cơ thể (bodyweight)</option>
+            </select>
+          </label>
+          <label class="field">Mức vận động ngoài giờ tập
+            <select id="f_activity">
+              <option value="sedentary">Ít vận động (ngồi nhiều)</option>
+              <option value="light">Vận động nhẹ (đi lại thường xuyên)</option>
+              <option value="moderate">Vận động vừa (việc chân tay/đi bộ nhiều)</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="divider"></div>
+        <fieldset>
+          <legend>Vấn đề sức khoẻ / hạn chế cần lưu ý (chọn nếu có)</legend>
+          <div class="chip-group" id="limChips">
+            <button type="button" class="chip warn" data-val="knee" aria-pressed="false">Đau/yếu đầu gối</button>
+            <button type="button" class="chip warn" data-val="shoulder" aria-pressed="false">Đau vai</button>
+            <button type="button" class="chip warn" data-val="low_back" aria-pressed="false">Đau lưng dưới</button>
+            <button type="button" class="chip warn" data-val="tech_neck" aria-pressed="false">Gù lưng / mỏi cổ vai gáy (dân văn phòng)</button>
+            <button type="button" class="chip warn" data-val="wrist" aria-pressed="false">Đau cổ tay</button>
+            <button type="button" class="chip warn" data-val="hypertension" aria-pressed="false">Huyết áp cao</button>
+            <button type="button" class="chip warn" data-val="diabetes" aria-pressed="false">Tiểu đường type 2</button>
+          </div>
+        </fieldset>
+
+        <div class="divider"></div>
+        <div id="midCycleNotice" style="display:none;margin-bottom:14px">
+          <label class="field" style="flex-direction:row;align-items:center;gap:8px;font-weight:600;color:var(--text)">
+            <input type="checkbox" id="f_forceNew" style="width:auto">
+            Bỏ chu kỳ đang chạy, tạo chu kỳ 12 tuần mới ngay với thông tin vừa nhập
+          </label>
+          <div class="callout warn" style="margin-top:8px">Bạn đang có một chu kỳ chưa hoàn thành. Nếu không tick ô trên, hệ thống chỉ lưu lại thông tin hồ sơ — chu kỳ hiện tại và tiến độ các tuần đã tập vẫn được giữ nguyên.</div>
+        </div>
+        <div class="flex-between">
+          <div class="callout" style="max-width:60ch">Hệ thống sẽ tạo <b>chu kỳ 12 tuần</b> gồm 3 khối × 4 tuần theo mô hình OPT (Stabilization → Strength/Hypertrophy → Strength tối đa hoặc Power), có tuần giảm tải và tự động chèn bài tập hiệu chỉnh tư thế nếu cần.</div>
+          <button type="submit" class="btn" id="genBtn">Tạo chu kỳ 12 tuần →</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- PROGRAM -->
+    <section class="page" id="page-program">
+      <div class="page-head">
+        <div class="eyebrow">Chu kỳ hiện tại</div>
+        <h1 id="programTitle">Chu kỳ tập luyện</h1>
+        <div class="desc">Xem chi tiết từng buổi tập: số hiệp, số lần lặp, tempo, thời gian nghỉ theo đúng giai đoạn OPT.</div>
+      </div>
+      <div id="programContent"></div>
+    </section>
+
+    <!-- CHECKIN -->
+    <section class="page" id="page-checkin">
+      <div class="page-head">
+        <div class="eyebrow">Cứ 4 tuần một lần</div>
+        <h1>Check-in &amp; Tiến độ</h1>
+        <div class="desc">Nhập lại chỉ số sau mỗi khối 4 tuần để hệ thống nâng cấp độ khó bài tập cho khối tiếp theo — đúng nguyên lý Progressive Overload.</div>
+      </div>
+      <div id="checkinContent"></div>
+    </section>
+
+    <!-- NUTRITION -->
+    <section class="page" id="page-nutrition">
+      <div class="page-head">
+        <div class="eyebrow">Dinh dưỡng</div>
+        <h1>Năng lượng &amp; Macro</h1>
+        <div class="desc">Tính theo công thức Mifflin–St Jeor (BMR), hệ số hoạt động (TDEE) và mục tiêu hiện tại của bạn.</div>
+      </div>
+      <div id="nutritionContent"></div>
+    </section>
+
+    <!-- GLOSSARY -->
+    <section class="page" id="page-glossary">
+      <div class="page-head">
+        <div class="eyebrow">Tra cứu</div>
+        <h1>Thuật ngữ chuyên ngành</h1>
+        <div class="desc">Các khái niệm thường gặp trong strength &amp; conditioning, sinh lý học vận động và phục hồi.</div>
+      </div>
+      <input type="text" class="search-box" id="glossarySearch" placeholder="Tìm thuật ngữ… (VD: RPE, hypertrophy, DOMS)">
+      <div class="grid grid-2" id="glossaryList"></div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section class="page" id="page-research">
+      <div class="page-head">
+        <div class="eyebrow">Bằng chứng khoa học</div>
+        <h1>Nghiên cứu &amp; Số liệu</h1>
+        <div class="desc">Tóm lược các khuyến nghị và phát hiện chính từ NASM, ACSM, WHO và các nghiên cứu/tổng quan hệ thống được trích dẫn rộng rãi.</div>
+      </div>
+      <div class="grid grid-2" id="researchList"></div>
+    </section>
+
+    <!-- SOURCES -->
+    <section class="page" id="page-sources">
+      <div class="page-head">
+        <div class="eyebrow">Hệ sinh thái tri thức</div>
+        <h1>Nguồn tri thức chuyên môn</h1>
+        <div class="desc">10 tổ chức/chuyên gia đầu ngành mà PHASE12 tham khảo khi xây dựng nội dung — mô hình OPT, khuyến nghị an toàn, số liệu dinh dưỡng và cơ chế phì đại cơ trong app đều bắt nguồn từ đây.</div>
+      </div>
+      <div class="grid grid-2" id="sourcesList"></div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+/* =========================================================
+   THEME
+========================================================= */
+var root=document.documentElement;
+var savedTheme=localStorage.getItem('p12_theme');
+if(savedTheme) root.setAttribute('data-theme',savedTheme);
+function themeLabel(){
+  var t=localStorage.getItem('p12_theme');
+  document.getElementById('themeLabel').textContent = t==='dark'?'Tối':(t==='light'?'Sáng':'Hệ thống');
+}
+document.getElementById('themeToggle').addEventListener('click',function(){
+  var cur=localStorage.getItem('p12_theme');
+  var next = cur==='dark' ? 'light' : (cur==='light' ? null : 'dark');
+  if(next){ root.setAttribute('data-theme',next); localStorage.setItem('p12_theme',next); }
+  else { root.removeAttribute('data-theme'); localStorage.removeItem('p12_theme'); }
+  themeLabel();
+});
+themeLabel();
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+var pages=['dashboard','profile','program','checkin','nutrition','glossary','research','sources'];
+function showPage(id){
+  pages.forEach(function(p){
+    document.getElementById('page-'+p).classList.toggle('active',p===id);
+  });
+  document.querySelectorAll('.navitem').forEach(function(n){
+    n.classList.toggle('active', n.getAttribute('data-page')===id);
+  });
+  window.scrollTo(0,0);
+  if(id==='dashboard') renderDashboard();
+  if(id==='program') renderProgram();
+  if(id==='checkin') renderCheckin();
+  if(id==='nutrition') renderNutrition();
+  if(id==='profile' && typeof refreshMidCycleNotice==='function') refreshMidCycleNotice();
+}
+document.querySelectorAll('.navitem').forEach(function(n){
+  n.addEventListener('click',function(){ showPage(n.getAttribute('data-page')); });
+});
+
+/* =========================================================
+   EXERCISE DATABASE
+   pattern: nhóm vận động | tier: 1 dễ, 2 vừa, 3 nâng cao
+   eq: thiết bị cần | modes: giai đoạn OPT phù hợp | contra: hạn chế nên tránh
+========================================================= */
+var EX = [
+// SQUAT
+{id:'sq1',name:'Squat chạm ghế (Box Squat hỗ trợ)',pattern:'squat',tier:1,eq:['BW'],modes:['stab'],contra:['knee'],cue:'Ngồi chạm nhẹ mép ghế, đầu gối theo hướng mũi chân, không sụp vào trong.'},
+{id:'sq2',name:'Bodyweight Squat',pattern:'squat',tier:1,eq:['BW'],modes:['stab','strength_end'],contra:[],cue:'Gập ở hông trước rồi mới gập gối khi xuống; lúc đứng lên siết mông và đẩy lực qua gót, tránh để gối sụp vào trong.'},
+{id:'sq3',name:'Goblet Squat (tạ đơn/kettlebell)',pattern:'squat',tier:2,eq:['DB','KB'],modes:['strength_end','hyper'],contra:[],cue:'Giữ tạ sát ngực, khuỷu tay lách vào trong gối khi xuống sâu.'},
+{id:'sq4',name:'Squat với dây kháng lực quanh gối',pattern:'squat',tier:2,eq:['BAND'],modes:['stab','strength_end'],contra:[],cue:'Chủ động đẩy gối ra ngoài chống lại lực kéo của dây.'},
+{id:'sq5',name:'Barbell Back Squat',pattern:'squat',tier:3,eq:['BB'],modes:['hyper','max_strength'],contra:['knee','low_back','hypertension'],cue:'Siết lõi trước khi xuống, xuống hết biên độ kiểm soát được.'},
+{id:'sq6',name:'Front Squat',pattern:'squat',tier:3,eq:['BB'],modes:['hyper','max_strength','power'],contra:['knee','wrist','hypertension'],cue:'Khuỷu tay hướng lên cao, thân trên giữ thẳng đứng.'},
+{id:'sq7',name:'Jump Squat',pattern:'squat',tier:2,eq:['BW'],modes:['power'],contra:['knee'],cue:'Bật nảy có kiểm soát, tiếp đất êm bằng cả bàn chân.'},
+{id:'sq8',name:'Leg Press (máy)',pattern:'squat',tier:2,eq:['MC'],modes:['hyper','strength_end'],contra:[],cue:'Không khoá cứng khớp gối ở điểm duỗi hết.'},
+// HINGE
+{id:'h1',name:'Glute Bridge',pattern:'hinge',tier:1,eq:['BW'],modes:['stab','strength_end'],contra:[],isCorrective:true,targets:['low_back','tech_neck'],cue:'Siết mông ở đỉnh 2 giây, tránh ưỡn lưng quá mức.'},
+{id:'h2',name:'Romanian Deadlift tạ đơn',pattern:'hinge',tier:2,eq:['DB'],modes:['strength_end','hyper'],contra:['low_back'],cue:'Đẩy hông ra sau, lưng thẳng, tạ lướt sát ống chân.'},
+{id:'h3',name:'Kettlebell Swing',pattern:'hinge',tier:2,eq:['KB'],modes:['power','strength_end'],contra:['low_back'],cue:'Lực đến từ hông bật ra, không dùng tay nhấc tạ.'},
+{id:'h4',name:'Barbell Deadlift',pattern:'hinge',tier:3,eq:['BB'],modes:['hyper','max_strength'],contra:['low_back','knee','hypertension'],cue:'Giữ thanh tạ sát người suốt hành trình, lưng trung tính.'},
+{id:'h5',name:'Barbell Romanian Deadlift',pattern:'hinge',tier:3,eq:['BB'],modes:['hyper','max_strength'],contra:['low_back'],cue:'Gập từ hông, cảm nhận căng gân kheo, không cong lưng.'},
+{id:'h6',name:'Single-leg RDL (bodyweight/tạ đơn)',pattern:'hinge',tier:2,eq:['BW','DB'],modes:['stab','strength_end'],contra:[],cue:'Giữ hông vuông góc sàn, thân và chân sau tạo một đường thẳng.'},
+{id:'h7',name:'Hip Thrust (tạ đòn)',pattern:'hinge',tier:3,eq:['BB'],modes:['hyper','max_strength'],contra:['low_back'],cue:'Cằm hơi cụp, siết mông mạnh ở đỉnh, không ưỡn ngực quá.'},
+{id:'h8',name:'Cable Pull-through',pattern:'hinge',tier:2,eq:['MC'],modes:['strength_end','hyper'],contra:['low_back'],cue:'Gập hông ra sau, kéo dây qua giữa hai chân bằng lực mông.'},
+// LUNGE
+{id:'l1',name:'Static Lunge (tại chỗ)',pattern:'lunge',tier:1,eq:['BW'],modes:['stab'],contra:['knee'],cue:'Đầu gối trước không vượt quá mũi chân, hạ thẳng xuống.'},
+{id:'l2',name:'Reverse Lunge',pattern:'lunge',tier:1,eq:['BW'],modes:['stab','strength_end'],contra:['knee'],cue:'Bước lùi, giữ thân trên thẳng, kiểm soát khi hạ gối sau.'},
+{id:'l3',name:'Walking Lunge (tạ đơn)',pattern:'lunge',tier:2,eq:['DB'],modes:['strength_end','hyper'],contra:['knee'],cue:'Mỗi bước dài vừa phải, đầu gối sau gần chạm sàn.'},
+{id:'l4',name:'Bulgarian Split Squat',pattern:'lunge',tier:3,eq:['DB','BB'],modes:['hyper','max_strength'],contra:['knee'],cue:'Chân sau gác lên ghế, trọng tâm dồn vào chân trước.'},
+{id:'l5',name:'Lateral Lunge',pattern:'lunge',tier:2,eq:['BW','DB'],modes:['stab','strength_end'],contra:['knee'],cue:'Đẩy hông sang một bên, chân kia giữ thẳng, lưng phẳng.'},
+{id:'l6',name:'Barbell Walking Lunge',pattern:'lunge',tier:3,eq:['BB'],modes:['hyper','max_strength'],contra:['knee'],cue:'Vác tạ chắc trên lưng trên, bước đều, thân giữ ổn định.'},
+{id:'l7',name:'Lunge Jump (đổi chân trên không)',pattern:'lunge',tier:3,eq:['BW'],modes:['power'],contra:['knee'],cue:'Bật đổi chân nhẹ nhàng, tiếp đất êm ở tư thế lunge.'},
+// PUSH HORIZONTAL
+{id:'ph1',name:'Push-up chống gối',pattern:'push_h',tier:1,eq:['BW'],modes:['stab'],contra:['shoulder','wrist'],cue:'Thân tạo một đường thẳng từ đầu đến gối, hạ ngực gần sàn.'},
+{id:'ph2',name:'Push-up chuẩn',pattern:'push_h',tier:2,eq:['BW'],modes:['stab','strength_end'],contra:['wrist'],cue:'Siết bụng và mông, khuỷu tay hợp thân góc ~45°.'},
+{id:'ph3',name:'DB Bench/Floor Press',pattern:'push_h',tier:2,eq:['DB'],modes:['strength_end','hyper'],contra:['shoulder'],cue:'Hạ tạ có kiểm soát, không khoá cứng khuỷu ở điểm đẩy lên.'},
+{id:'ph4',name:'Barbell Bench Press',pattern:'push_h',tier:3,eq:['BB'],modes:['hyper','max_strength'],contra:['shoulder','wrist'],cue:'Bả vai ép xuống và ra sau, chân đạp chắc xuống sàn.'},
+{id:'ph5',name:'Incline DB Press',pattern:'push_h',tier:2,eq:['DB'],modes:['hyper'],contra:['shoulder'],cue:'Ghế nghiêng 30–45°, đẩy tạ theo đường chéo lên trên.'},
+{id:'ph6',name:'Cable Chest Press',pattern:'push_h',tier:2,eq:['MC'],modes:['strength_end','hyper'],contra:[],cue:'Giữ lực căng liên tục, không để vai nhô lên tai.'},
+{id:'ph7',name:'Plyo Push-up',pattern:'push_h',tier:3,eq:['BW'],modes:['power'],contra:['wrist','shoulder'],cue:'Đẩy bùng nổ để tay rời sàn, tiếp đất mềm bằng khuỷu hơi gập.'},
+// PUSH VERTICAL
+{id:'pv1',name:'Overhead Press với dây kháng lực',pattern:'push_v',tier:1,eq:['BAND'],modes:['stab'],contra:['shoulder'],cue:'Đẩy thẳng lên, tránh ưỡn lưng dưới để bù trừ.'},
+{id:'pv2',name:'DB Shoulder Press (ngồi)',pattern:'push_v',tier:2,eq:['DB'],modes:['strength_end','hyper'],contra:['shoulder'],cue:'Lưng tựa ghế, đẩy tạ thẳng lên, không khoá cứng khuỷu.'},
+{id:'pv3',name:'Barbell Overhead Press',pattern:'push_v',tier:3,eq:['BB'],modes:['hyper','max_strength'],contra:['shoulder','low_back','hypertension'],cue:'Siết mông và bụng để tránh ưỡn lưng khi đẩy tạ qua đầu.'},
+{id:'pv4',name:'Pike Push-up',pattern:'push_v',tier:2,eq:['BW'],modes:['strength_end','hyper'],contra:['shoulder','wrist'],cue:'Hông đẩy cao tạo hình chữ V ngược, hạ đỉnh đầu về phía sàn.'},
+{id:'pv5',name:'Landmine Press',pattern:'push_v',tier:2,eq:['BB'],modes:['strength_end','hyper'],contra:['shoulder'],cue:'Đẩy chéo lên trên, thân giữ ổn định, ít áp lực lên vai.'},
+{id:'pv6',name:'Push Press (bùng nổ chân)',pattern:'push_v',tier:3,eq:['BB'],modes:['power'],contra:['shoulder','low_back','hypertension'],cue:'Hơi chùng gối rồi bật chân để hỗ trợ đẩy tạ lên nhanh.'},
+// PULL HORIZONTAL
+{id:'plh1',name:'Band Row',pattern:'pull_h',tier:1,eq:['BAND'],modes:['stab'],contra:[],isCorrective:true,targets:['tech_neck','shoulder'],cue:'Kéo khuỷu tay ra sau, ép hai bả vai lại gần nhau.'},
+{id:'plh2',name:'DB Bent-over Row',pattern:'pull_h',tier:2,eq:['DB'],modes:['strength_end','hyper'],contra:['low_back'],cue:'Gập hông giữ lưng phẳng, kéo tạ về phía hông.'},
+{id:'plh3',name:'Barbell Bent-over Row',pattern:'pull_h',tier:3,eq:['BB'],modes:['hyper','max_strength'],contra:['low_back'],cue:'Thân trên gập ~45°, kéo thanh tạ chạm bụng dưới.'},
+{id:'plh4',name:'Seated Cable Row',pattern:'pull_h',tier:2,eq:['MC'],modes:['strength_end','hyper'],contra:['low_back'],cue:'Ngực mở, kéo về bằng lực lưng chứ không chỉ cánh tay.'},
+{id:'plh5',name:'Inverted Row (dưới xà/bàn thấp)',pattern:'pull_h',tier:2,eq:['BW'],modes:['strength_end','hyper'],contra:['shoulder'],cue:'Thân thẳng như tấm ván, kéo ngực lên chạm xà.'},
+{id:'plh6',name:'Chest-supported Row',pattern:'pull_h',tier:2,eq:['DB','MC'],modes:['hyper'],contra:[],cue:'Ngực tựa ghế nghiêng để cô lập lưng, tránh dùng đà.'},
+// PULL VERTICAL
+{id:'plv1',name:'Band Pull-apart',pattern:'pull_v',tier:1,eq:['BAND'],modes:['stab'],contra:['shoulder'],isCorrective:true,targets:['tech_neck'],cue:'Kéo dây căng ngang ngực, ép bả vai, giữ khuỷu thẳng.'},
+{id:'plv2',name:'Lat Pulldown (máy/cáp)',pattern:'pull_v',tier:2,eq:['MC'],modes:['strength_end','hyper'],contra:['shoulder'],cue:'Kéo thanh xuống ngang ngực trên, tránh ngả người quá mức.'},
+{id:'plv3',name:'Pull-up hỗ trợ dây/máy',pattern:'pull_v',tier:2,eq:['BAND','BW'],modes:['strength_end','hyper'],contra:['shoulder'],cue:'Kéo từ bả vai trước, hạ xuống có kiểm soát.'},
+{id:'plv4',name:'Pull-up chuẩn',pattern:'pull_v',tier:3,eq:['BW'],modes:['hyper','max_strength'],contra:['shoulder','wrist'],cue:'Cằm qua xà, hạ xuống hết biên độ, không đu người.'},
+{id:'plv5',name:'Chin-up',pattern:'pull_v',tier:3,eq:['BW'],modes:['hyper','max_strength'],contra:['shoulder'],cue:'Nắm ngược vai rộng bằng vai, kéo đều không giật.'},
+// CORE - ANTI-EXTENSION
+{id:'ce1',name:'Plank',pattern:'core_antiext',tier:1,eq:['BW'],modes:['stab'],contra:['low_back'],isCorrective:true,cue:'Siết bụng và mông, không để hông võng xuống.'},
+{id:'ce2',name:'Dead Bug',pattern:'core_antiext',tier:1,eq:['BW'],modes:['stab'],contra:[],isCorrective:true,targets:['low_back'],cue:'Ép lưng dưới sát sàn, tay/chân đối diện hạ chậm.'},
+{id:'ce3',name:'Ab Rollout (bánh xe tập bụng)',pattern:'core_antiext',tier:3,eq:['BW'],modes:['hyper','max_strength'],contra:['low_back','shoulder'],cue:'Lăn ra tới mức lưng vẫn giữ thẳng, kéo về bằng lực bụng.'},
+{id:'ce4',name:'Stir-the-pot (bóng tập)',pattern:'core_antiext',tier:2,eq:['BW'],modes:['stab','strength_end'],contra:['low_back'],cue:'Chống khuỷu tay lên bóng, xoay tròn giữ hông ổn định.'},
+{id:'ce5',name:'Hanging Knee Raise',pattern:'core_antiext',tier:3,eq:['BW'],modes:['hyper'],contra:['shoulder','low_back'],cue:'Treo người, cuộn xương chậu lên, tránh đung đưa.'},
+// CORE - ANTI-ROTATION
+{id:'cr1',name:'Pallof Press (dây kháng lực)',pattern:'core_antirot',tier:1,eq:['BAND'],modes:['stab','strength_end'],contra:[],isCorrective:true,targets:['low_back'],cue:'Đẩy tay thẳng ra trước, chống lại lực kéo xoay người.'},
+{id:'cr2',name:'Cable Woodchop',pattern:'core_antirot',tier:2,eq:['MC'],modes:['strength_end','hyper'],contra:['low_back'],cue:'Xoay từ hông và thân, tay giữ thẳng theo đường chéo.'},
+{id:'cr3',name:'Half-kneeling Band Chop',pattern:'core_antirot',tier:2,eq:['BAND'],modes:['stab','strength_end'],contra:[],cue:'Quỳ một gối, kéo dây chéo qua người, hông giữ vuông.'},
+// CORE - ANTI-LATERAL FLEXION
+{id:'cl1',name:'Side Plank (gối chống)',pattern:'core_antilat',tier:1,eq:['BW'],modes:['stab'],contra:['shoulder'],cue:'Thân tạo đường thẳng, hông không võng xuống sàn.'},
+{id:'cl2',name:'Side Plank chuẩn',pattern:'core_antilat',tier:2,eq:['BW'],modes:['stab','strength_end'],contra:['shoulder'],cue:'Nâng hông cao hết mức, giữ vai-hông-gót thẳng hàng.'},
+{id:'cl3',name:'Suitcase Carry (mang lệch một bên)',pattern:'core_antilat',tier:2,eq:['DB','KB'],modes:['strength_end','hyper'],contra:['low_back'],cue:'Đi bộ thẳng, chống nghiêng người sang bên cầm tạ.'},
+// CARRY
+{id:'ca1',name:'Farmer\'s Carry',pattern:'carry',tier:2,eq:['DB','KB'],modes:['strength_end','hyper','power'],contra:['low_back'],cue:'Vai kéo xuống ra sau, bước đều, siết lõi suốt quãng đường.'},
+{id:'ca2',name:'Overhead Carry',pattern:'carry',tier:3,eq:['DB','KB'],modes:['hyper','power'],contra:['shoulder'],cue:'Tay khoá thẳng trên đầu, bước chậm và có kiểm soát.'},
+// CORRECTIVE (tư thế văn phòng)
+{id:'co1',name:'Giãn cơ ngực trong khung cửa',pattern:'corrective',tier:1,eq:['BW'],modes:['stab'],contra:[],isCorrective:true,targets:['tech_neck','shoulder'],cue:'Giữ 20–30 giây mỗi bên, cảm nhận căng nhẹ vùng ngực trước.'},
+{id:'co2',name:'Chin Tuck (gập cằm)',pattern:'corrective',tier:1,eq:['BW'],modes:['stab'],contra:[],isCorrective:true,targets:['tech_neck'],cue:'Kéo cằm về sau như tạo cằm đôi, ép hai bả vai, giữ 2 giây, lặp lại.'},
+{id:'co3',name:'Prone Y-T-W (Blackburn)',pattern:'corrective',tier:1,eq:['BW'],modes:['stab'],contra:['shoulder'],isCorrective:true,targets:['tech_neck','shoulder'],cue:'Nằm sấp, nâng tay theo hình Y-T-W để kích hoạt lưng trên.'},
+{id:'co4',name:'Giãn cơ gập háng (Hip Flexor Stretch)',pattern:'corrective',tier:1,eq:['BW'],modes:['stab'],contra:[],isCorrective:true,targets:['low_back','tech_neck'],cue:'Quỳ một gối, đẩy hông ra trước, giữ thân thẳng, giữ 30–60 giây mỗi bên.'},
+{id:'co5',name:'Cat-Cow (di động cột sống)',pattern:'corrective',tier:1,eq:['BW'],modes:['stab'],contra:[],isCorrective:true,targets:['low_back','tech_neck'],cue:'Luân phiên võng và gù lưng chậm rãi theo nhịp thở.'},
+{id:'co6',name:'Lăn foam vùng lưng trên',pattern:'corrective',tier:1,eq:['BW'],modes:['stab'],contra:[],isCorrective:true,targets:['tech_neck','shoulder'],cue:'Lăn chậm từ giữa lưng lên vai, dừng ở điểm căng cứng 30–60 giây.'},
+{id:'co7',name:'Bird Dog',pattern:'corrective',tier:1,eq:['BW'],modes:['stab'],contra:[],isCorrective:true,targets:['low_back'],cue:'Vươn tay và chân đối diện, giữ hông và vai song song sàn, giữ 2 giây mỗi lần.'},
+{id:'co8',name:'Squat to Row (dây kháng lực)',pattern:'corrective',tier:2,eq:['BAND','MC'],modes:['stab'],contra:[],isCorrective:true,targets:['low_back','shoulder','tech_neck'],cue:'Ngồi xổm rồi đứng lên kết hợp kéo dây về phía hông, siết bả vai ở cuối động tác — bước "Integrate" của chuỗi hiệu chỉnh.'},
+{id:'co9',name:'Xoay ngoài vai với dây kháng lực',pattern:'corrective',tier:1,eq:['BAND'],modes:['stab'],contra:[],isCorrective:true,targets:['shoulder'],cue:'Khuỷu tay gập 90° sát hông, xoay cẳng tay ra ngoài chậm rãi, giữ vai không nhô lên tai.'},
+{id:'co10',name:'Lăn foam cơ gập háng & đùi trong',pattern:'corrective',tier:1,eq:['BW'],modes:['stab'],contra:[],isCorrective:true,targets:['low_back'],cue:'Giữ 30–60 giây tại điểm căng, sau đó giãn cơ gập háng ở tư thế lunge thấp.'},
+// BALANCE
+{id:'b1',name:'Đứng một chân (mắt mở)',pattern:'balance',tier:1,eq:['BW'],modes:['stab'],contra:[],cue:'Giữ thăng bằng 20–30 giây, mắt nhìn cố định một điểm.'},
+{id:'b2',name:'Đứng một chân trên bề mặt mềm/mắt nhắm',pattern:'balance',tier:2,eq:['BW'],modes:['stab'],contra:[],cue:'Tăng độ khó bằng cách nhắm mắt hoặc đứng trên đệm.'},
+{id:'b3',name:'Single-leg RDL to Reach',pattern:'balance',tier:2,eq:['BW'],modes:['stab','strength_end'],contra:[],cue:'Vươn tay chạm sàn phía trước khi giữ thăng bằng một chân.'},
+{id:'b4',name:'Squat trên bề mặt không ổn định',pattern:'balance',tier:2,eq:['BW'],modes:['stab'],contra:['knee'],cue:'Squat chậm rãi trên đệm cân bằng, ưu tiên kiểm soát hơn tốc độ.'},
+// POWER / PLYO
+{id:'p1',name:'Box Step-up bùng nổ',pattern:'power',tier:2,eq:['BW'],modes:['power'],contra:['knee'],cue:'Đạp mạnh chân trụ để bật người lên bục, hạ nhẹ nhàng.'},
+{id:'p2',name:'Broad Jump (bật xa)',pattern:'power',tier:2,eq:['BW'],modes:['power'],contra:['knee'],cue:'Vung tay lấy đà, tiếp đất mềm bằng cả hai chân.'},
+{id:'p3',name:'Med Ball Slam',pattern:'power',tier:2,eq:['DB'],modes:['power'],contra:['low_back','shoulder'],cue:'Dùng toàn thân đập tạ xuống sàn bằng lực bùng nổ.'},
+{id:'p4',name:'Burpee',pattern:'power',tier:2,eq:['BW'],modes:['power'],contra:['shoulder','knee'],cue:'Chuyển động liên tục, kiểm soát nhịp thở, không cần quá nhanh.'},
+// CARDIO / CONDITIONING (metabolic finisher)
+{id:'cd1',name:'Mountain Climbers',pattern:'cardio',tier:2,eq:['BW'],modes:['hyper','power'],contra:['wrist'],cue:'Giữ hông thấp ổn định, đầu gối kéo nhanh về ngực.'},
+{id:'cd2',name:'Nhảy dây',pattern:'cardio',tier:2,eq:['BW'],modes:['hyper','power'],contra:['knee'],cue:'Bật nhẹ bằng cổ chân, giữ nhịp đều.'},
+{id:'cd3',name:'Xe đạp/Rowing máy (conditioning)',pattern:'cardio',tier:2,eq:['MC'],modes:['hyper','strength_end'],contra:[],cue:'Duy trì nhịp ổn định trong thời gian quy định.'},
+{id:'cd4',name:'Đi bộ nhanh / Incline Walk',pattern:'cardio',tier:1,eq:['BW'],modes:['stab'],contra:[],cue:'Phù hợp khởi động hoặc phục hồi tích cực, cường độ thấp.'}
+];
+
+var EQUIP_ACCESS = {
+  bodyweight_only:['BW','BAND'],
+  dumbbell_only:['BW','BAND','DB'],
+  home_basic:['BW','BAND','DB','KB'],
+  full_gym:['BW','BAND','DB','KB','BB','MC']
+};
+
+/* =========================================================
+   PHASE / PERIODIZATION LOGIC (mô hình OPT - NASM)
+========================================================= */
+var PHASE_INFO = {
+  stab:{ label:'Giai đoạn 1 — Ổn định & Chịu đựng (Stabilization Endurance)', short:'Ổn định',
+    sets:[2,3], reps:'12–20', tempo:'4-2-1 (chậm, kiểm soát)', rest:'60–90 giây', rir:'Không cần chạm ngưỡng — ưu tiên kỹ thuật',
+    note:'Ưu tiên kỹ thuật, cân bằng và kích hoạt cơ lõi trước khi tăng tải.'},
+  strength_end:{ label:'Giai đoạn 2 — Sức mạnh Chịu đựng (Strength Endurance)', short:'Sức mạnh chịu đựng',
+    sets:[3,3], reps:'8–12 (superset với 12–20 ổn định)', tempo:'2-0-2', rest:'60–90 giây', rir:'RIR 0–1',
+    note:'Kết hợp bài sức mạnh với bài ổn định theo cặp superset để tăng sức bền cơ.'},
+  hyper:{ label:'Giai đoạn 3 — Phát triển Cơ bắp (Hypertrophy)', short:'Phì đại cơ',
+    sets:[3,4], reps:'8–12', tempo:'2-0-2', rest:'60–75 giây', rir:'RIR 0–2 (đơn khớp) / 2–4 (đa khớp)',
+    note:'Trọng tâm là tổng khối lượng tập (volume) để kích thích phát triển cơ.'},
+  max_strength:{ label:'Giai đoạn 4 — Sức mạnh Tối đa (Maximal Strength)', short:'Sức mạnh tối đa',
+    sets:[4,5], reps:'3–6', tempo:'Kiểm soát, đẩy/kéo dứt khoát', rest:'2–3 phút', rir:'RIR 1–2 (thỉnh thoảng 0)',
+    note:'Tăng cường độ (%1RM), giảm số lần lặp, nghỉ dài để phục hồi hệ thần kinh.'},
+  power:{ label:'Giai đoạn 5 — Sức mạnh Bùng nổ (Power)', short:'Sức mạnh bùng nổ',
+    sets:[3,4], reps:'8–10 (thực hiện bùng nổ, nhanh)', tempo:'X-X-X (nhanh nhất có thể)', rest:'2–3 phút', rir:'RIR 2–3 (tối đa 4)',
+    note:'Chuyển hoá sức mạnh thành tốc độ và công suất chuyển động. Với bài plyo/bật nhảy, NASM khuyến nghị tổng ~25–50 lần tiếp đất mỗi buổi thay vì 80–200 như quan niệm cũ.'}
+};
+
+// Mỗi mục tiêu -> chuỗi 3 khối (mỗi khối 4 tuần) theo giai đoạn OPT
+var GOAL_BLOCKS = {
+  fat_loss:          ['stab','strength_end','hyper'],
+  muscle_gain:       ['stab','hyper','max_strength'],
+  strength:          ['stab','hyper','max_strength'],
+  competition:       ['hyper','max_strength','power'],
+  general_health:     ['stab','strength_end','stab'],
+  functional_fitness: ['stab','strength_end','power']
+};
+
+var GOAL_LABEL = {
+  fat_loss:'Giảm mỡ / thon gọn', muscle_gain:'Tăng cân, tăng cơ', strength:'Tăng sức mạnh',
+  competition:'Siết cơ thi đấu', general_health:'Tăng cường sức khoẻ', functional_fitness:'Thể lực chức năng'
+};
+
+function splitForDays(days){
+  days=parseInt(days,10);
+  if(days<=3) return {type:'full_body', names:['Toàn thân A','Toàn thân B','Toàn thân C'].slice(0,days)};
+  if(days===4) return {type:'upper_lower', names:['Thân trên A','Thân dưới A','Thân trên B','Thân dưới B']};
+  if(days===5) return {type:'ppl', names:['Đẩy (Push)','Kéo (Pull)','Chân (Legs)','Thân trên','Thân dưới']};
+  return {type:'ppl', names:['Đẩy (Push)','Kéo (Pull)','Chân (Legs)','Đẩy (Push)','Kéo (Pull)','Chân (Legs)']};
+}
+
+// slot templates theo loại buổi tập: [pattern, count]
+var SESSION_SLOTS = {
+  full_body: [['squat',1],['hinge',1],['push_h',1],['pull_h',1],['core_antiext',1],['core_antirot',1]],
+  'Thân trên': [['push_h',1],['pull_h',1],['push_v',1],['pull_v',1],['core_antilat',1]],
+  'Thân dưới': [['squat',1],['hinge',1],['lunge',1],['balance',1],['core_antiext',1]],
+  'Đẩy (Push)': [['push_h',1],['push_v',1],['push_h',1],['core_antiext',1]],
+  'Kéo (Pull)': [['pull_h',1],['pull_v',1],['pull_h',1],['core_antirot',1]],
+  'Chân (Legs)': [['squat',1],['hinge',1],['lunge',1],['balance',1]]
+};
+
+function slotsForDayName(name){
+  if(name.indexOf('Toàn thân')===0) return SESSION_SLOTS.full_body;
+  if(name.indexOf('Thân trên')===0) return SESSION_SLOTS['Thân trên'];
+  if(name.indexOf('Thân dưới')===0) return SESSION_SLOTS['Thân dưới'];
+  if(name.indexOf('Đẩy')===0) return SESSION_SLOTS['Đẩy (Push)'];
+  if(name.indexOf('Kéo')===0) return SESSION_SLOTS['Kéo (Pull)'];
+  if(name.indexOf('Chân')===0) return SESSION_SLOTS['Chân (Legs)'];
+  return SESSION_SLOTS.full_body;
+}
+
+function pickExercise(pattern, mode, allowedEq, tier, contraList, weekIdx, avoidIds){
+  avoidIds = avoidIds || [];
+  var pool = EX.filter(function(e){
+    if(e.pattern!==pattern) return false;
+    if(e.modes.indexOf(mode)===-1) return false;
+    if(!e.eq.some(function(x){return allowedEq.indexOf(x)!==-1;})) return false;
+    if(e.contra.some(function(c){return contraList.indexOf(c)!==-1;})) return false;
+    return true;
+  });
+  if(pool.length===0){
+    pool = EX.filter(function(e){
+      return e.pattern===pattern && e.eq.some(function(x){return allowedEq.indexOf(x)!==-1;}) &&
+        !e.contra.some(function(c){return contraList.indexOf(c)!==-1;});
+    });
+  }
+  if(pool.length===0) return null;
+  // ưu tiên tier gần với tier mục tiêu nhất, rồi xoay vòng theo tuần để tạo biến thiên
+  pool.sort(function(a,b){ return Math.abs(a.tier-tier)-Math.abs(b.tier-tier); });
+  var closest = Math.abs(pool[0].tier-tier);
+  var candidates = pool.filter(function(e){ return Math.abs(e.tier-tier)===closest; });
+  var fresh = candidates.filter(function(e){ return avoidIds.indexOf(e.id)===-1; });
+  var finalPool = fresh.length ? fresh : candidates;
+  return finalPool[weekIdx % finalPool.length];
+}
+
+function correctiveExercise(allowedEq, contraList, weekIdx, avoidIds, limitations){
+  avoidIds = avoidIds || [];
+  limitations = limitations || [];
+  var pool = EX.filter(function(e){
+    return e.isCorrective && e.eq.some(function(x){return allowedEq.indexOf(x)!==-1;}) &&
+      !e.contra.some(function(c){return contraList.indexOf(c)!==-1;});
+  });
+  if(pool.length===0) return null;
+  // ưu tiên bài có "targets" khớp đúng hạn chế người dùng khai báo (VD: low_back -> Squat to Row, Bird Dog...)
+  var targeted = pool.filter(function(e){ return e.targets && e.targets.some(function(t){return limitations.indexOf(t)!==-1;}); });
+  var scoped = targeted.length ? targeted : pool;
+  var fresh = scoped.filter(function(e){ return avoidIds.indexOf(e.id)===-1; });
+  var finalPool = fresh.length ? fresh : scoped;
+  return finalPool[weekIdx % finalPool.length];
+}
+
+// tier 1..3 (có thể lẻ), giới hạn theo thiết bị (không vượt quá tier cao nhất khả dụng cho pattern đó)
+function effectiveTier(rawTier, pattern, allowedEq){
+  var maxAvail = 1;
+  EX.forEach(function(e){ if(e.pattern===pattern && e.eq.some(function(x){return allowedEq.indexOf(x)!==-1;})) maxAvail=Math.max(maxAvail,e.tier); });
+  return Math.max(1, Math.min(rawTier, maxAvail));
+}
+
+function weekVolumeAdjust(phaseInfo, weekInBlock, isFinalWeekOfCycle){
+  // weekInBlock: 0..3 (0=tuần1 ... 3=tuần4/giảm tải)
+  var sets = phaseInfo.sets[0];
+  var note = '';
+  if(weekInBlock===0){ sets = phaseInfo.sets[0]; note='Tuần nền — làm quen tải trọng.'; }
+  else if(weekInBlock===1){ sets = phaseInfo.sets[0]; note='Tăng nhẹ khối lượng hoặc mức tạ so với tuần 1.'; }
+  else if(weekInBlock===2){ sets = phaseInfo.sets[1]; note='Tuần đỉnh khối — cố gắng đạt mức tạ/số hiệp cao nhất khối này.'; }
+  else {
+    if(isFinalWeekOfCycle){ sets = phaseInfo.sets[0]; note='Tuần kiểm tra — thử lại các mốc để chuẩn bị check-in.'; }
+    else { sets = Math.max(1, phaseInfo.sets[0]-1); note='Tuần giảm tải (deload) — giảm ~30–40% khối lượng để phục hồi.'; }
+  }
+  return {sets:sets, note:note, isDeload: (weekInBlock===3 && !isFinalWeekOfCycle)};
+}
+
+/* =========================================================
+   PROGRAM GENERATOR
+========================================================= */
+function generateProgram(profile, progression, avoidIds){
+  // progression: {tier: number 1-3.x}; avoidIds: bài người dùng đã chủ động đổi/loại bỏ ở chu kỳ hiện tại
+  avoidIds = avoidIds || [];
+  var blocks = GOAL_BLOCKS[profile.goal] || GOAL_BLOCKS.general_health;
+  var split = splitForDays(profile.days);
+  var allowedEq = EQUIP_ACCESS[profile.equip];
+  var contraList = profile.limitations.filter(function(l){ return ['knee','shoulder','low_back','wrist','hypertension'].indexOf(l)!==-1; });
+  var officeFlags = profile.limitations.indexOf('tech_neck')!==-1 || profile.lifestyle==='office';
+
+  var weeks = [];
+  for(var w=1; w<=12; w++){
+    var blockIdx = Math.floor((w-1)/4); // 0,1,2
+    var weekInBlock = (w-1)%4; // 0..3
+    var mode = blocks[blockIdx];
+    var phaseInfo = PHASE_INFO[mode];
+    var isFinalWeekOfCycle = (w===12);
+    var vol = weekVolumeAdjust(phaseInfo, weekInBlock, isFinalWeekOfCycle);
+
+    var days = split.names.map(function(dayName, dIdx){
+      var slots = slotsForDayName(dayName);
+      var exercises = [];
+      var usedIds = [];
+      var rawTier = progression.tier + (blockIdx*0.15) + (weekInBlock*0.05); // tăng nhẹ dần trong chu kỳ
+      slots.forEach(function(slot, slotIdx){
+        var pattern = slot[0];
+        var tier = effectiveTier(rawTier, pattern, allowedEq);
+        var ex = pickExercise(pattern, mode, allowedEq, tier, contraList, w+dIdx+slotIdx, usedIds.concat(avoidIds));
+        if(ex){ exercises.push({ex:ex, sets:vol.sets, reps:phaseInfo.reps, tempo:phaseInfo.tempo, rest:phaseInfo.rest, rir:phaseInfo.rir}); usedIds.push(ex.id); }
+      });
+      // chèn bài hiệu chỉnh tư thế: ưu tiên bài nhắm đúng hạn chế người dùng khai báo (low_back/shoulder/tech_neck...),
+      // theo liều lượng NASM khuyến nghị (1–2 hiệp, giữ 10–20 giây)
+      if((officeFlags || profile.limitations.length) && (mode==='stab' || weekInBlock===0)){
+        var corr = correctiveExercise(allowedEq, contraList, w+dIdx, usedIds.concat(avoidIds), profile.limitations);
+        if(corr){ exercises.push({ex:corr, sets:'1–2', reps:'10–15 lần hoặc giữ 10–20 giây', tempo:'Chậm, có kiểm soát', rest:'30 giây', rir:'—', isCorrective:true}); usedIds.push(corr.id); }
+      }
+      // finisher chuyển hoá cho mục tiêu giảm mỡ / thi đấu ở khối cuối
+      if((profile.goal==='fat_loss' || profile.goal==='competition') && mode==='hyper' && weekInBlock!==3){
+        var fin = pickExercise('cardio','hyper',allowedEq,2,contraList,w+dIdx,usedIds.concat(avoidIds)) || pickExercise('cardio','stab',allowedEq,1,contraList,w+dIdx,usedIds.concat(avoidIds));
+        if(fin) exercises.push({ex:fin, sets:3, reps:'30–45 giây', tempo:'Nhịp độ cao', rest:'30 giây', rir:'—', isFinisher:true});
+      }
+      return {name:dayName, exercises:exercises};
+    });
+
+    weeks.push({
+      week:w, blockIdx:blockIdx, weekInBlock:weekInBlock, mode:mode,
+      phaseLabel: phaseInfo.label, phaseShort: phaseInfo.short,
+      isDeload: vol.isDeload, isTestWeek: isFinalWeekOfCycle,
+      note: vol.note, phaseNote: phaseInfo.note,
+      days: days
+    });
+  }
+  return { goal:profile.goal, blocks:blocks, weeks:weeks, generatedAt: Date.now() };
+}
+
+/* =========================================================
+   NUTRITION
+========================================================= */
+var ACTIVITY_MULT = {sedentary:1.2, light:1.375, moderate:1.55};
+function calcNutrition(profile){
+  var bmr = profile.gender==='male'
+    ? 10*profile.weight + 6.25*profile.height - 5*profile.age + 5
+    : 10*profile.weight + 6.25*profile.height - 5*profile.age - 161;
+  var mult = ACTIVITY_MULT[profile.activity] || 1.375;
+  var trainingBump = 1 + (parseInt(profile.days,10) * 0.02); // mỗi buổi tập/tuần cộng thêm ~2% TDEE
+  var tdee = bmr * mult * trainingBump;
+
+  var calorieFactor = {fat_loss:0.80, competition:0.78, muscle_gain:1.10, strength:1.05, general_health:1.0, functional_fitness:1.0}[profile.goal] || 1.0;
+  var rawTargetCal = tdee * calorieFactor;
+  // NASM khuyến cáo không nên xuống dưới 1200 kcal/ngày kể cả khi đang thâm hụt để giảm mỡ
+  var targetCal = Math.max(1200, rawTargetCal);
+  var cappedAtFloor = targetCal > rawTargetCal;
+
+  var proteinPerKg = {fat_loss:2.2, competition:2.2, muscle_gain:2.0, strength:2.0, general_health:1.6, functional_fitness:1.6}[profile.goal] || 1.6;
+  var proteinG = proteinPerKg * profile.weight;
+  var proteinCal = proteinG*4;
+
+  var fatCal = targetCal*0.25;
+  var fatG = fatCal/9;
+
+  var carbCal = Math.max(0, targetCal - proteinCal - fatCal);
+  var carbG = carbCal/4;
+
+  return {bmr:bmr, tdee:tdee, targetCal:targetCal, protein:proteinG, fat:fatG, carb:carbG, calorieFactor:calorieFactor, cappedAtFloor:cappedAtFloor};
+}
+
+/* =========================================================
+   STATE (localStorage)
+========================================================= */
+var STORE_KEY='p12_state_v1';
+function loadState(){
+  try{
+    var raw=localStorage.getItem(STORE_KEY);
+    if(!raw) return {profile:null, cycles:[], progression:{tier:1}};
+    return JSON.parse(raw);
+  }catch(e){ return {profile:null, cycles:[], progression:{tier:1}}; }
+}
+function saveState(s){ localStorage.setItem(STORE_KEY, JSON.stringify(s)); }
+var STATE = loadState();
+
+function currentCycle(){ return STATE.cycles.length ? STATE.cycles[STATE.cycles.length-1] : null; }
+
+function currentWeekNumber(cycle){
+  if(!cycle) return 1;
+  var elapsedDays = Math.floor((Date.now()-cycle.startedAt)/(1000*60*60*24));
+  var wk = Math.floor(elapsedDays/7)+1;
+  return Math.max(1, Math.min(12, wk));
+}
+
+/* =========================================================
+   RENDER: DASHBOARD
+========================================================= */
+function esc(s){ return (s+'').replace(/[&<>]/g, function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c];}); }
+
+function renderDashboard(){
+  var el=document.getElementById('dashContent');
+  if(!STATE.profile){
+    el.innerHTML =
+      '<div class="card empty-state">'+
+        '<h3>Chưa có hồ sơ tập luyện</h3>'+
+        '<p style="margin-bottom:16px">Bắt đầu bằng cách nhập hồ sơ để hệ thống thiết kế chu kỳ 12 tuần dành riêng cho bạn.</p>'+
+        '<button class="btn" onclick="P12.goto(\'profile\')">Tạo hồ sơ ngay</button>'+
+      '</div>';
+    return;
+  }
+  var p=STATE.profile, cyc=currentCycle();
+  var wk = cyc ? currentWeekNumber(cyc) : 1;
+  var weekData = cyc ? cyc.program.weeks[wk-1] : null;
+  var nutri = calcNutrition(p);
+
+  var html = healthNoticeHtml(p.limitations);
+  html += '<div class="grid grid-3" style="margin-bottom:16px">';
+  html += statCard('Mục tiêu', GOAL_LABEL[p.goal], p.experience==='beginner'?'Mới bắt đầu':(p.experience==='intermediate'?'Trung bình':'Nâng cao'));
+  html += statCard('Tuần hiện tại', cyc ? ('Tuần '+wk+' / 12') : '—', weekData ? weekData.phaseShort : 'Chưa có chu kỳ');
+  html += statCard('Năng lượng mục tiêu', Math.round(nutri.targetCal)+' kcal', 'Đạm '+Math.round(nutri.protein)+'g / ngày');
+  html += '</div>';
+
+  if(cyc && weekData){
+    cyc.logs = cyc.logs || {};
+    var adh = weekAdherence(cyc, wk);
+    var totalLogged = Object.keys(cyc.logs).length;
+    html += '<div class="card" style="margin-bottom:16px">';
+    html += '<div class="flex-between"><h3 style="font-size:16px">Tuần '+wk+' — '+esc(weekData.phaseShort)+(weekData.isDeload?' <span class="badge warn">Giảm tải</span>':'')+(weekData.isTestWeek?' <span class="badge accent">Tuần kiểm tra</span>':'')+'</h3><button class="btn small secondary" onclick="P12.goto(\'program\')">Xem chi tiết →</button></div>';
+    html += '<div class="row-gap" style="margin-top:8px">';
+    html += '<span class="badge'+(adh.done===adh.total?' ok':' accent')+'">Đã tập '+adh.done+'/'+adh.total+' buổi tuần này</span>';
+    html += '<span class="badge ok">Tổng '+totalLogged+' buổi đã ghi log trong chu kỳ</span>';
+    html += '</div>';
+    html += '<div style="margin-top:10px" class="callout">'+esc(weekData.note)+'</div>';
+    html += renderTimeline(cyc.program, wk);
+    html += '</div>';
+  }
+
+  html += '<div class="grid grid-2">';
+  html += '<div class="card"><h3 style="font-size:15px;margin-bottom:8px">Việc cần làm</h3><ul class="plain">';
+  if(!cyc) html += '<li>Tạo chu kỳ tập luyện đầu tiên trong mục Hồ sơ.</li>';
+  else{
+    var needCheckin = cyc.checkins.length < Math.floor((wk-1)/4);
+    if(wk%4===0 || needCheckin) html += '<li>Đã đến hạn <b>check-in 4 tuần</b> — cập nhật số liệu để nâng cấp bài tập.</li>';
+    var wkAdh = weekAdherence(cyc, wk);
+    if(wkAdh.done<wkAdh.total) html += '<li>Còn <b>'+(wkAdh.total-wkAdh.done)+' buổi</b> chưa ghi log trong tuần này.</li>';
+    html += '<li>Xem buổi tập hôm nay trong mục Chu kỳ tập luyện.</li>';
+    if(p.limitations.length) html += '<li>Bạn có ghi nhận hạn chế: '+p.limitations.map(limLabel).join(', ')+' — hệ thống đã loại các bài tập không phù hợp.</li>';
+  }
+  html += '</ul></div>';
+
+  html += '<div class="card"><h3 style="font-size:15px;margin-bottom:8px">Hồ sơ tóm tắt</h3><ul class="plain">';
+  html += '<li>Cân nặng: <span class="num">'+p.weight+' kg</span> · Chiều cao: <span class="num">'+p.height+' cm</span></li>';
+  html += '<li>Thiết bị: '+equipLabel(p.equip)+'</li>';
+  html += '<li>Buổi tập/tuần: <span class="num">'+p.days+'</span></li>';
+  html += '<li>Lối sống: '+lifestyleLabel(p.lifestyle)+'</li>';
+  html += '</ul><button class="btn ghost small" style="margin-top:8px" onclick="P12.goto(\'profile\')">Chỉnh sửa hồ sơ</button></div>';
+  html += '</div>';
+
+  el.innerHTML = html;
+}
+function statCard(label,val,sub){
+  return '<div class="card stat"><div class="label">'+esc(label)+'</div><div class="value">'+esc(val)+'</div><div class="sub">'+esc(sub)+'</div></div>';
+}
+function limLabel(v){
+  return {knee:'Đầu gối',shoulder:'Vai',low_back:'Lưng dưới',tech_neck:'Cổ vai gáy',wrist:'Cổ tay',hypertension:'Huyết áp cao',diabetes:'Tiểu đường'}[v]||v;
+}
+function equipLabel(v){
+  return {full_gym:'Phòng gym đầy đủ',home_basic:'Tạ đơn/kettlebell + dây',dumbbell_only:'Chỉ tạ đơn',bodyweight_only:'Chỉ bodyweight'}[v]||v;
+}
+function lifestyleLabel(v){
+  return {office:'Văn phòng / ít vận động',onfeet:'Đứng/di chuyển nhiều',active:'Vận động viên / lao động chân tay'}[v]||v;
+}
+
+function renderTimeline(program, currentWk){
+  var html='<div class="timeline">';
+  for(var b=0;b<3;b++){
+    html+='<div class="tl-block"><div class="tl-weeks">';
+    for(var i=0;i<4;i++){
+      var wnum=b*4+i+1;
+      var wd=program.weeks[wnum-1];
+      var cls='tl-week';
+      if(wnum<currentWk) cls+=' done'; else if(wnum===currentWk) cls+=' current';
+      if(wd.isDeload) cls+=' deload';
+      html+='<div class="'+cls+'" title="Tuần '+wnum+' — '+esc(wd.phaseShort)+'">'+wnum+'</div>';
+    }
+    html+='</div><div class="tl-label">'+esc(PHASE_INFO[program.blocks[b]].short)+'</div></div>';
+  }
+  html+='</div>';
+  return html;
+}
+
+/* =========================================================
+   RENDER: PROFILE FORM interactions
+========================================================= */
+document.querySelectorAll('#goalChips .chip').forEach(function(c){
+  c.addEventListener('click',function(){
+    document.querySelectorAll('#goalChips .chip').forEach(function(x){x.classList.remove('selected');x.setAttribute('aria-pressed','false');});
+    c.classList.add('selected'); c.setAttribute('aria-pressed','true');
+  });
+});
+document.querySelectorAll('#limChips .chip').forEach(function(c){
+  c.addEventListener('click',function(){
+    var on=c.classList.toggle('selected');
+    c.setAttribute('aria-pressed', on?'true':'false');
+  });
+});
+
+function fillProfileForm(p){
+  if(!p) return;
+  document.getElementById('f_name').value = p.name||'';
+  document.getElementById('f_lifestyle').value = p.lifestyle;
+  document.getElementById('f_age').value = p.age;
+  document.getElementById('f_gender').value = p.gender;
+  document.getElementById('f_height').value = p.height;
+  document.getElementById('f_weight').value = p.weight;
+  document.getElementById('f_exp').value = p.experience;
+  document.getElementById('f_days').value = p.days;
+  document.getElementById('f_equip').value = p.equip;
+  document.getElementById('f_activity').value = p.activity;
+  document.querySelectorAll('#goalChips .chip').forEach(function(c){ var on=c.getAttribute('data-val')===p.goal; c.classList.toggle('selected', on); c.setAttribute('aria-pressed', on?'true':'false'); });
+  document.querySelectorAll('#limChips .chip').forEach(function(c){ var on=p.limitations.indexOf(c.getAttribute('data-val'))!==-1; c.classList.toggle('selected', on); c.setAttribute('aria-pressed', on?'true':'false'); });
+}
+fillProfileForm(STATE.profile);
+
+function refreshMidCycleNotice(){
+  var cyc = currentCycle();
+  var midCycle = !!(cyc && currentWeekNumber(cyc) < 12);
+  document.getElementById('midCycleNotice').style.display = midCycle ? 'block' : 'none';
+  if(!midCycle) document.getElementById('f_forceNew').checked = false;
+}
+refreshMidCycleNotice();
+
+document.getElementById('profileForm').addEventListener('submit', function(ev){
+  ev.preventDefault();
+  var goalEl = document.querySelector('#goalChips .chip.selected');
+  if(!goalEl){ alert('Vui lòng chọn một mục tiêu chính.'); return; }
+  var lims = Array.prototype.map.call(document.querySelectorAll('#limChips .chip.selected'), function(c){return c.getAttribute('data-val');});
+  var profile = {
+    name: document.getElementById('f_name').value.trim(),
+    lifestyle: document.getElementById('f_lifestyle').value,
+    age: parseInt(document.getElementById('f_age').value,10)||30,
+    gender: document.getElementById('f_gender').value,
+    height: parseFloat(document.getElementById('f_height').value)||170,
+    weight: parseFloat(document.getElementById('f_weight').value)||65,
+    goal: goalEl.getAttribute('data-val'),
+    experience: document.getElementById('f_exp').value,
+    days: document.getElementById('f_days').value,
+    equip: document.getElementById('f_equip').value,
+    activity: document.getElementById('f_activity').value,
+    limitations: lims
+  };
+  var isNewCycle = !STATE.profile || !currentCycle();
+  var wasCycleComplete = currentCycle() && currentWeekNumber(currentCycle())>=12;
+  var forceNew = document.getElementById('f_forceNew').checked;
+  STATE.profile = profile;
+
+  if(STATE.cycles.length===0){
+    // chỉ đặt mốc khởi điểm theo kinh nghiệm ở lần tạo hồ sơ đầu tiên;
+    // các chu kỳ sau kế thừa tiến độ tích luỹ từ check-in thay vì reset về mức cơ bản.
+    STATE.progression = {tier: profile.experience==='beginner'?1:(profile.experience==='intermediate'?2:3)};
+  }
+
+  if(isNewCycle || wasCycleComplete || forceNew){
+    var program = generateProgram(profile, STATE.progression);
+    STATE.cycles.push({ startedAt: Date.now(), profileSnapshot: profile, program: program, checkins: [], logs: {}, avoidIds: [] });
+    saveState(STATE);
+    activeWeek = 1; activeDay = 0;
+    showPage('program');
+  } else {
+    // cập nhật hồ sơ nhưng giữ chu kỳ hiện tại
+    saveState(STATE);
+    showPage('dashboard');
+  }
+});
+
+/* =========================================================
+   RENDER: PROGRAM
+========================================================= */
+var activeWeek=1, activeDay=0;
+var programToastMsg = null;
+var HEALTH_NOTES = {
+  hypertension:'Bạn có khai báo huyết áp cao. Hệ thống đã ưu tiên biến thể ít áp lực hơn cho các bài tạ đòn nặng đứng (squat/deadlift/đẩy vai qua đầu — nhóm gây áp lực trong ổ bụng cao nhất theo nghiên cứu về nghiệm pháp Valsalva). Khi tập nên thở đều, tránh nín thở gắng sức tối đa, và hỏi bác sĩ về ngưỡng nhịp tim/huyết áp an toàn trước khi bắt đầu.',
+  diabetes:'Bạn có khai báo tiểu đường type 2. Nên kiểm tra đường huyết trước/sau buổi tập nếu đang dùng insulin hoặc thuốc hạ đường huyết, mang theo nguồn đường hấp thu nhanh phòng hạ đường huyết, và kiểm tra bàn chân thường xuyên nếu tập các bài có tác động cao (nhảy, plyometric).'
+};
+function healthNoticeHtml(limitations){
+  var notes = (limitations||[]).filter(function(l){ return HEALTH_NOTES[l]; }).map(function(l){ return HEALTH_NOTES[l]; });
+  if(!notes.length) return '';
+  return '<div class="callout warn" style="margin-bottom:16px">'+notes.map(esc).join(' ')+'</div>';
+}
+/* =========================================================
+   GHI LOG BUỔI TẬP
+========================================================= */
+function logKey(week, dayIdx){ return week+'_'+dayIdx; }
+function repsToMidpoint(repsStr){
+  if(!repsStr) return null;
+  var m = (''+repsStr).match(/(\d+)\s*[–-]\s*(\d+)/);
+  if(m) return (parseInt(m[1],10)+parseInt(m[2],10))/2;
+  var single = (''+repsStr).match(/^\s*(\d+)\s*$/);
+  if(single) return parseInt(single[1],10);
+  return null;
+}
+function computeSessionVolume(entries, dayExercises){
+  var total = 0;
+  entries.forEach(function(en){
+    if(!en.weight) return;
+    var item = dayExercises.filter(function(it){ return it.ex.id===en.exId; })[0];
+    if(!item) return;
+    var mid = repsToMidpoint(item.reps);
+    if(mid===null) return;
+    var setsNum = parseFloat(item.sets);
+    if(isNaN(setsNum)) return;
+    total += en.weight * setsNum * mid;
+  });
+  return total;
+}
+function formatDateVi(ts){
+  var d = new Date(ts);
+  return d.toLocaleDateString('vi-VN') + ' ' + d.toLocaleTimeString('vi-VN',{hour:'2-digit',minute:'2-digit'});
+}
+function weekAdherence(cyc, wk){
+  var weekData = cyc.program.weeks[wk-1];
+  var total = weekData.days.length, done=0;
+  for(var i=0;i<total;i++){ if(cyc.logs && cyc.logs[logKey(wk,i)]) done++; }
+  return {done:done, total:total};
+}
+
+/* =========================================================
+   ĐỔI BÀI TẬP — hiện tối đa 3 lựa chọn thay thế rõ ràng để tự chọn,
+   áp dụng cho toàn bộ tuần còn lại trong chu kỳ
+========================================================= */
+function getSwapAlternatives(item, week, allowedEq, contraList, avoidIds, count){
+  avoidIds = avoidIds || [];
+  var pool;
+  if(item.isCorrective){
+    pool = EX.filter(function(e){ return e.isCorrective && e.eq.some(function(x){return allowedEq.indexOf(x)!==-1;}) && !e.contra.some(function(c){return contraList.indexOf(c)!==-1;}); });
+  } else if(item.isFinisher){
+    pool = EX.filter(function(e){ return e.pattern==='cardio' && e.eq.some(function(x){return allowedEq.indexOf(x)!==-1;}) && !e.contra.some(function(c){return contraList.indexOf(c)!==-1;}); });
+  } else {
+    pool = EX.filter(function(e){ return e.pattern===item.ex.pattern && e.modes.indexOf(week.mode)!==-1 && e.eq.some(function(x){return allowedEq.indexOf(x)!==-1;}) && !e.contra.some(function(c){return contraList.indexOf(c)!==-1;}); });
+    if(pool.length<2){
+      pool = EX.filter(function(e){ return e.pattern===item.ex.pattern && e.eq.some(function(x){return allowedEq.indexOf(x)!==-1;}) && !e.contra.some(function(c){return contraList.indexOf(c)!==-1;}); });
+    }
+  }
+  pool = pool.filter(function(e){ return e.id!==item.ex.id; });
+  var fresh = pool.filter(function(e){ return avoidIds.indexOf(e.id)===-1; });
+  pool = fresh.length ? fresh : pool;
+  pool.sort(function(a,b){ return Math.abs(a.tier-item.ex.tier)-Math.abs(b.tier-item.ex.tier); });
+  return pool.slice(0, count);
+}
+function swapExerciseTo(cyc, oldExId, newExId){
+  var newEx = EX.filter(function(e){ return e.id===newExId; })[0];
+  if(!newEx) return {n:0, name:''};
+  cyc.avoidIds = cyc.avoidIds || [];
+  if(cyc.avoidIds.indexOf(oldExId)===-1) cyc.avoidIds.push(oldExId);
+  var n = 0;
+  cyc.program.weeks.forEach(function(w){
+    w.days.forEach(function(d){
+      d.exercises.forEach(function(item){
+        if(item.ex.id===oldExId){ item.ex = newEx; n++; }
+      });
+    });
+  });
+  return {n:n, name:newEx.name};
+}
+
+/* =========================================================
+   KHỞI ĐỘNG (warm-up) — theo nhóm vận động chính của buổi
+========================================================= */
+var WARMUP_POOL = {
+  general:['5 phút cardio nhẹ (đi bộ nhanh/đạp xe/nhảy dây chậm) để tăng nhiệt độ cơ thể','Lăn foam toàn thân 1–2 phút tại vùng cảm thấy căng cứng'],
+  lower:['Xoay hông, đá chân trước-sau mỗi bên 10 lần (leg swing)','Squat không tải 10 lần chậm để làm nóng khớp gối-hông','Lunge đi bộ không tải 8 bước mỗi bên'],
+  upper:['Xoay vai, xoay tay 10 lần mỗi hướng','Band Pull-apart nhẹ 15 lần để kích hoạt lưng trên','Push-up chống gối 8 lần không tải để làm nóng vai-ngực']
+};
+var LOWER_PATTERNS = ['squat','hinge','lunge','balance'];
+var UPPER_PATTERNS = ['push_h','push_v','pull_h','pull_v'];
+function warmupForDay(day){
+  var patterns = day.exercises.map(function(it){ return it.ex.pattern; });
+  var hasLower = patterns.some(function(p){ return LOWER_PATTERNS.indexOf(p)!==-1; });
+  var hasUpper = patterns.some(function(p){ return UPPER_PATTERNS.indexOf(p)!==-1; });
+  var items = WARMUP_POOL.general.slice();
+  if(hasLower) items = items.concat(WARMUP_POOL.lower);
+  if(hasUpper) items = items.concat(WARMUP_POOL.upper);
+  return items;
+}
+
+function renderProgram(){
+  var el=document.getElementById('programContent');
+  var cyc=currentCycle();
+  if(!STATE.profile || !cyc){
+    el.innerHTML='<div class="card empty-state"><h3>Chưa có chu kỳ nào</h3><p style="margin-bottom:16px">Hoàn thành hồ sơ để hệ thống tạo chu kỳ 12 tuần đầu tiên.</p><button class="btn" onclick="P12.goto(\'profile\')">Đi đến Hồ sơ</button></div>';
+    return;
+  }
+  cyc.logs = cyc.logs || {};
+  cyc.avoidIds = cyc.avoidIds || [];
+  document.getElementById('programTitle').textContent = 'Chu kỳ #'+STATE.cycles.length+' — '+GOAL_LABEL[cyc.profileSnapshot.goal];
+  var wk = Math.min(Math.max(activeWeek,1),12);
+  var weekData = cyc.program.weeks[wk-1];
+
+  var html = '';
+  if(programToastMsg){
+    html += '<div class="callout'+(programToastMsg.type==='ok'?' calm':' warn')+'" style="margin-bottom:16px">'+esc(programToastMsg.text)+'</div>';
+    programToastMsg = null;
+  }
+  html += healthNoticeHtml(cyc.profileSnapshot.limitations);
+
+  html += '<div class="card" style="margin-bottom:16px">';
+  html += renderTimeline(cyc.program, currentWeekNumber(cyc));
+  html += '<div class="row-gap" style="margin-top:14px;flex-wrap:wrap">';
+  for(var w=1;w<=12;w++){
+    html += '<button type="button" class="day-tab'+(w===wk?' active':'')+'" onclick="P12.setWeek('+w+')">Tuần '+w+'</button>';
+  }
+  html += '</div></div>';
+
+  var adherence = weekAdherence(cyc, wk);
+  html += '<div class="card" style="margin-bottom:16px">';
+  html += '<div class="flex-between"><div class="eyebrow" style="cursor:pointer" onclick="P12.jumpToTerm(\'OPT Model\')" title="Xem giải thích mô hình OPT trong Thuật ngữ">'+esc(weekData.phaseLabel)+' ℹ</div><div class="badge'+(adherence.done===adherence.total?' ok':' accent')+'">Đã tập '+adherence.done+'/'+adherence.total+' buổi tuần này</div></div>';
+  html += '<div style="margin-top:8px" class="callout'+(weekData.isDeload?' warn':'')+'">'+esc(weekData.note)+' — '+esc(weekData.phaseNote)+'</div>';
+  html += '</div>';
+
+  html += '<div class="card">';
+  html += '<div class="day-tabs">';
+  weekData.days.forEach(function(d,i){
+    var doneMark = cyc.logs[logKey(wk,i)] ? ' ✓' : '';
+    html += '<button type="button" class="day-tab'+(i===activeDay?' active':'')+'" onclick="P12.setDay('+i+')">Ngày '+(i+1)+' · '+esc(d.name)+doneMark+'</button>';
+  });
+  html += '</div>';
+  var day = weekData.days[Math.min(activeDay, weekData.days.length-1)];
+
+  html += '<div class="callout calm" style="margin-bottom:14px"><b style="color:var(--text)">Khởi động (~5–7 phút):</b> '+warmupForDay(day).map(esc).join(' · ')+'</div>';
+
+  var swapAllowedEq = EQUIP_ACCESS[cyc.profileSnapshot.equip];
+  var swapContraList = cyc.profileSnapshot.limitations.filter(function(l){ return ['knee','shoulder','low_back','wrist','hypertension'].indexOf(l)!==-1; });
+
+  html += '<div class="scrollwrap"><table class="ex-table"><thead><tr><th>Bài tập</th><th>Hiệp</th><th>Số lần</th><th>Tempo</th><th style="cursor:pointer" onclick="P12.jumpToTerm(\'RIR\')" title="Xem giải thích RIR trong Thuật ngữ">RIR ℹ</th><th>Nghỉ</th><th>Đổi bài</th></tr></thead><tbody>';
+  day.exercises.forEach(function(item){
+    var tags='';
+    if(item.isCorrective) tags+='<span class="tag corr">Hiệu chỉnh tư thế</span>';
+    if(item.isFinisher) tags+='<span class="tag">Chuyển hoá</span>';
+    var alts = getSwapAlternatives(item, weekData, swapAllowedEq, swapContraList, cyc.avoidIds, 3);
+    var swapCell = alts.length
+      ? '<select class="js-swap-select" data-exid="'+esc(item.ex.id)+'">'+
+          '<option value="">Chọn bài khác…</option>'+
+          alts.map(function(a){ return '<option value="'+esc(a.id)+'">'+esc(a.name)+'</option>'; }).join('')+
+        '</select>'
+      : '<span style="color:var(--text-faint);font-size:11px">Không có lựa chọn khác</span>';
+    html += '<tr><td><div class="ex-name">'+esc(item.ex.name)+'</div>'+tags+'<div class="ex-cue">'+esc(item.ex.cue)+'</div></td>'+
+      '<td class="num">'+item.sets+'</td><td class="num">'+esc(item.reps)+'</td><td class="num">'+esc(item.tempo)+'</td><td class="num">'+esc(item.rir||'—')+'</td><td class="num">'+esc(item.rest)+'</td>'+
+      '<td>'+swapCell+'</td></tr>';
+  });
+  html += '</tbody></table></div>';
+
+  var lk = logKey(wk, activeDay);
+  var existingLog = cyc.logs[lk];
+  html += '<div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border)">';
+  if(existingLog){
+    html += '<div class="flex-between"><div><h3 style="font-size:14.5px">✓ Đã ghi log buổi này</h3><p style="color:var(--text-muted);font-size:12px;margin-top:4px">Hoàn thành lúc '+formatDateVi(existingLog.completedAt)+(existingLog.totalVolume>0?' · Tổng khối lượng ước tính: '+Math.round(existingLog.totalVolume)+' kg':'')+'</p></div><button type="button" class="btn secondary small" onclick="P12.reopenLog()">Ghi lại buổi này</button></div>';
+  } else {
+    html += '<h3 style="font-size:14.5px;margin-bottom:8px">Ghi log buổi tập</h3>';
+    html += '<div class="scrollwrap"><table class="ex-table"><tbody>';
+    day.exercises.forEach(function(item){
+      html += '<tr><td style="width:60%">'+esc(item.ex.name)+'</td><td><input type="number" step="0.5" min="0" class="log-weight-input" data-exid="'+esc(item.ex.id)+'" placeholder="kg (không bắt buộc)" style="width:160px"></td></tr>';
+    });
+    html += '</tbody></table></div>';
+    html += '<button type="button" class="btn" style="margin-top:12px" onclick="P12.completeSession()">Đánh dấu hoàn thành buổi tập</button>';
+  }
+  html += '</div>';
+
+  html += '</div>';
+
+  el.innerHTML = html;
+}
+window.P12 = window.P12 || {};
+P12.goto = showPage;
+P12.setWeek = function(w){ activeWeek=w; activeDay=0; renderProgram(); };
+P12.setDay = function(i){ activeDay=i; renderProgram(); };
+P12.setMealDay = function(i){ mealPlanDay=i; renderNutrition(); };
+P12.shuffleMealPlan = function(){ mealPlanSeed++; renderNutrition(); };
+P12.completeSession = function(){
+  var cyc = currentCycle(); if(!cyc) return;
+  var wk = Math.min(Math.max(activeWeek,1),12);
+  var weekData = cyc.program.weeks[wk-1];
+  var day = weekData.days[Math.min(activeDay, weekData.days.length-1)];
+  var entries = Array.prototype.map.call(document.querySelectorAll('.log-weight-input'), function(inp){
+    var w = parseFloat(inp.value);
+    return {exId: inp.getAttribute('data-exid'), weight: isNaN(w)?null:w};
+  });
+  var totalVolume = computeSessionVolume(entries, day.exercises);
+  cyc.logs = cyc.logs || {};
+  cyc.logs[logKey(wk,activeDay)] = {completedAt: Date.now(), entries: entries, totalVolume: totalVolume, week: wk};
+  saveState(STATE);
+  renderProgram();
+};
+P12.reopenLog = function(){
+  var cyc = currentCycle(); if(!cyc) return;
+  var wk = Math.min(Math.max(activeWeek,1),12);
+  delete cyc.logs[logKey(wk,activeDay)];
+  saveState(STATE);
+  renderProgram();
+};
+P12.swapExercise = function(oldExId, newExId){
+  var cyc = currentCycle(); if(!cyc) return;
+  if(!newExId) return;
+  try{
+    var result = swapExerciseTo(cyc, oldExId, newExId);
+    saveState(STATE);
+    programToastMsg = result.n>0
+      ? {type:'ok', text:'✓ Đã đổi sang "'+result.name+'" cho '+result.n+' buổi trong chu kỳ (áp dụng từ tuần này trở đi).'}
+      : {type:'warn', text:'Không đổi được bài — vui lòng thử lại.'};
+  } catch(e){
+    programToastMsg = {type:'warn', text:'Có lỗi khi đổi bài, vui lòng thử lại. ('+e.message+')'};
+  }
+  renderProgram();
+};
+P12.jumpToTerm = function(termEn){
+  showPage('glossary');
+  document.getElementById('glossarySearch').value = termEn;
+  expandedTerms.add(termEn);
+  renderGlossary(termEn);
+};
+
+/* =========================================================
+   RENDER: CHECK-IN
+========================================================= */
+/* =========================================================
+   BIỂU ĐỒ TIẾN ĐỘ — SVG line chart nhẹ, 1 chuỗi số liệu/biểu đồ
+========================================================= */
+function sparklineSVG(points, color, unitSuffix){
+  // points: [{x:label, y:number}] — cần ít nhất 2 điểm
+  var W=520, H=140, padL=8, padR=8, padT=18, padB=24;
+  var ys = points.map(function(p){return p.y;});
+  var minY = Math.min.apply(null, ys), maxY = Math.max.apply(null, ys);
+  if(minY===maxY){ minY -= 1; maxY += 1; }
+  var rangeY = maxY - minY;
+  var stepX = (W-padL-padR) / (points.length-1);
+  function px(i){ return padL + i*stepX; }
+  function py(v){ return padT + (1 - (v-minY)/rangeY) * (H-padT-padB); }
+  var pathD = points.map(function(p,i){ return (i===0?'M':'L')+px(i).toFixed(1)+','+py(p.y).toFixed(1); }).join(' ');
+  var svg = '<svg viewBox="0 0 '+W+' '+H+'" width="100%" height="'+H+'" preserveAspectRatio="none" style="overflow:visible">';
+  svg += '<line x1="'+padL+'" y1="'+(H-padB)+'" x2="'+(W-padR)+'" y2="'+(H-padB)+'" stroke="var(--border)" stroke-width="1"/>';
+  svg += '<path d="'+pathD+'" fill="none" stroke="'+color+'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>';
+  points.forEach(function(p,i){
+    var cx=px(i).toFixed(1), cy=py(p.y).toFixed(1);
+    svg += '<circle cx="'+cx+'" cy="'+cy+'" r="9" fill="transparent"><title>'+esc(p.x)+': '+esc(p.y)+unitSuffix+'</title></circle>';
+    svg += '<circle cx="'+cx+'" cy="'+cy+'" r="3.5" fill="'+color+'"/>';
+    if(i===0 || i===points.length-1){
+      svg += '<text x="'+cx+'" y="'+(parseFloat(cy)-10)+'" font-size="10" font-family="var(--font-mono)" fill="var(--text-muted)" text-anchor="'+(i===0?'start':'end')+'">'+esc(p.y)+unitSuffix+'</text>';
+    }
+    svg += '<text x="'+cx+'" y="'+(H-padB+14)+'" font-size="9" font-family="var(--font-mono)" fill="var(--text-faint)" text-anchor="middle">'+esc(p.x)+'</text>';
+  });
+  svg += '</svg>';
+  return svg;
+}
+function renderProgressCharts(cyc){
+  var weightPoints = [];
+  var baseWeight = cyc.profileSnapshot.weight;
+  weightPoints.push({x:'Tuần 1', y:baseWeight});
+  cyc.checkins.forEach(function(c){ weightPoints.push({x:'Tuần '+c.week, y:c.weight}); });
+
+  var logsArr = Object.keys(cyc.logs||{}).map(function(k){ return cyc.logs[k]; }).filter(function(l){ return l.totalVolume>0; });
+  logsArr.sort(function(a,b){ return a.completedAt-b.completedAt; });
+  var volumePoints = logsArr.map(function(l,i){ return {x:'Buổi '+(i+1), y:Math.round(l.totalVolume)}; });
+
+  var html = '<div class="grid grid-2">';
+  html += '<div class="card"><h3 style="font-size:14.5px;margin-bottom:4px">Cân nặng theo check-in</h3>';
+  if(weightPoints.length<2){
+    html += '<p style="color:var(--text-muted);font-size:12.5px;margin-top:10px">Cần thêm ít nhất 1 lần check-in để vẽ biểu đồ xu hướng.</p>';
+  } else {
+    html += sparklineSVG(weightPoints, 'var(--accent)', ' kg');
+  }
+  html += '</div>';
+  html += '<div class="card"><h3 style="font-size:14.5px;margin-bottom:4px">Tổng khối lượng mỗi buổi đã log</h3>';
+  if(volumePoints.length<2){
+    html += '<p style="color:var(--text-muted);font-size:12.5px;margin-top:10px">Cần ghi log kèm mức tạ ở ít nhất 2 buổi tập để vẽ biểu đồ xu hướng.</p>';
+  } else {
+    html += sparklineSVG(volumePoints, 'var(--accent-2)', ' kg');
+  }
+  html += '</div></div>';
+  return html;
+}
+function renderCheckin(){
+  var el=document.getElementById('checkinContent');
+  var cyc=currentCycle();
+  if(!STATE.profile || !cyc){
+    el.innerHTML='<div class="card empty-state"><h3>Chưa có chu kỳ để check-in</h3></div>';
+    return;
+  }
+  var wk = currentWeekNumber(cyc);
+  var blockJustFinished = Math.floor((wk-1)/4); // block index đang chạy
+  var checkinsDone = cyc.checkins.length;
+  var canCheckin = wk>=4 && checkinsDone < Math.min(3, Math.floor(wk/4));
+
+  var html = '<div class="grid grid-2">';
+  html += '<div class="card">';
+  html += '<h3 style="font-size:15px;margin-bottom:10px">Nhập check-in mới</h3>';
+  if(!canCheckin){
+    html += '<div class="callout calm">Check-in mở lại vào cuối mỗi khối 4 tuần (tuần 4, 8, 12). Hiện bạn đang ở tuần '+wk+'.</div>';
+  } else {
+    html += '<form id="checkinForm" class="form-grid" style="margin-top:4px">'+
+      '<label class="field">Cân nặng hiện tại (kg)<input type="number" step="0.1" id="ci_weight" value="'+STATE.profile.weight+'"></label>'+
+      '<label class="field">Mức độ hoàn thành buổi tập<select id="ci_feedback">'+
+        '<option value="easy">Dễ hơn dự kiến — sẵn sàng tăng độ khó</option>'+
+        '<option value="ok" selected>Vừa sức</option>'+
+        '<option value="hard">Khó, chưa hoàn thành hết</option>'+
+      '</select></label>'+
+      '<label class="field" style="grid-column:1/-1">Ghi chú (không bắt buộc)<textarea id="ci_note" rows="2" placeholder="VD: đầu gối hơi khó chịu khi squat sâu"></textarea></label>'+
+      '<div style="grid-column:1/-1"><button type="submit" class="btn">Lưu check-in &amp; nâng cấp bài tập</button></div>'+
+    '</form>';
+  }
+  html += '</div>';
+
+  html += '<div class="card"><h3 style="font-size:15px;margin-bottom:10px">Lịch sử check-in</h3>';
+  if(!cyc.checkins.length){
+    html += '<p style="color:var(--text-muted);font-size:13px">Chưa có dữ liệu check-in.</p>';
+  } else {
+    html += '<div class="hist-row head"><div>Tuần</div><div>Cân nặng</div><div>Đánh giá</div><div>Ghi chú</div></div>';
+    cyc.checkins.forEach(function(c){
+      var fb = {easy:'<span class="badge ok">Dễ</span>',ok:'<span class="badge accent">Vừa sức</span>',hard:'<span class="badge warn">Khó</span>'}[c.feedback];
+      html += '<div class="hist-row"><div class="num">'+c.week+'</div><div class="num">'+c.weight+' kg</div><div>'+fb+'</div><div style="color:var(--text-muted)">'+esc(c.note||'—')+'</div></div>';
+    });
+  }
+  html += '</div></div>';
+
+  html += '<div class="page-head" style="margin:24px 0 14px"><h3 style="font-size:16px">Biểu đồ tiến độ</h3><div class="desc" style="margin-top:4px">Di chuột vào từng điểm để xem giá trị chính xác.</div></div>';
+  html += renderProgressCharts(cyc);
+
+  if(wk>=12){
+    html += '<div class="card" style="margin-top:16px"><div class="flex-between"><div><h3 style="font-size:15px">Hoàn thành chu kỳ 12 tuần!</h3><p style="color:var(--text-muted);font-size:13px;margin-top:4px">Cập nhật hồ sơ với số liệu mới nhất để hệ thống tạo chu kỳ tiếp theo với bài tập nâng cấp hơn.</p></div><button class="btn" onclick="P12.goto(\'profile\')">Bắt đầu chu kỳ mới →</button></div></div>';
+  }
+
+  el.innerHTML = html;
+  var form=document.getElementById('checkinForm');
+  if(form){
+    form.addEventListener('submit', function(ev){
+      ev.preventDefault();
+      var weight=parseFloat(document.getElementById('ci_weight').value)||STATE.profile.weight;
+      var feedback=document.getElementById('ci_feedback').value;
+      var note=document.getElementById('ci_note').value.trim();
+      cyc.checkins.push({week:wk, weight:weight, feedback:feedback, note:note, at:Date.now()});
+      STATE.profile.weight = weight;
+      var delta = feedback==='easy'?0.34 : (feedback==='hard'?-0.34:0);
+      STATE.progression.tier = Math.max(1, Math.min(3.99, (STATE.progression.tier||1)+delta));
+      // tái tạo lại các tuần còn lại của chu kỳ với tier mới (giữ nguyên tuần đã qua),
+      // vẫn tôn trọng các bài đã bị đổi/loại bỏ thủ công trước đó (cyc.avoidIds)
+      var newProgram = generateProgram(STATE.profile, STATE.progression, cyc.avoidIds);
+      for(var i=wk;i<12;i++){ cyc.program.weeks[i]=newProgram.weeks[i]; }
+      saveState(STATE);
+      renderCheckin();
+      renderDashboard();
+    });
+  }
+}
+
+/* =========================================================
+   RENDER: NUTRITION
+========================================================= */
+/* =========================================================
+   THỰC ĐƠN TUẦN — món ăn Việt Nam dễ chuẩn bị
+   Mỗi combo: kcal/protein/carb/fat ước tính cho 1 khẩu phần chuẩn;
+   hệ thống co giãn khẩu phần (scale) để khớp mục tiêu calo từng bữa.
+========================================================= */
+var FOOD_COMBOS = [
+  // BỮA SÁNG
+  {id:'bf1',slot:'breakfast',name:'Trứng ốp la + bánh mì nguyên cám',items:'2 quả trứng ốp la, 1 lát bánh mì nguyên cám (60g), rau sống, cà chua',kcal:380,protein:22,carb:34,fat:16},
+  {id:'bf2',slot:'breakfast',name:'Yến mạch sữa tươi + chuối + óc chó',items:'50g yến mạch nấu sữa tươi không đường, 1 quả chuối, 5 hạt óc chó',kcal:420,protein:16,carb:60,fat:14},
+  {id:'bf3',slot:'breakfast',name:'Phở gà',items:'1 bát phở gà (bánh phở vừa, nhiều ức gà xé)',kcal:450,protein:30,carb:55,fat:10},
+  {id:'bf4',slot:'breakfast',name:'Sữa chua Hy Lạp + granola + mật ong',items:'200g sữa chua Hy Lạp không đường, 30g granola, 1 thìa mật ong',kcal:350,protein:20,carb:45,fat:9},
+  {id:'bf5',slot:'breakfast',name:'Xôi đậu xanh + trứng luộc',items:'1 gói xôi đậu xanh nhỏ (~150g), 1 quả trứng gà luộc',kcal:430,protein:17,carb:60,fat:13},
+  {id:'bf6',slot:'breakfast',name:'Bánh mì trứng ốp + chả nạc',items:'1 ổ bánh mì nhỏ, 1 trứng ốp la, 30g chả lụa nạc, dưa leo',kcal:460,protein:22,carb:50,fat:18},
+  {id:'bf7',slot:'breakfast',name:'Cháo yến mạch thịt bằm',items:'50g yến mạch, 60g thịt heo nạc bằm, rau cải',kcal:380,protein:22,carb:45,fat:10},
+  {id:'bf8',slot:'breakfast',name:'Bánh cuốn chả lụa',items:'~200g bánh cuốn, 40g chả lụa, nước mắm chua ngọt',kcal:400,protein:18,carb:55,fat:12},
+  // BỮA TRƯA
+  {id:'lu1',slot:'lunch',name:'Cơm gạo lứt + ức gà áp chảo + rau luộc',items:'1 chén cơm gạo lứt (150g), 150g ức gà áp chảo, rau luộc, canh rau',kcal:520,protein:45,carb:50,fat:10},
+  {id:'lu2',slot:'lunch',name:'Cơm trắng + cá kho tộ + rau muống xào',items:'1 chén cơm trắng, 150g cá kho tộ, rau muống xào tỏi',kcal:560,protein:38,carb:55,fat:18},
+  {id:'lu3',slot:'lunch',name:'Bún thịt nướng',items:'1 tô bún thịt nướng vừa, rau sống, nước mắm chua ngọt',kcal:600,protein:30,carb:70,fat:20},
+  {id:'lu4',slot:'lunch',name:'Cơm gạo lứt + bò xào rau củ',items:'1 chén cơm gạo lứt, 150g thịt bò xào, rau củ thập cẩm',kcal:580,protein:42,carb:50,fat:20},
+  {id:'lu5',slot:'lunch',name:'Cơm trắng + đậu hũ sốt cà (chay)',items:'1 chén cơm trắng, 200g đậu hũ sốt cà chua, rau xào',kcal:480,protein:22,carb:65,fat:15},
+  {id:'lu6',slot:'lunch',name:'Cơm gạo lứt + tôm rim + canh bí đỏ',items:'1 chén cơm gạo lứt, 150g tôm rim, canh bí đỏ',kcal:500,protein:38,carb:48,fat:12},
+  {id:'lu7',slot:'lunch',name:'Bánh canh giò heo nạc',items:'1 tô bánh canh, 100g giò heo nạc, rau',kcal:550,protein:28,carb:65,fat:18},
+  {id:'lu8',slot:'lunch',name:'Cơm gạo lứt + ức gà + salad dầu ô liu',items:'1 chén cơm gạo lứt, 150g ức gà, salad rau trộn dầu ô liu',kcal:540,protein:45,carb:42,fat:18},
+  // BỮA TỐI
+  {id:'di1',slot:'dinner',name:'Cá hồi áp chảo + salad + khoai lang',items:'120g cá hồi áp chảo, salad rau trộn dầu ô liu, 100g khoai lang hấp',kcal:480,protein:32,carb:35,fat:22},
+  {id:'di2',slot:'dinner',name:'Canh chua cá lóc + cơm gạo lứt',items:'1 tô canh chua cá lóc, nửa chén cơm gạo lứt, rau',kcal:420,protein:30,carb:45,fat:10},
+  {id:'di3',slot:'dinner',name:'Ức gà luộc xé + rau củ hấp',items:'150g ức gà luộc xé, rau củ hấp, nửa chén cơm',kcal:440,protein:42,carb:35,fat:10},
+  {id:'di4',slot:'dinner',name:'Đậu hũ hấp + rau luộc (chay)',items:'200g đậu hũ hấp, rau luộc, nửa chén cơm gạo lứt',kcal:380,protein:18,carb:50,fat:10},
+  {id:'di5',slot:'dinner',name:'Trứng chiên rau củ + salad',items:'2 quả trứng chiên rau củ, salad rau trộn dầu ô liu',kcal:350,protein:20,carb:20,fat:20},
+  {id:'di6',slot:'dinner',name:'Canh rau ngót thịt bằm + cơm gạo lứt',items:'canh rau ngót thịt bằm, nửa chén cơm gạo lứt',kcal:400,protein:25,carb:42,fat:12},
+  {id:'di7',slot:'dinner',name:'Tôm hấp sả + rau luộc + khoai lang',items:'150g tôm hấp sả, rau luộc, 100g khoai lang',kcal:410,protein:35,carb:35,fat:10},
+  // BỮA PHỤ
+  {id:'sn1',slot:'snack',name:'Sữa chua không đường + hạnh nhân',items:'1 hũ sữa chua không đường, 10 hạt hạnh nhân',kcal:180,protein:10,carb:12,fat:10},
+  {id:'sn2',slot:'snack',name:'Chuối + bơ đậu phộng',items:'1 quả chuối, 1 thìa bơ đậu phộng',kcal:220,protein:6,carb:28,fat:10},
+  {id:'sn3',slot:'snack',name:'Ức gà xé + dưa leo',items:'50g ức gà xé sẵn, dưa leo',kcal:90,protein:15,carb:3,fat:2},
+  {id:'sn4',slot:'snack',name:'Trứng luộc',items:'2 quả trứng luộc',kcal:140,protein:12,carb:1,fat:10},
+  {id:'sn5',slot:'snack',name:'Sữa đậu nành + hạt điều',items:'1 ly sữa đậu nành không đường, vài hạt điều',kcal:200,protein:10,carb:15,fat:11},
+  {id:'sn6',slot:'snack',name:'Táo + phô mai que',items:'1 quả táo, 1 que phô mai',kcal:180,protein:8,carb:20,fat:7}
+];
+var MEAL_SLOTS = [
+  {key:'breakfast', label:'Bữa sáng', ratio:0.25},
+  {key:'lunch', label:'Bữa trưa', ratio:0.35},
+  {key:'dinner', label:'Bữa tối', ratio:0.30},
+  {key:'snack', label:'Bữa phụ', ratio:0.10}
+];
+var DAY_NAMES_VI = ['Thứ 2','Thứ 3','Thứ 4','Thứ 5','Thứ 6','Thứ 7','Chủ nhật'];
+
+function buildWeeklyMealPlan(targets, seed){
+  var days = [];
+  for(var d=0; d<7; d++){
+    var slots = MEAL_SLOTS.map(function(slotDef){
+      var pool = FOOD_COMBOS.filter(function(f){ return f.slot===slotDef.key; });
+      var combo = pool[(d+seed) % pool.length];
+      var slotTargetKcal = targets.targetCal * slotDef.ratio;
+      var scale = Math.max(0.75, Math.min(1.35, slotTargetKcal / combo.kcal));
+      return {
+        slotKey: slotDef.key, slotLabel: slotDef.label, combo: combo, scale: scale,
+        kcal: combo.kcal*scale, protein: combo.protein*scale, carb: combo.carb*scale, fat: combo.fat*scale
+      };
+    });
+    var totals = slots.reduce(function(acc,s){ acc.kcal+=s.kcal; acc.protein+=s.protein; acc.carb+=s.carb; acc.fat+=s.fat; return acc; }, {kcal:0,protein:0,carb:0,fat:0});
+    days.push({dayName: DAY_NAMES_VI[d], slots: slots, totals: totals});
+  }
+  return days;
+}
+
+var mealPlanDay = 0, mealPlanSeed = 0;
+
+function renderMealPlan(targets){
+  var plan = buildWeeklyMealPlan(targets, mealPlanSeed);
+  var day = plan[mealPlanDay];
+  var html = '<div class="card" style="margin-top:16px">';
+  html += '<div class="flex-between"><h3 style="font-size:15px">Thực đơn tuần — món Việt dễ chuẩn bị</h3><button type="button" class="btn secondary small" onclick="P12.shuffleMealPlan()">Làm mới thực đơn ↻</button></div>';
+  html += '<div class="row-gap" style="margin-top:12px">';
+  DAY_NAMES_VI.forEach(function(dn,i){
+    html += '<button type="button" class="day-tab'+(i===mealPlanDay?' active':'')+'" onclick="P12.setMealDay('+i+')">'+dn+'</button>';
+  });
+  html += '</div>';
+
+  html += '<div style="margin-top:14px">';
+  day.slots.forEach(function(s){
+    var scaleNote = Math.abs(s.scale-1)>0.08 ? ('Khẩu phần ×'+s.scale.toFixed(2)+' so với chuẩn') : 'Khẩu phần chuẩn';
+    html += '<div class="meal-slot">'+
+      '<div class="meal-slot-label">'+esc(s.slotLabel)+'</div>'+
+      '<div><div class="meal-slot-name">'+esc(s.combo.name)+'</div>'+
+        '<div class="meal-slot-items">'+esc(s.combo.items)+'</div>'+
+        '<div class="meal-slot-scale">'+esc(scaleNote)+'</div></div>'+
+      '<div class="meal-slot-macros"><div class="meal-slot-kcal">'+Math.round(s.kcal)+' kcal</div>'+
+        '<div>Đ '+Math.round(s.protein)+'g · T '+Math.round(s.carb)+'g · B '+Math.round(s.fat)+'g</div></div>'+
+    '</div>';
+  });
+  html += '</div>';
+
+  html += '<div class="meal-day-summary">'+
+    '<div class="item">Tổng ngày: <b>'+Math.round(day.totals.kcal)+' kcal</b> / mục tiêu <b>'+Math.round(targets.targetCal)+' kcal</b></div>'+
+    '<div class="item">Đạm: <b>'+Math.round(day.totals.protein)+'g</b></div>'+
+    '<div class="item">Tinh bột: <b>'+Math.round(day.totals.carb)+'g</b></div>'+
+    '<div class="item">Béo: <b>'+Math.round(day.totals.fat)+'g</b></div>'+
+  '</div>';
+  html += '<div class="callout calm" style="margin-top:14px">Khẩu phần trong ngoặc là ước lượng theo trọng lượng sống/chín tham khảo, có thể tăng giảm theo cảm giác đói-no. Món ăn xoay vòng theo tuần để tránh lặp; bấm "Làm mới thực đơn" để đổi bộ món khác cùng mức calo.</div>';
+  html += '</div>';
+  return html;
+}
+
+var NUTRITION_TABS = [
+  {key:'overview', label:'Tổng quan calo'},
+  {key:'macros', label:'Đại lượng & Vi lượng'},
+  {key:'mealplan', label:'Thực đơn tuần'},
+  {key:'recovery', label:'Giấc ngủ & Stress'}
+];
+var nutritionTab = 'overview';
+
+function renderNutrition(){
+  var el=document.getElementById('nutritionContent');
+  var html = '<div class="row-gap" style="margin-bottom:18px">';
+  NUTRITION_TABS.forEach(function(t){
+    html += '<button type="button" class="day-tab'+(nutritionTab===t.key?' active':'')+'" onclick="P12.setNutritionTab(\''+t.key+'\')">'+esc(t.label)+'</button>';
+  });
+  html += '</div>';
+
+  // "Đại lượng & Vi lượng" và "Giấc ngủ & Stress" là nội dung kiến thức chung — không cần hồ sơ vẫn xem được
+  if(nutritionTab==='macros'){ html += renderNutritionEducation(); el.innerHTML = html; return; }
+  if(nutritionTab==='recovery'){ html += renderRecoverySection(); el.innerHTML = html; return; }
+
+  if(!STATE.profile){
+    html += '<div class="card empty-state"><h3>Cần có hồ sơ trước</h3><p style="margin-bottom:16px">Tab này tính theo số liệu cá nhân, cần tạo hồ sơ trước.</p><button class="btn" onclick="P12.goto(\'profile\')">Tạo hồ sơ</button></div>';
+    el.innerHTML = html;
+    return;
+  }
+  var n = calcNutrition(STATE.profile);
+  if(nutritionTab==='overview') html += renderNutritionOverview(n);
+  else if(nutritionTab==='mealplan') html += renderMealPlan(n);
+
+  el.innerHTML = html;
+}
+P12.setNutritionTab = function(t){ nutritionTab=t; renderNutrition(); };
+
+function renderNutritionOverview(n){
+  var html='<div class="grid grid-3" style="margin-bottom:16px">';
+  html+=statCard('BMR (trao đổi chất cơ bản)', Math.round(n.bmr)+' kcal','Công thức Mifflin–St Jeor');
+  html+=statCard('TDEE (tổng năng lượng tiêu hao)', Math.round(n.tdee)+' kcal','Đã gồm hệ số hoạt động + tập luyện');
+  html+=statCard('Mục tiêu calo/ngày', Math.round(n.targetCal)+' kcal', (n.calorieFactor<1?'Thâm hụt ':(n.calorieFactor>1?'Thặng dư ':'Duy trì '))+Math.round(Math.abs(1-n.calorieFactor)*100)+'%');
+  html+='</div>';
+
+  html+='<div class="card"><h3 style="font-size:15px;margin-bottom:12px">Phân bổ Macro đề xuất</h3>';
+  html+='<div class="grid grid-3">';
+  html+=macroBar('Đạm (Protein)', n.protein, n.protein*4, n.targetCal, 'var(--accent)');
+  html+=macroBar('Béo (Fat)', n.fat, n.fat*9, n.targetCal, 'var(--warn)');
+  html+=macroBar('Tinh bột (Carb)', n.carb, n.carb*4, n.targetCal, 'var(--accent-2)');
+  html+='</div></div>';
+
+  if(n.cappedAtFloor){
+    html+='<div class="callout warn" style="margin-top:16px">Mức thâm hụt tính theo công thức của bạn thấp hơn 1200 kcal/ngày — theo khuyến cáo an toàn của NASM, hệ thống đã tự động nâng mục tiêu lên 1200 kcal để tránh thiếu hụt dinh dưỡng nghiêm trọng. Nếu mục tiêu là giảm cân, hãy giảm tốc độ giảm mỡ hoặc tham khảo chuyên gia dinh dưỡng thay vì cắt giảm sâu hơn.</div>';
+  }
+  html+='<div class="callout" style="margin-top:16px">Đạm khuyến nghị dựa trên tổng quan của Morton et al. (2018, British Journal of Sports Medicine): 1.6–2.2g/kg thể trọng/ngày tối ưu hoá phát triển cơ khi kết hợp tập kháng lực. Công thức BMR và mức sàn 1200 kcal tham khảo theo NASM. Số liệu ở đây mang tính ước lượng, không thay thế tư vấn từ chuyên gia dinh dưỡng có chứng chỉ. Xem thêm chi tiết từng đại lượng/vi lượng ở tab "Đại lượng & Vi lượng".</div>';
+  return html;
+}
+function macroBar(label, grams, cal, total, color){
+  var pct = Math.round((cal/total)*100);
+  return '<div class="stat"><div class="label">'+label+'</div><div class="value">'+Math.round(grams)+'g</div>'+
+    '<div class="sub">'+Math.round(cal)+' kcal · '+pct+'%</div>'+
+    '<div style="height:6px;border-radius:3px;background:var(--border);margin-top:6px;overflow:hidden">'+
+    '<div style="height:100%;width:'+pct+'%;background:'+color+'"></div></div></div>';
+}
+
+/* =========================================================
+   ĐẠI LƯỢNG (macro) & VI LƯỢNG (micronutrient) — giáo dục dinh dưỡng
+========================================================= */
+var MACRO_EDU = [
+  {name:'Đạm (Protein)', color:'var(--accent)',
+    role:'Xây dựng và phục hồi mô cơ, tổng hợp enzyme/hormone, hỗ trợ miễn dịch. Là đại lượng quan trọng nhất khi mục tiêu là giữ hoặc tăng khối cơ.',
+    need:'1.6–2.2g/kg thể trọng/ngày cho người tập kháng lực đều đặn; khoảng 0.8–1g/kg cho người ít vận động, không có mục tiêu tăng cơ.',
+    quality:'Đạm hoàn chỉnh (đủ 9 acid amin thiết yếu) đến từ động vật: thịt, cá, trứng, sữa. Đạm thực vật (đậu, gạo, các loại hạt) thường thiếu 1–2 acid amin thiết yếu — nên kết hợp đa dạng nguồn (VD: cơm + đậu) để bù đắp lẫn nhau, đặc biệt quan trọng với người ăn chay.',
+    foods:['Ức gà','Thịt bò nạc','Cá basa/cá thu','Trứng','Tôm','Đậu phụ','Sữa & sữa chua','Đậu nành/đậu xanh','Tép, cua đồng']},
+  {name:'Tinh bột (Carbohydrate)', color:'var(--accent-2)',
+    role:'Nguồn năng lượng chính cho não bộ và cơ bắp khi hoạt động cường độ cao; dự trữ dưới dạng glycogen trong cơ và gan để cấp năng lượng nhanh khi tập nặng.',
+    need:'Thường chiếm phần năng lượng còn lại sau khi đã tính đủ đạm và béo — dao động khoảng 3–7g/kg/ngày, cao hơn ở người tập cường độ lớn hoặc nhiều buổi/tuần.',
+    quality:'Ưu tiên carb phức (tinh bột nguyên cám, giải phóng đường chậm, kèm chất xơ) hơn carb đơn/đường tinh luyện (giải phóng nhanh, dễ đói lại sớm). Chất xơ từ rau/trái cây hỗ trợ tiêu hoá và tạo cảm giác no lâu.',
+    foods:['Gạo lứt','Khoai lang','Yến mạch','Bún/phở (vừa phải)','Bánh mì nguyên cám','Chuối','Đậu các loại','Rau xanh (chất xơ)']},
+  {name:'Chất béo (Fat)', color:'var(--warn)',
+    role:'Tổng hợp hormone (testosterone, estrogen), hấp thu vitamin tan trong dầu (A, D, E, K), cấu tạo màng tế bào và bảo vệ nội tạng.',
+    need:'Khoảng 20–30% tổng năng lượng/ngày (PHASE12 mặc định dùng 25%) — không nên xuống quá thấp vì ảnh hưởng đến nội tiết tố.',
+    quality:'Ưu tiên béo không bão hoà (dầu ô liu, cá béo, quả bơ, các loại hạt), đặc biệt omega-3 có tác dụng chống viêm và hỗ trợ phục hồi. Hạn chế béo bão hoà (mỡ động vật, dầu dừa) và tránh béo chuyển hoá (trans fat trong đồ chiên rán công nghiệp, bánh kẹo đóng gói).',
+    foods:['Dầu ô liu','Cá hồi/cá thu','Quả bơ','Đậu phộng, hạt điều, óc chó','Mè/vừng','Lòng đỏ trứng','Dừa (vừa phải)']}
+];
+var MICRO_EDU = [
+  {name:'Vitamin D', role:'Hấp thu canxi, sức khoẻ xương, chức năng cơ và miễn dịch.', foods:'Ánh nắng mặt trời (10–15 phút/ngày), cá béo, lòng đỏ trứng, sữa bổ sung.', note:'Dân văn phòng ít ra nắng dễ thiếu hụt — nên chủ động phơi nắng buổi sáng hoặc hỏi bác sĩ về bổ sung nếu xét nghiệm thấp.'},
+  {name:'Canxi', role:'Mật độ xương, dẫn truyền thần kinh, co cơ.', foods:'Sữa, sữa chua, đậu phụ, rau lá xanh đậm, tôm/cua ăn cả vỏ, cá cơm ăn cả xương.', note:''},
+  {name:'Sắt', role:'Vận chuyển oxy trong máu (hemoglobin) — thiếu sắt gây mệt mỏi, giảm hiệu suất tập.', foods:'Thịt đỏ, gan, lòng đỏ trứng, rau bina, đậu lăng.', note:'Phụ nữ trong độ tuổi sinh sản cần nhiều sắt hơn nam giới. Sắt heme (động vật) hấp thu tốt hơn sắt non-heme (thực vật) — ăn kèm thực phẩm giàu vitamin C (cam, ổi) giúp tăng hấp thu sắt thực vật.'},
+  {name:'Magie', role:'Chức năng cơ và thần kinh, giảm chuột rút, liên quan chất lượng giấc ngủ.', foods:'Các loại hạt, đậu, rau lá xanh, chuối, socola đen (>70% cacao).', note:''},
+  {name:'Kẽm', role:'Miễn dịch, tổng hợp protein, liên quan nội tiết tố testosterone.', foods:'Hàu, thịt đỏ, hạt bí, đậu các loại.', note:''},
+  {name:'Kali', role:'Cân bằng điện giải, dẫn truyền co cơ, hỗ trợ ổn định huyết áp.', foods:'Chuối, khoai lang, rau xanh, nước dừa, bơ.', note:''},
+  {name:'Natri (muối)', role:'Cân bằng điện giải và thể tích máu — mất qua mồ hôi khi tập cường độ cao hoặc trời nóng.', foods:'Muối ăn, nước mắm, thực phẩm chế biến.', note:'Người đổ mồ hôi nhiều (đặc biệt khí hậu Việt Nam) nên chú ý bù điện giải chứ không chỉ nước lọc — xem nguyên tắc tính lượng mồ hôi mất (sweat rate) của GSSI ở mục Nguồn tri thức.'},
+  {name:'Omega-3', role:'Chống viêm, hỗ trợ phục hồi sau tập, sức khoẻ tim mạch và não bộ.', foods:'Cá hồi, cá thu, cá trích, hạt chia, hạt lanh, óc chó.', note:''}
+];
+function renderNutritionEducation(){
+  var html = '<div class="page-head" style="margin-bottom:14px"><h3 style="font-size:16px">Ba đại lượng (Macronutrients)</h3><div class="desc" style="margin-top:4px">Mỗi đại lượng có vai trò riêng — ăn đủ tổng calo nhưng lệch tỷ lệ đại lượng vẫn có thể cản trở mục tiêu tập luyện.</div></div>';
+  html += '<div class="grid" style="grid-template-columns:1fr;gap:14px;margin-bottom:24px">';
+  html += MACRO_EDU.map(function(m){
+    return '<div class="card" style="border-left:3px solid '+m.color+'">'+
+      '<h4 style="font-size:15px;font-weight:800;margin-bottom:8px">'+esc(m.name)+'</h4>'+
+      '<div class="source-basis"><b style="color:var(--text)">Vai trò:</b> '+esc(m.role)+'</div>'+
+      '<div class="source-basis" style="margin-top:6px"><b style="color:var(--text)">Nhu cầu:</b> '+esc(m.need)+'</div>'+
+      '<div class="source-basis" style="margin-top:6px"><b style="color:var(--text)">Chất lượng:</b> '+esc(m.quality)+'</div>'+
+      '<div style="margin-top:10px" class="chip-group">'+m.foods.map(function(f){return '<span class="tag" style="background:var(--bg);border:1px solid var(--border);color:var(--text-muted)">'+esc(f)+'</span>';}).join('')+'</div>'+
+    '</div>';
+  }).join('');
+  html += '</div>';
+
+  html += '<div class="page-head" style="margin-bottom:14px"><h3 style="font-size:16px">Vi lượng & Khoáng chất quan trọng</h3><div class="desc" style="margin-top:4px">Ăn đủ calo/đạm/carb/béo chưa chắc đủ vi chất — đặc biệt với người ăn kiêng thâm hụt sâu hoặc ăn chay trường kỳ.</div></div>';
+  html += '<div class="grid grid-2">';
+  html += MICRO_EDU.map(function(mi){
+    return '<div class="card" style="padding:14px 16px">'+
+      '<div style="font-weight:700;font-size:14px;margin-bottom:4px">'+esc(mi.name)+'</div>'+
+      '<div class="term-def">'+esc(mi.role)+'</div>'+
+      '<div class="term-def" style="margin-top:6px"><b style="color:var(--text-muted)">Nguồn:</b> '+esc(mi.foods)+'</div>'+
+      (mi.note ? '<div class="callout calm" style="margin-top:8px;font-size:11.5px">'+esc(mi.note)+'</div>' : '')+
+    '</div>';
+  }).join('');
+  html += '</div>';
+  return html;
+}
+
+/* =========================================================
+   GIẤC NGỦ & STRESS/CORTISOL — phục hồi
+========================================================= */
+function renderRecoverySection(){
+  var html = '';
+  html += '<div class="card" style="margin-bottom:16px">'+
+    '<div class="eyebrow">Phục hồi</div>'+
+    '<h3 style="font-size:17px;margin-top:6px">Giấc ngủ — yếu tố phục hồi bị đánh giá thấp nhất</h3>'+
+    '<div class="source-basis" style="margin-top:10px">Phần lớn hormone tăng trưởng (GH) được tiết ra trong giấc ngủ sâu (deep sleep), đây cũng là thời điểm cơ thể ưu tiên tổng hợp protein cơ và sửa chữa mô sau buổi tập. Ngủ dưới 6 giờ liên tục nhiều đêm làm giảm khả năng phục hồi, tăng cortisol nền và giảm hiệu suất tập ngày hôm sau.</div>'+
+    '<ul class="source-insights" style="margin-top:10px">'+
+      '<li>Ngủ thiếu (~4 giờ/đêm) làm tăng hormone gây đói ghrelin và giảm hormone tạo cảm giác no leptin — dễ thèm đồ ngọt/nhiều calo hơn dù không thực sự cần năng lượng.</li>'+
+      '<li>Khuyến nghị chung của các hiệp hội y học giấc ngủ: 7–9 giờ/đêm cho người trưởng thành để tối ưu phục hồi và hiệu suất tập luyện.</li>'+
+      '<li>Vệ sinh giấc ngủ thực tế: giờ ngủ/thức cố định kể cả cuối tuần, tránh màn hình sáng xanh 30–60 phút trước ngủ, phòng ngủ tối và mát, hạn chế caffeine sau 14h, không tập luyện cường độ cao sát giờ ngủ.</li>'+
+    '</ul>'+
+    '<div class="term-refs-label" style="margin-top:12px">Nguồn tham khảo</div>'+
+    '<a class="term-ref-link" href="https://journals.plos.org/plosmedicine/article?id=10.1371%2Fjournal.pmed.0010062" target="_blank" rel="noopener noreferrer">Taheri S. và cộng sự (2004). Short Sleep Duration Is Associated with Reduced Leptin, Elevated Ghrelin — PLOS Medicine ↗</a>'+
+    '<a class="term-ref-link" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7785053/" target="_blank" rel="noopener noreferrer">Sleep deprivation & muscle protein synthesis — PubMed Central, 2020 ↗</a>'+
+  '</div>';
+
+  html += '<div class="card">'+
+    '<div class="eyebrow">Phục hồi</div>'+
+    '<h3 style="font-size:17px;margin-top:6px">Stress & Cortisol</h3>'+
+    '<div class="source-basis" style="margin-top:10px">Cortisol là hormone stress chính, tăng tự nhiên và cần thiết khi gắng sức thể chất (kể cả một buổi tập bình thường) — đây là phản ứng cấp tính, bình thường và có lợi. Vấn đề xảy ra khi cortisol duy trì ở mức cao kéo dài do stress mãn tính (áp lực công việc, thiếu ngủ, tập quá độ không nghỉ) — mô mỡ nội tạng (vùng bụng) có mật độ thụ thể cortisol cao nên đặc biệt nhạy với tình trạng này.</div>'+
+    '<ul class="source-insights" style="margin-top:10px">'+
+      '<li>Cortisol mãn tính cao liên quan đến tích mỡ vùng bụng, cản trở phục hồi cơ, rối loạn giấc ngủ và tăng cảm giác thèm ăn.</li>'+
+      '<li>Tập luyện cường độ cao liên tục không có tuần giảm tải cũng là một dạng "stress" cộng dồn lên trục HPA (vùng dưới đồi–tuyến yên–thượng thận) — đây là lý do PHASE12 luôn chèn tuần deload sau mỗi 3 tuần tập nặng.</li>'+
+      '<li>Cách quản lý thực tế: hít thở sâu/chậm vài phút mỗi ngày, đi bộ ngoài trời, giảm thời gian dùng màn hình buổi tối, ngủ đủ giờ, và không cố gắng "gánh" cả stress công việc lẫn tập luyện cường độ cao cùng lúc trong giai đoạn quá tải.</li>'+
+    '</ul>'+
+    '<div class="term-refs-label" style="margin-top:12px">Nguồn tham khảo</div>'+
+    '<a class="term-ref-link" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11907100/" target="_blank" rel="noopener noreferrer">Glucocorticoids and HPA axis regulation in the stress–obesity connection — PubMed Central, 2024 ↗</a>'+
+  '</div>';
+  return html;
+}
+
+/* =========================================================
+   GLOSSARY
+========================================================= */
+var GLOSSARY = [
+  {en:'1RM',vi:'Mức tạ tối đa 1 lần lặp',def:'Trọng lượng tối đa một người có thể nâng đúng kỹ thuật cho duy nhất 1 lần lặp. Dùng làm mốc để tính %cường độ tập luyện.',
+    detail:{extended:'Vì test 1RM trực tiếp có rủi ro chấn thương (đặc biệt người mới), thực hành phổ biến là ước tính gián tiếp qua công thức (VD: Epley, Brzycki) dựa trên số lần lặp tối đa thực hiện được ở một mức tạ nhẹ hơn. Các vùng %1RM (VD 65–75% cho phì đại cơ, ≥85% cho sức mạnh tối đa) mà app dùng để gợi ý mức tạ đều bắt nguồn từ khung khuyến nghị này.',
+      refs:[{authors:'Ratamess N.A. và cộng sự (ACSM)',year:'2009',source:'Progression Models in Resistance Training for Healthy Adults — Medicine & Science in Sports & Exercise',url:'https://doi.org/10.1249/MSS.0b013e3181915670'}]}},
+  {en:'RPE',vi:'Mức độ gắng sức cảm nhận',def:'Rate of Perceived Exertion — thang điểm 1–10 tự đánh giá mức độ nặng của một hiệp tập, dùng để điều chỉnh tải khi không biết chính xác 1RM.',
+    detail:{extended:'Bắt nguồn từ thang Borg (6–20) trong khoa học thể dục nhịp điệu, được điều chỉnh thành thang 0–10 (CR-10) phổ biến hơn trong tập kháng lực. RPE 8/10 nghĩa là còn khoảng 2 lần lặp mới tới thất bại cơ. Nghiên cứu tổng hợp cho thấy RPE có độ tin cậy khá tốt để ước lượng %1RM đang dùng, dù chính xác hơn khi người tập đã có kinh nghiệm.',
+      refs:[{authors:'Nhiều tác giả',year:'2021–2022',source:'Các phân tích gộp về độ tin cậy của RPE trong tập kháng lực (PubMed Central)',url:'https://pmc.ncbi.nlm.nih.gov/articles/PMC8896022/'}]}},
+  {en:'RIR',vi:'Số lần lặp còn có thể thực hiện',def:'Reps in Reserve — ước lượng còn bao nhiêu lần lặp nữa mới đến thất bại cơ (failure). RIR 2 nghĩa là còn có thể làm thêm 2 lần.',
+    detail:{extended:'RIR và RPE thực chất là hai mặt của cùng một thang đo (RIR 0 ≈ RPE 10, RIR 2 ≈ RPE 8), nhưng RIR thường dễ hình dung hơn với người mới vì hỏi trực tiếp "còn làm thêm được mấy lần" thay vì quy đổi độ khó ra một con số trừu tượng. NASM đưa ra vùng RIR khuyến nghị riêng cho từng giai đoạn OPT: Sức mạnh Chịu đựng RIR 0–1; Phì đại cơ RIR 0–2 với bài đơn khớp và RIR 2–4 với bài đa khớp; Sức mạnh Tối đa RIR 1–2 (thỉnh thoảng 0); Sức mạnh Bùng nổ RIR 2–3 (tối đa 4). PHASE12 hiển thị đúng vùng RIR này ở cột RIR trong mỗi buổi tập.',
+      refs:[{authors:'NASM (Kinsey Cave)',year:'2022',source:'Reps in Reserve (RIR): What You Need to Know — NASM Blog',url:'https://blog.nasm.org/reps-in-reserve'}]}},
+  {en:'Progressive Overload',vi:'Nguyên lý quá tải tiệm tiến',def:'Tăng dần và có hệ thống mức tải, số hiệp, số lần lặp hoặc tần suất theo thời gian để cơ thể liên tục thích nghi và phát triển.',
+    detail:{extended:'Có thể đạt được qua nhiều "biến số" khác nhau, không chỉ tăng mức tạ: tăng số hiệp, tăng số lần lặp, tăng tần suất tập một nhóm cơ/tuần, rút ngắn thời gian nghỉ, hoặc cải thiện biên độ chuyển động và kỹ thuật. Đây là lý do vì sao PHASE12 tăng dần số hiệp/độ khó bài tập qua từng tuần trong một khối, thay vì giữ nguyên một chương trình cố định suốt 12 tuần.',
+      refs:[{authors:'Schoenfeld B.J., Ogborn D., Krieger J.W.',year:'2016',source:'Effects of Resistance Training Frequency on Measures of Muscle Hypertrophy — Sports Medicine',url:'https://link.springer.com/article/10.1007/s40279-016-0543-8'}]}},
+  {en:'Periodization',vi:'Chu kỳ hoá tập luyện',def:'Chia chương trình tập thành các giai đoạn (block/phase) có mục tiêu và thông số khác nhau nhằm tối ưu hiệu suất và giảm nguy cơ chấn thương/quá tải.',
+    detail:{extended:'Hai trường phái chính: periodization tuyến tính (khối lượng giảm dần, cường độ tăng dần qua từng khối — cách PHASE12 áp dụng) và undulating/không tuyến tính (thay đổi khối lượng-cường độ liên tục trong tuần, VD ngày nặng/ngày nhẹ xen kẽ). Cả hai đều hiệu quả hơn tập không có cấu trúc; lựa chọn phụ thuộc kinh nghiệm và sở thích cá nhân.',
+      refs:[{authors:'Ratamess N.A. và cộng sự (ACSM)',year:'2009',source:'Progression Models in Resistance Training for Healthy Adults',url:'https://doi.org/10.1249/MSS.0b013e3181915670'}]}},
+  {en:'Hypertrophy',vi:'Phì đại cơ',def:'Sự gia tăng kích thước sợi cơ, thường đạt hiệu quả cao nhất với khối lượng tập vừa-cao (8–12 lần lặp, nhiều hiệp).',
+    detail:{extended:'Ba cơ chế được đề xuất thúc đẩy phì đại: căng cơ học (mechanical tension — được xem là động lực chính), tổn thương cơ (muscle damage) và áp lực chuyển hoá (metabolic stress). Vùng 6–12 lần lặp không phải "vùng thần thánh" duy nhất — nghiên cứu cho thấy phì đại có thể đạt được ở biên độ lặp rộng (6–30) miễn hiệp tập đủ gần ngưỡng thất bại và tổng khối lượng tương đương.',
+      refs:[{authors:'Schoenfeld B.J., Ogborn D., Krieger J.W.',year:'2016',source:'Effects of Resistance Training Frequency on Measures of Muscle Hypertrophy — Sports Medicine',url:'https://link.springer.com/article/10.1007/s40279-016-0543-8'}]}},
+  {en:'OPT Model',vi:'Mô hình Luyện tập Tối ưu (NASM)',def:'Optimum Performance Training — mô hình 5 giai đoạn của NASM: Ổn định, Sức mạnh chịu đựng, Phì đại cơ, Sức mạnh tối đa, Sức mạnh bùng nổ.',
+    detail:{extended:'Mô hình chia thành 3 cấp (Stabilization, Strength, Power) gồm 5 giai đoạn cụ thể, mỗi giai đoạn nhắm tới một mục tiêu thần kinh-cơ khác nhau thay vì chỉ tăng tải một chiều. PHASE12 ánh xạ 3 khối 4-tuần của mỗi chu kỳ vào chuỗi giai đoạn OPT phù hợp với mục tiêu bạn chọn (VD: giảm mỡ ưu tiên Ổn định → Sức mạnh chịu đựng → Phì đại cơ có finisher chuyển hoá).',
+      refs:[{authors:'NASM (National Academy of Sports Medicine)',year:'—',source:'Stabilization Endurance: NASM\'s Optimum Performance Training (NASM Blog)',url:'https://blog.nasm.org/nasm-optimum-performance-training'}]}},
+  {en:'Stabilization',vi:'Sự ổn định',def:'Khả năng kiểm soát khớp và duy trì tư thế đúng trong suốt chuyển động — nền tảng trước khi tăng tải nặng.',
+    detail:{extended:'Về sinh lý là khả năng hệ thần kinh-cơ kiểm soát khớp thông qua co cơ đồng thời (co-contraction) của các nhóm cơ đối vận, giữ khớp ở vị trí trung tính khi chịu lực. Đây là lý do giai đoạn 1 của OPT ưu tiên bài tập biên độ lớn, tempo chậm và thường trên nền không ổn định (một chân, bóng tập) trước khi chuyển sang tải nặng.',
+      refs:[{authors:'NASM (National Academy of Sports Medicine)',year:'—',source:'NASM Optimum Performance Training model (NASM Blog)',url:'https://blog.nasm.org/nasm-optimum-performance-training'}]}},
+  {en:'Proprioception',vi:'Cảm nhận bản thể',def:'Khả năng cảm nhận vị trí và chuyển động của cơ thể trong không gian mà không cần nhìn — quan trọng cho thăng bằng và phòng chấn thương.',
+    detail:{extended:'Đến từ các thụ thể cơ học (mechanoreceptor) nằm ở cơ, gân và bao khớp, liên tục gửi tín hiệu về hệ thần kinh trung ương để điều chỉnh tư thế theo thời gian thực. Bài tập thăng bằng một chân hoặc trên bề mặt không ổn định trong app luyện tập trực tiếp hệ thống này — quan trọng với người lớn tuổi hoặc người có tiền sử lật cổ chân/đau gối.'}},
+  {en:'Kinetic Chain',vi:'Chuỗi động học',def:'Hệ thống các khớp và cơ liên kết với nhau trong một chuyển động; rối loạn ở một mắt xích có thể ảnh hưởng dây chuyền đến các vùng khác.',
+    detail:{extended:'Theo NASM, cơn đau có thể xuất hiện ở một vùng khác hẳn với "gốc rễ" gây ra nó — ví dụ căng cứng ở bàn chân hoặc cơ gập háng có thể là nguyên nhân góp phần gây đau lưng dưới, dù người tập chỉ cảm nhận triệu chứng ở lưng. Đây là lý do huấn luyện viên đánh giá toàn bộ chuỗi vận động thay vì chỉ nhìn vào vùng đang đau, đồng thời kết hợp cả bài tập chuỗi động học mở (cô lập một khớp) lẫn chuỗi động học đóng (toàn thân, chịu trọng lượng) khi lên chương trình.',
+      refs:[{authors:'NASM (National Academy of Sports Medicine)',year:'—',source:'The Kinetic Chain and How to Apply It — NASM Blog',url:'https://blog.nasm.org/kinetic-chain'}]}},
+  {en:'DOMS',vi:'Đau cơ khởi phát muộn',def:'Delayed Onset Muscle Soreness — cảm giác đau/mỏi cơ xuất hiện 24–72 giờ sau buổi tập, do vi tổn thương sợi cơ, là phản ứng thích nghi bình thường.',
+    detail:{extended:'Quan niệm phổ biến "đau do axit lactic tích tụ" là sai — lactate được thanh thải khỏi máu trong vòng 1 giờ sau tập. Cơ chế thực sự là tổn thương cơ học vi mô ở đĩa Z (Z-disc) của sợi cơ, đặc biệt sau các chuyển động eccentric (hạ tạ chậm, chạy xuống dốc), theo sau bởi phản ứng viêm. DOMS không phải thước đo bắt buộc của một buổi tập hiệu quả — không đau không có nghĩa là không tiến bộ.',
+      refs:[{authors:'Cheung K., Hume P.A., Maxwell L.',year:'2003',source:'Delayed Onset Muscle Soreness: Treatment Strategies and Performance Factors — Sports Medicine',url:'https://link.springer.com/article/10.2165/00007256-200333020-00005'}]}},
+  {en:'Deload',vi:'Tuần giảm tải',def:'Giai đoạn chủ động giảm khối lượng/cường độ tập (thường 30–50%) để cơ thể phục hồi, thường chèn sau 3–4 tuần tập nặng.',
+    detail:{extended:'Có thể giảm theo khối lượng (ít hiệp/reps hơn, giữ nguyên tạ), giảm cường độ (tạ nhẹ hơn, giữ nguyên hiệp/reps), hoặc cả hai. Mục đích không phải nghỉ hoàn toàn mà là giảm mệt mỏi tích luỹ (fatigue) trong khi vẫn giữ được phần lớn năng lực đã đạt (fitness) — PHASE12 tự động chèn tuần này vào tuần 4 của mỗi khối.'}},
+  {en:'Supercompensation',vi:'Siêu bù trừ',def:'Hiện tượng cơ thể phục hồi vượt mức ban đầu sau kích thích tập luyện và nghỉ ngơi đủ, tạo nền cho sự tiến bộ.',
+    detail:{extended:'Mô hình kinh điển gồm 3 pha: mệt mỏi (ngay sau buổi tập, năng lực tạm giảm) → phục hồi (trở về mức ban đầu) → siêu bù (vượt mức ban đầu trong một khoảng thời gian nhất định trước khi tụt trở lại nếu không tập tiếp). Tập lại quá sớm (chưa phục hồi) hoặc quá muộn (đã tụt khỏi đỉnh siêu bù) đều làm chậm tiến bộ — đây là lý do lịch tập cần nhịp độ hợp lý thay vì tập kiệt sức mỗi ngày.'}},
+  {en:'Tempo',vi:'Nhịp độ chuyển động',def:'Thời gian (giây) cho từng pha của một lần lặp, viết dạng con số ví dụ 4-2-1: 4 giây hạ (eccentric) – 2 giây giữ – 1 giây nâng (concentric).',
+    detail:{extended:'Đôi khi viết đủ 4 số (VD 4-2-1-0) với số cuối là thời gian giữ ở điểm co ngắn nhất. Tempo chậm ở giai đoạn Ổn định giúp tăng "time under tension" và buộc người tập kiểm soát kỹ thuật thay vì dùng đà; tempo nhanh/bùng nổ (ký hiệu X) ở giai đoạn Sức mạnh bùng nổ nhằm huấn luyện tốc độ sản sinh lực (rate of force development).'}},
+  {en:'Eccentric / Concentric',vi:'Pha kéo dài / pha co ngắn',def:'Eccentric là pha cơ dài ra dưới lực cản (hạ tạ); Concentric là pha cơ co ngắn lại (nâng tạ).',
+    detail:{extended:'Cơ có khả năng chịu tải cao hơn ở pha eccentric so với concentric (ước tính khoảng 1.3 lần), đồng thời eccentric cũng gây tổn thương cơ học nhiều hơn — liên hệ trực tiếp tới DOMS. Còn một loại co cơ thứ ba là isometric (chiều dài cơ không đổi, VD giữ plank) — được dùng nhiều ở giai đoạn Ổn định để rèn khả năng giữ vững khớp.',
+      refs:[{authors:'Cheung K., Hume P.A., Maxwell L.',year:'2003',source:'Delayed Onset Muscle Soreness: Treatment Strategies and Performance Factors',url:'https://link.springer.com/article/10.2165/00007256-200333020-00005'}]}},
+  {en:'TDEE',vi:'Tổng năng lượng tiêu hao mỗi ngày',def:'Total Daily Energy Expenditure — tổng calo cơ thể đốt trong ngày, gồm BMR, hoạt động thể chất và hiệu ứng nhiệt của thức ăn.',
+    detail:{extended:'Gồm 3 thành phần chính: BMR (khoảng 60–70% tổng, tuỳ khối cơ và tuổi), hiệu ứng nhiệt của thức ăn TEF (~10%, tiêu hoá đạm tốn năng lượng nhiều hơn carb/béo), và năng lượng cho hoạt động (~20–30%, gồm cả tập luyện có chủ đích lẫn NEAT). Vì NEAT biến thiên lớn giữa người với người, TDEE ước tính từ công thức luôn có sai số — nên theo dõi cân nặng thực tế 2–4 tuần để hiệu chỉnh lại mục tiêu calo.',
+      refs:[{authors:'WHO',year:'2020',source:'WHO Guidelines on Physical Activity and Sedentary Behaviour',url:'https://pmc.ncbi.nlm.nih.gov/articles/PMC7719906/'}]}},
+  {en:'BMR',vi:'Chuyển hoá cơ bản',def:'Basal Metabolic Rate — năng lượng tối thiểu cơ thể cần để duy trì các chức năng sống khi hoàn toàn nghỉ ngơi.',
+    detail:{extended:'PHASE12 dùng công thức Mifflin–St Jeor (10×kg + 6.25×cm − 5×tuổi ± hằng số theo giới tính) để tính BMR — đây cũng là công thức chính NASM khuyến nghị vì chính xác hơn công thức Harris–Benedict cũ (1919) trên dân số hiện đại. BMR chịu ảnh hưởng lớn bởi khối lượng cơ (cơ tiêu hao năng lượng nhiều hơn mỡ ngay cả lúc nghỉ), tuổi (giảm dần theo tuổi do mất khối cơ) và giới tính. NASM cũng lưu ý không nên đặt mục tiêu calo xuống dưới 1200 kcal/ngày dù đang giảm cân — PHASE12 tự động áp dụng mức sàn này khi tính mục tiêu calo.',
+      refs:[{authors:'NASM (Dana Bender)',year:'—',source:"Here's How to Calculate & Improve Your RMR — NASM Blog",url:'https://blog.nasm.org/how-to-calculate-and-improve-rmr-resting-metabolic-rate'}]}},
+  {en:'NEAT',vi:'Sinh nhiệt hoạt động không luyện tập',def:'Non-Exercise Activity Thermogenesis — năng lượng tiêu hao từ các hoạt động hằng ngày ngoài tập luyện có chủ đích (đi lại, đứng, làm việc nhà).',
+    detail:{extended:'Có thể chênh lệch tới hàng trăm, thậm chí cả nghìn kcal/ngày giữa hai người cùng cân nặng tuỳ mức độ hiếu động vô thức (đứng dậy, đi lại, thay đổi tư thế). Vì không gây mệt mỏi tích luỹ như tập nặng, tăng NEAT (đi bộ nhiều hơn, đứng dậy mỗi giờ) là đòn bẩy bền vững cho người giảm mỡ, đặc biệt dân văn phòng ít vận động — đúng nhóm mà PHASE12 nhắm tới.'}},
+  {en:'Corrective Exercise Continuum',vi:'Chuỗi bài tập hiệu chỉnh (NASM)',def:'Quy trình 4 bước của NASM để sửa mất cân bằng cơ: Inhibit (ức chế/lăn foam) → Lengthen (kéo giãn) → Activate (kích hoạt) → Integrate (tích hợp vận động).',
+    detail:{extended:'Ví dụ NASM áp dụng cho đau vai: lăn foam vùng lưng xô/ngực (Inhibit) → giãn cơ ngực và lưng xô (Lengthen) → Chin Tuck và Blackburn T kích hoạt lưng trên (Activate) → động tác Squat to Row tích hợp toàn thân (Integrate). PHASE12 dùng đúng cấu trúc 4 bước này khi chèn bài hiệu chỉnh, ưu tiên bài khớp với hạn chế bạn khai báo (cổ vai gáy/vai/lưng dưới) thay vì chọn ngẫu nhiên.',
+      refs:[{authors:'NASM (Kinsey Cave)',year:'—',source:'10 Effective Shoulder Pain Exercises — NASM Blog',url:'https://blog.nasm.org/shoulder-pain-exercises'}]}},
+  {en:'Upper Crossed Syndrome',vi:'Hội chứng bắt chéo trên (gù vai, mỏi cổ)',def:'Mất cân bằng cơ thường gặp ở dân văn phòng: cơ ngực/cổ trước bị co ngắn, cơ lưng trên/cổ sau bị yếu, dẫn tới tư thế vai tròn, đầu chúi trước.',
+    detail:{extended:'Khái niệm do nhà thần kinh-vật lý trị liệu Vladimir Janda đề xuất: một nhóm cơ trở nên "tăng trương lực/ngắn" (ngực lớn/bé, thang trên, nâng vai, ức đòn chũm) trong khi nhóm đối vận trở nên "yếu/ức chế" (gập cổ sâu, răng cưa trước, trám, thang giữa-dưới), tạo thành hình chữ X bắt chéo khi nhìn nghiêng. Ngồi nhìn màn hình nhiều giờ là yếu tố nguy cơ kinh điển — chính là lý do các bài Chin Tuck, Doorway Pec Stretch, Prone Y-T-W xuất hiện trong chương trình dành cho dân văn phòng.',
+      refs:[{authors:'Nhiều tác giả (cập nhật mô hình Janda)',year:'2015',source:'The Torsional Upper Crossed Syndrome: A Multi-Planar Update to Janda\'s Model',url:'https://pubmed.ncbi.nlm.nih.gov/26592225/'}]}},
+  {en:'Anterior Pelvic Tilt',vi:'Nghiêng khung chậu ra trước',def:'Tư thế khung chậu nghiêng trước quá mức do cơ gập háng căng và cơ mông/bụng yếu — thường gặp khi ngồi nhiều, gây áp lực lên lưng dưới.',
+    detail:{extended:'Đây là biểu hiện của "hội chứng bắt chéo dưới" (Lower Crossed Syndrome) — cũng theo mô hình của Janda, tương tự bắt chéo trên nhưng ở vùng hông/lưng dưới: cơ gập háng và dựng sống thắt lưng ngắn/căng, trong khi cơ mông lớn và bụng thẳng yếu/ức chế. Ngồi lâu khiến cơ gập háng ở trạng thái co ngắn kéo dài — bài Hip Flexor Stretch và Glute Bridge trong app nhắm trực tiếp vào cặp mất cân bằng này.'}},
+  {en:'Mechanotransduction',vi:'Chuyển hoá tín hiệu cơ học',def:'Quá trình tế bào cơ chuyển đổi lực cơ học (căng, kéo giãn) thành tín hiệu sinh hoá kích hoạt tổng hợp protein cơ (muscle protein synthesis).',
+    detail:{extended:'Khi sợi cơ chịu căng cơ học đủ lớn, các con đường tín hiệu nội bào (trong đó có mTOR) được kích hoạt, thúc đẩy tế bào tổng hợp protein co cơ mới. Đây là lý do TẢI TRỌNG cơ học (không chỉ riêng lượng đạm nạp vào) là điều kiện bắt buộc để tăng cơ — ăn nhiều đạm mà không tập kháng lực sẽ không kích hoạt được con đường này ở mức đáng kể.'}},
+  {en:'Muscle Protein Synthesis (MPS)',vi:'Tổng hợp protein cơ',def:'Quá trình xây dựng protein mới trong sợi cơ, được kích thích bởi tập kháng lực và nạp đủ đạm — nền tảng sinh học của phì đại cơ.',
+    detail:{extended:'MPS tăng cao trong khoảng 24–48 giờ sau một buổi tập kháng lực chứ không chỉ trong "khung giờ vàng" 30 phút như quan niệm phổ biến trước đây — nghĩa là tổng lượng đạm và tần suất nạp trong cả ngày quan trọng hơn việc uống whey ngay sau tập. Phân bổ đạm tương đối đều qua 3–4 bữa/ngày (thay vì dồn vào 1 bữa) được xem là tối ưu hơn cho MPS tích luỹ.',
+      refs:[{authors:'Morton R.W., Murphy K.T., McKellar S.R. và cộng sự',year:'2018',source:'A systematic review, meta-analysis and meta-regression of protein supplementation — British Journal of Sports Medicine',url:'https://pubmed.ncbi.nlm.nih.gov/28698222/'}]}},
+  {en:'VO2max',vi:'Hấp thụ oxy tối đa',def:'Lượng oxy tối đa cơ thể có thể sử dụng trong 1 phút khi gắng sức tối đa — chỉ số phản ánh sức bền tim mạch (cardiorespiratory fitness).',
+    detail:{extended:'Đo chính xác nhất trong phòng lab qua phân tích khí thở khi chạy/đạp xe gắng sức tăng dần, nhưng có thể ước tính thực địa qua các bài test như Cooper (chạy 12 phút) hoặc bước bục (step test). VO2max là một trong những chỉ số dự đoán tuổi thọ và nguy cơ tim mạch mạnh nhất trong y học thể thao, cải thiện được qua cả bài tập nền tảng (steady-state) lẫn ngắt quãng cường độ cao (HIIT).'}},
+  {en:'Superset',vi:'Tổ hợp hiệp liên tiếp',def:'Thực hiện 2 bài tập liên tiếp không nghỉ hoặc nghỉ rất ngắn giữa chúng, thường dùng ở giai đoạn Strength Endurance để tiết kiệm thời gian và tăng sức bền cơ.',
+    detail:{extended:'Dạng phổ biến nhất là superset đối vận (agonist–antagonist), VD đẩy ngực nối tiếp kéo lưng — hai nhóm cơ khác nhau nên không làm giảm hiệu suất bài thứ hai nhiều, đồng thời rút ngắn tổng thời gian buổi tập. Khác với "compound set" (2 bài liên tiếp cùng một nhóm cơ, mệt hơn nhiều) — giai đoạn Strength Endurance trong OPT dùng superset ổn định + sức mạnh trên cùng nhóm cơ với mục đích khác: tăng sức bền cơ có kiểm soát.'}},
+  {en:'Delayed Transformation / Motor Learning',vi:'Học vận động',def:'Quá trình hệ thần kinh–cơ dần tối ưu hoá kỹ thuật động tác qua lặp lại có phản hồi, giúp động tác trở nên tự động và hiệu quả hơn.',
+    detail:{extended:'Mô hình kinh điển của Fitts & Posner (1967) chia học vận động thành 3 giai đoạn: nhận thức (cognitive — phải suy nghĩ từng bước, động tác vụng về), liên kết (associative — mượt hơn, ít lỗi hơn), và tự động hoá (autonomous — thực hiện chính xác mà gần như không cần chú ý). Đây là lý do các bài tập mới nên được giữ ổn định vài tuần đầu (giai đoạn Ổn định trong OPT) trước khi tăng độ phức tạp — não bộ cần thời gian để "tự động hoá" kỹ thuật trước khi chất thêm tải.'}},
+  {en:'Valsalva Maneuver',vi:'Nghiệm pháp Valsalva (nín thở gắng sức)',def:'Kỹ thuật nín thở khi gắng sức tối đa để tăng ổn định cột sống; cần thận trọng hoặc tránh với người huyết áp cao do làm tăng áp lực nội sọ/huyết áp tức thời.',
+    detail:{extended:'Nghiên cứu đo áp lực trong ổ bụng cho thấy squat và deadlift tạo áp lực cao nhất khi thực hiện Valsalva, trong khi bench press tạo áp lực thấp hơn đáng kể — đây là lý do các bài nâng thấp (bench, hàng ngồi) thường được khuyến nghị an toàn hơn cho người mới hoặc người huyết áp cao. Với nhóm này, kỹ thuật "thở ra có kiểm soát khi gắng sức" (thay vì nín thở hoàn toàn) là lựa chọn cân bằng giữa ổn định cột sống và an toàn tim mạch.',
+      refs:[{authors:'Nhiều tác giả',year:'2020',source:'Systematic review of intra-abdominal and intrathoracic pressures during the Valsalva manoeuvre in resistance exercise',url:'https://pubmed.ncbi.nlm.nih.gov/31938009/'}]}},
+  {en:'Metabolic Conditioning (MetCon)',vi:'Điều hoà chuyển hoá',def:'Các bài tập cường độ cao xen kẽ nghỉ ngắn nhằm cải thiện sức bền năng lượng và tăng tiêu hao calo sau tập (EPOC).',
+    detail:{extended:'MetCon thực sự làm tăng tiêu hao oxy sau tập (EPOC), nhưng các tổng quan cho thấy khoản này chỉ chiếm khoảng 6–15% tổng năng lượng tiêu hao liên quan tới buổi tập — không nên xem là "đốt mỡ thần kỳ" thay thế cho kiểm soát chế độ ăn. Giá trị thực sự của MetCon nằm ở cải thiện sức bền chuyển hoá và tiết kiệm thời gian, được PHASE12 dùng làm bài "finisher" cuối buổi cho mục tiêu giảm mỡ/thi đấu.',
+      refs:[{authors:'LaForgia J., Withers R.T., Gore C.J.',year:'2006',source:'Effects of exercise intensity and duration on the excess post-exercise oxygen consumption',url:'https://pubmed.ncbi.nlm.nih.gov/17101527/'}]}},
+  {en:'EPOC',vi:'Tiêu hao oxy dư sau vận động',def:'Excess Post-exercise Oxygen Consumption — mức tiêu hao năng lượng tăng cao sau buổi tập cường độ lớn khi cơ thể phục hồi.',
+    detail:{extended:'Độ lớn EPOC tăng theo hàm mũ với cường độ bài tập; các nghiên cứu ghi nhận EPOC kéo dài đáng kể (3–24 giờ) chỉ xuất hiện sau bài tập dưới mức tối đa kéo dài (≥50 phút ở ≥70% VO2max) hoặc bài tập trên mức tối đa (≥6 phút ở ≥105% VO2max) — nghĩa là bài tập ngắn cường độ vừa phải sẽ không tạo EPOC lớn như nhiều người kỳ vọng. Dù vậy, EPOC vẫn là một phần hợp lý (không phải toàn bộ) lý do MetCon/HIIT được ưa chuộng cho mục tiêu giảm mỡ.',
+      refs:[{authors:'LaForgia J., Withers R.T., Gore C.J.',year:'2006',source:'Effects of exercise intensity and duration on the excess post-exercise oxygen consumption',url:'https://pubmed.ncbi.nlm.nih.gov/17101527/'}]}}
+];
+var expandedTerms = new Set();
+var glossaryQuery = '';
+function renderGlossary(filter){
+  if(typeof filter==='string') glossaryQuery = filter;
+  var el=document.getElementById('glossaryList');
+  var q=(glossaryQuery||'').toLowerCase();
+  var list = GLOSSARY.filter(function(g){ return !q || g.en.toLowerCase().indexOf(q)!==-1 || g.vi.toLowerCase().indexOf(q)!==-1 || g.def.toLowerCase().indexOf(q)!==-1; });
+  if(!list.length){ el.innerHTML='<div class="card empty-state">Không tìm thấy thuật ngữ phù hợp.</div>'; return; }
+  el.innerHTML = list.map(function(g){
+    var isOpen = expandedTerms.has(g.en);
+    var detailHtml = '';
+    if(isOpen && g.detail){
+      var refsHtml = '';
+      if(g.detail.refs && g.detail.refs.length){
+        refsHtml = '<div class="term-refs-label">Đọc thêm / Nguồn tham khảo</div>' + g.detail.refs.map(function(r){
+          var citation = esc(r.authors+' ('+r.year+'). '+r.source+'.');
+          return r.url
+            ? '<a class="term-ref-link" href="'+esc(r.url)+'" target="_blank" rel="noopener noreferrer">'+citation+' ↗</a>'
+            : '<div class="term-ref-plain">'+citation+'</div>';
+        }).join('');
+      }
+      detailHtml = '<div class="term-detail"><div class="term-extended">'+esc(g.detail.extended)+'</div>'+refsHtml+'</div>';
+    }
+    return '<div class="card term-card">'+
+      '<button type="button" class="term-card-toggle" data-term="'+esc(g.en)+'" aria-expanded="'+isOpen+'">'+
+        '<div class="term-en">'+esc(g.en)+'</div><div class="term-vi">'+esc(g.vi)+'</div><div class="term-def">'+esc(g.def)+'</div>'+
+        (g.detail ? '<div class="term-toggle-hint">'+(isOpen?'Thu gọn ↑':'Xem thêm & nguồn tham khảo ↓')+'</div>' : '')+
+      '</button>'+detailHtml+
+    '</div>';
+  }).join('');
+  el.querySelectorAll('.term-card-toggle').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var id = btn.getAttribute('data-term');
+      if(expandedTerms.has(id)) expandedTerms.delete(id); else expandedTerms.add(id);
+      renderGlossary();
+    });
+  });
+}
+document.getElementById('glossarySearch').addEventListener('input', function(e){ renderGlossary(e.target.value); });
+renderGlossary('');
+
+/* =========================================================
+   RESEARCH
+========================================================= */
+var ARTICLES = [
+  {tag:'Tần suất tập luyện', title:'Tập mỗi nhóm cơ 2 lần/tuần cho hiệu quả phì đại tốt hơn 1 lần/tuần',
+    body:'Tổng quan hệ thống và phân tích gộp của Schoenfeld, Ogborn & Krieger (2016) trên các nghiên cứu đối chứng cho thấy khi tổng khối lượng tập được giữ tương đương, việc chia tần suất tập mỗi nhóm cơ ≥2 lần/tuần mang lại mức tăng cơ nhỉnh hơn so với chỉ tập 1 lần/tuần.',
+    src:'Schoenfeld, Ogborn, Krieger — Sports Medicine, 2016', url:'https://link.springer.com/article/10.1007/s40279-016-0543-8'},
+  {tag:'Dinh dưỡng', title:'1.6–2.2g protein/kg thể trọng là ngưỡng tối ưu cho tăng cơ',
+    body:'Phân tích gộp trên hơn 1800 người tham gia của Morton và cộng sự kết luận nạp đạm trên khoảng 1.6g/kg/ngày không mang lại lợi ích tăng cơ thêm đáng kể ở đa số trường hợp, với 2.2g/kg là mức an toàn cho hầu hết mục tiêu tăng cơ.',
+    src:'Morton et al. — British Journal of Sports Medicine, 2018', url:'https://pubmed.ncbi.nlm.nih.gov/28698222/'},
+  {tag:'Hoạt động thể chất', title:'WHO khuyến nghị tối thiểu 150–300 phút vận động vừa/tuần',
+    body:'Hướng dẫn hoạt động thể chất toàn cầu của WHO khuyến nghị người trưởng thành nên vận động aerobic cường độ vừa 150–300 phút/tuần (hoặc 75–150 phút cường độ cao), kết hợp tập kháng lực toàn thân ≥2 buổi/tuần để giảm nguy cơ bệnh tim mạch, tiểu đường type 2 và tử vong sớm.',
+    src:'WHO Guidelines on Physical Activity and Sedentary Behaviour, 2020', url:'https://pmc.ncbi.nlm.nih.gov/articles/PMC7719906/'},
+  {tag:'Hành vi ít vận động', title:'Ngồi lâu là yếu tố nguy cơ độc lập, kể cả khi có tập thể dục',
+    body:'Nhiều nghiên cứu dịch tễ cho thấy thời gian ngồi kéo dài liên quan đến tăng nguy cơ bệnh chuyển hoá và tim mạch một cách tương đối độc lập với việc có tập thể dục định kỳ hay không — gợi ý nên xen kẽ đứng dậy/di chuyển mỗi 30–60 phút làm việc.',
+    src:'Biswas et al. — Annals of Internal Medicine, 2015 (tổng quan hệ thống)', url:'https://pubmed.ncbi.nlm.nih.gov/25599350/'},
+  {tag:'Phục hồi', title:'Ngủ dưới 6 giờ làm giảm tổng hợp protein cơ và hiệu quả tập luyện',
+    body:'Thiếu ngủ ảnh hưởng tiêu cực đến hormone đồng hoá (testosterone, GH), tăng cortisol và giảm khả năng phục hồi cơ bắp. Khuyến nghị chung của các hiệp hội y học giấc ngủ là 7–9 giờ/đêm cho người trưởng thành để tối ưu hoá phục hồi và hiệu suất tập luyện.',
+    src:'Sleep deprivation & muscle protein synthesis — PubMed Central, 2020', url:'https://pmc.ncbi.nlm.nih.gov/articles/PMC7785053/'},
+  {tag:'Chấn thương & Hiệu chỉnh', title:'Chuỗi hiệu chỉnh 4 bước giúp giảm mất cân bằng cơ ở dân văn phòng',
+    body:'Mô hình Corrective Exercise Continuum của NASM (Inhibit–Lengthen–Activate–Integrate) được thiết kế để giải quyết các mất cân bằng phổ biến như hội chứng bắt chéo trên, nghiêng khung chậu trước — thường gặp ở người ngồi nhiều — trước khi tăng tải nặng.',
+    src:'10 Effective Shoulder Pain Exercises — NASM Blog', url:'https://blog.nasm.org/shoulder-pain-exercises'},
+  {tag:'Chấn thương & Hiệu chỉnh', title:'7 bài tập NASM khuyến nghị để giảm đau lưng dưới',
+    body:'Bộ bài tập gồm lăn foam cơ khép/gập háng/lưng xô, Glute Bridge, Side Plank, Bird Dog và Squat to Row — đi từ ức chế/kéo giãn mô mềm đến kích hoạt và tích hợp vận động toàn thân, đúng cấu trúc Corrective Exercise Continuum. PHASE12 đưa các bài này vào thư viện và tự ưu tiên chọn khi người dùng khai báo có đau lưng dưới.',
+    src:'The 7 Best Exercises to Alleviate Lower Back Pain — NASM Blog', url:'https://blog.nasm.org/exercises-for-lower-back-pain'},
+  {tag:'Giảm mỡ', title:'Thâm hụt calo vừa phải (~20%) bảo toàn cơ tốt hơn thâm hụt sâu',
+    body:'Các nghiên cứu so sánh tốc độ giảm cân cho thấy thâm hụt calo mạnh kết hợp thiếu đạm/tập kháng lực dễ dẫn đến mất cơ nạc nhiều hơn. Thâm hụt vừa phải (~20% TDEE) kết hợp đủ đạm và duy trì tập kháng lực giúp ưu tiên giảm mỡ, bảo toàn khối cơ. NASM cũng khuyến cáo không đặt mục tiêu dưới 1200 kcal/ngày dù đang giảm cân.',
+    src:'ACSM Position Stand — Progression Models in Resistance Training, 2009', url:'https://doi.org/10.1249/MSS.0b013e3181915670'},
+  {tag:'Sức mạnh', title:'Tập nặng, ít lần lặp là hiệu quả nhất để tăng sức mạnh tối đa',
+    body:'Ở vùng cường độ ≥85% 1RM với 1–6 lần lặp/hiệp, hệ thần kinh–cơ thích nghi mạnh về khả năng tuyển mộ đơn vị vận động (motor unit recruitment), mang lại mức tăng sức mạnh tối đa cao hơn so với vùng lặp cao đơn thuần.',
+    src:'ACSM Position Stand — Progression Models in Resistance Training, 2009', url:'https://doi.org/10.1249/MSS.0b013e3181915670'},
+  {tag:'Biomechanics', title:'Kỹ thuật squat đúng: gập hông trước, đẩy lực qua gót khi đứng lên',
+    body:'NASM mô tả trình tự chuẩn của squat: bắt đầu bằng gập ở khớp hông rồi mới gập gối khi đi xuống, giữ cột sống cổ trung tính; khi đứng lên chủ động siết mông và dồn lực qua gót. Các lỗi thường gặp cần tránh: bàn chân đổ vào trong, gối sụp vào trong (valgus) và tròn lưng dưới; độ gập mắt cá cần khoảng 15–20°.',
+    src:'The Muscles Used in Squats — Squat Biomechanics Explained — NASM Blog', url:'https://blog.nasm.org/biomechanics-of-the-squat'},
+  {tag:'Sức mạnh bùng nổ', title:'Plyometrics: 25–50 lần tiếp đất/buổi, không phải 80–200 như quan niệm cũ',
+    body:'Bằng chứng hiện nay cho thấy khối lượng plyometric hiệu quả và an toàn hơn nằm ở mức 25–50 lần tiếp đất mỗi buổi (tuỳ vùng cường độ %nỗ lực tối đa), thấp hơn nhiều khuyến nghị cũ 80–200 lần. Ưu tiên chất lượng tiếp đất êm, thẳng hàng hông-gối-mũi chân hơn là khối lượng lớn.',
+    src:'Plyometrics: Developing Power With Plyometric Exercises — NASM Blog', url:'https://blog.nasm.org/fitness/developing-power-in-everyday-athletes-with-plyometrics'},
+  {tag:'Tâm lý học thể thao', title:'Đặt mục tiêu SMART cải thiện độ kiên trì với chương trình tập',
+    body:'Mục tiêu cụ thể, đo lường được, có thời hạn (SMART) giúp tăng động lực nội tại và tỷ lệ duy trì luyện tập dài hạn so với mục tiêu mơ hồ như "tập cho khoẻ" — nền tảng cho thiết kế chu kỳ 12 tuần có mốc kiểm tra định kỳ.',
+    src:'Locke & Latham — Goal-Setting Theory, ứng dụng trong Sports Psychology'}
+];
+function renderResearch(){
+  var el=document.getElementById('researchList');
+  el.innerHTML = ARTICLES.map(function(a){
+    var srcHtml = a.url
+      ? '<a class="article-src" href="'+esc(a.url)+'" target="_blank" rel="noopener noreferrer" style="display:block">Nguồn: '+esc(a.src)+' ↗</a>'
+      : '<div class="article-src">Nguồn: '+esc(a.src)+'</div>';
+    return '<div class="card article-card"><div class="article-tag">'+esc(a.tag)+'</div><div class="article-title">'+esc(a.title)+'</div><div class="article-body">'+esc(a.body)+'</div>'+srcHtml+'</div>';
+  }).join('');
+}
+renderResearch();
+
+/* =========================================================
+   NGUỒN TRI THỨC — 10 tổ chức/chuyên gia đầu ngành
+========================================================= */
+var SOURCES = [
+  {name:'NASM', org:'National Academy of Sports Medicine', focus:'Hiệu chỉnh vận động & Hiệu suất',
+    basis:'Độc quyền mô hình OPT (Optimum Performance Training) 5 giai đoạn và Corrective Exercise Continuum — nền tảng cốt lõi cho cách PHASE12 chia 3 khối trong chu kỳ 12 tuần và chọn bài hiệu chỉnh tư thế.',
+    insights:['Mô hình OPT chia 3 cấp (Stabilization, Strength, Power) thành 5 giai đoạn tập cụ thể, mỗi giai đoạn có mục tiêu thần kinh-cơ riêng.',
+      'Chuỗi hiệu chỉnh 4 bước Inhibit–Lengthen–Activate–Integrate dùng để sửa mất cân bằng cơ trước khi tăng tải nặng.',
+      'Đưa ra vùng RIR khuyến nghị riêng cho từng giai đoạn OPT — PHASE12 hiển thị trực tiếp trong bảng bài tập mỗi buổi.'],
+    url:'https://www.nasm.org/'},
+  {name:'ACSM', org:'American College of Sports Medicine', focus:'Y học Thể thao & An toàn Vận động',
+    basis:'Tổ chức y học thể thao lâu đời và uy tín hàng đầu, đứng sau sáng kiến toàn cầu "Exercise is Medicine®" và cuốn cẩm nang ACSM\'s Guidelines for Exercise Testing and Prescription — tài liệu tham chiếu chuẩn cho ngưỡng an toàn tập luyện.',
+    insights:['Position Stand về progression trong tập kháng lực (Ratamess và cộng sự, 2009) là cơ sở cho vùng cường độ/số lần lặp theo từng giai đoạn trong PHASE12.',
+      'Đưa ra khuyến nghị sàng lọc sức khoẻ trước khi tập cho người có bệnh lý nền như tim mạch, tiểu đường, xương khớp.',
+      'Khuyến nghị hoạt động thể chất tối thiểu 150–300 phút/tuần cường độ vừa, kết hợp tập kháng lực ≥2 buổi/tuần.'],
+    url:'https://www.acsm.org/'},
+  {name:'NSCA', org:'National Strength and Conditioning Association', focus:'Sức mạnh & Sức bền Chuyên nghiệp',
+    basis:'Tổ chức phi lợi nhuận hơn 60.000 thành viên toàn cầu, xuất bản hai tạp chí bình duyệt Journal of Strength and Conditioning Research (JSCR) và Strength and Conditioning Journal (SCJ) — nguồn nghiên cứu cho các bài compound lift và plyometric.',
+    insights:['Chứng chỉ CSCS (Certified Strength and Conditioning Specialist) là tiêu chuẩn vàng cho huấn luyện sức mạnh thể thao thành tích cao.',
+      'Có tuyên bố lập trường riêng về tập kháng lực cho trẻ em/thanh thiếu niên và phát triển vận động viên dài hạn (LTAD).',
+      'Trọng tâm nghiên cứu về tốc độ phát lực (Rate of Force Development) — nền tảng khoa học cho giai đoạn Sức mạnh Bùng nổ trong OPT.'],
+    url:'https://www.nsca.com/'},
+  {name:'ACE', org:'American Council on Exercise', focus:'Thay đổi Hành vi & Duy trì Động lực',
+    basis:'Tổ chức chứng chỉ phi lợi nhuận với mô hình ACE IFT® tích hợp huấn luyện thể chất và chiến lược tâm lý hành vi — gần với cách PHASE12 dùng mục tiêu SMART và mốc check-in định kỳ để giữ người tập kiên trì.',
+    insights:['ACE Mover Method™ nhấn mạnh giao tiếp lấy người tập làm trung tâm thay vì áp đặt chương trình một chiều.',
+      'Mô hình ACE IFT phân loại quá trình huấn luyện theo từng giai đoạn thích nghi tim mạch, thần kinh-cơ và thể tích tập.',
+      '"7 Core Drivers of Healthy Living™" mở rộng phạm vi sức khoẻ ra ngoài phòng gym: giấc ngủ, dinh dưỡng, kết nối xã hội.'],
+    url:'https://www.acefitness.org/'},
+  {name:'PubMed / MEDLINE', org:'U.S. National Library of Medicine', focus:'Cơ sở dữ liệu Nghiên cứu Gốc',
+    basis:'Thư viện dữ liệu y sinh và khoa học thể thao lớn nhất thế giới — phần lớn trích dẫn nghiên cứu trong mục Thuật ngữ và Nghiên cứu của PHASE12 (Schoenfeld, Morton, Biswas...) đều dẫn thẳng về đây.',
+    insights:['Miễn phí truy cập hàng chục triệu tóm tắt nghiên cứu, gồm cả thử nghiệm đối chứng ngẫu nhiên (RCT) và phân tích tổng hợp (meta-analysis).',
+      'Là nơi kiểm chứng độc lập bất kỳ tuyên bố "khoa học" nào trước khi tin — thói quen nên có khi đọc nội dung fitness trên mạng xã hội.'],
+    url:'https://pubmed.ncbi.nlm.nih.gov/'},
+  {name:'GSSI', org:'Gatorade Sports Science Institute', focus:'Dinh dưỡng & Bù nước Thể thao',
+    basis:'Viện nghiên cứu chuyên sâu về trao đổi chất khi vận động cường độ cao, vận hành chuyên san bình duyệt Sports Science Exchange và cách tiếp cận "food-first" cho dinh dưỡng thể thao.',
+    insights:['Xuất bản hướng dẫn tính lượng nước mất qua mồ hôi (sweat rate) để bù nước/điện giải chính xác theo từng người.',
+      'Có tài liệu dinh dưỡng và bù nước riêng cho vận động viên nữ, phản ánh khác biệt sinh lý theo giới tính.',
+      'Triết lý "food-first" ưu tiên thực phẩm thật trước khi dùng thực phẩm bổ sung — cùng hướng tiếp cận với mục Dinh dưỡng của PHASE12.'],
+    url:'https://www.gssiweb.org/'},
+  {name:'Science for Sport', org:'SFS Academy', focus:'Đơn giản hoá Khoa học Thể thao',
+    basis:'Nền tảng chuyển hoá lý thuyết học thuật phức tạp thành nội dung thực hành trực quan, có kho thuật ngữ chuẩn hoá và hơn 1.400 bài tổng hợp nghiên cứu — cùng sứ mệnh với mục Thuật ngữ của PHASE12.',
+    insights:['Vận hành SFS Academy với hơn 120 khoá học chuyên sâu về S&C, dinh dưỡng, phục hồi, tâm lý thể thao.',
+      'Có thư viện bài test đánh giá thể lực (fitness testing) thực hành được, không cần thiết bị phòng lab.',
+      'Xuất bản "Performance Digest" hàng tháng tổng hợp nghiên cứu mới cho huấn luyện viên bận rộn.'],
+    url:'https://www.scienceforsport.com/'},
+  {name:'MASS Research Review', org:'Monthly Applications in Strength Sport', focus:'Phản biện Nghiên cứu Sức mạnh & Thể hình',
+    basis:'Ấn phẩm hàng tháng do các nhà nghiên cứu ứng dụng trong lĩnh vực sức mạnh & thể hình vận hành (đồng sáng lập có Eric Helms, Michael Zourdos và cộng sự), chuyên đọc kỹ từng nghiên cứu trong bối cảnh toàn bộ y văn thay vì chỉ tóm tắt một bài đơn lẻ.',
+    insights:['Phân tích các yếu tố tăng cơ: áp lực cơ học, thể tích tập, tần suất — cùng khung lý thuyết PHASE12 dùng để thiết kế giai đoạn Phì đại cơ.',
+      'Đặt nghiên cứu mới trong bối cảnh toàn bộ y văn thay vì trích một nghiên cứu đơn lẻ, giảm rủi ro "một nghiên cứu nói X nên X luôn đúng".',
+      'Nội dung có tín chỉ CEU/CEC cho huấn luyện viên cần duy trì chứng chỉ hành nghề.'],
+    url:'https://massresearchreview.com/'},
+  {name:'Chris Beardsley', org:'Strength and Conditioning Research (S&C Research)', focus:'Cơ sinh học Bài tập (Biomechanics)',
+    basis:'Nhà nghiên cứu độc lập chuyên phân tích vector lực và đường cong sức mạnh (strength curve) của từng bài tập đơn lẻ — lý giải vì sao ví dụ Hip Thrust và Squat kích hoạt cơ mông khác nhau dù cùng nhóm cơ chính.',
+    insights:['Phân tích cơ sinh học giúp chọn bài tập thay thế đúng khi một biến thể bị chống chỉ định do chấn thương — logic PHASE12 áp dụng khi lọc bài theo hạn chế sức khoẻ.',
+      'Nghiên cứu về đường cong sức mạnh lý giải vì sao tempo và góc khớp ảnh hưởng mức kích hoạt cơ, không chỉ riêng loại bài tập.',
+      'Lưu ý: nhiều link "Chris Beardsley" lan truyền trên mạng là link affiliate/trung gian — nguồn chính thức là nền tảng Strength and Conditioning Research của ông.'],
+    url:'https://sandcresearch.medium.com/'},
+  {name:'Dr. Brad Schoenfeld', org:'Look Great Naked · CUNY Lehman College', focus:'Khoa học Phì đại cơ (Hypertrophy)',
+    basis:'Tiến sĩ, CSCS, một trong những nhà nghiên cứu được trích dẫn nhiều nhất về phì đại cơ — nghiên cứu của ông về tần suất, thể tích và nghỉ giữa hiệp là nguồn trực tiếp cho cách PHASE12 tính sets/reps ở giai đoạn Phì đại cơ.',
+    insights:['Ba cơ chế thúc đẩy phì đại: căng cơ học (mechanical tension), tổn thương cơ (muscle damage), áp lực chuyển hoá (metabolic stress) — căng cơ học được xem là động lực chính.',
+      'Tổng quan 2016 (đã trích trong mục Nghiên cứu) cho thấy tập mỗi nhóm cơ ≥2 lần/tuần hiệu quả hơn 1 lần/tuần khi tổng khối lượng như nhau.',
+      'Khuyến nghị nghỉ giữa hiệp: bài đơn giản có thể nghỉ ngắn (60–90s), bài đa khớp nặng nên nghỉ dài hơn (2–3 phút) để giữ chất lượng khối lượng tập.'],
+    url:'https://www.lookgreatnaked.com/'}
+];
+function renderSources(){
+  var el=document.getElementById('sourcesList');
+  el.innerHTML = SOURCES.map(function(s){
+    return '<div class="card source-card">'+
+      '<div class="source-head"><div><div class="source-name">'+esc(s.name)+'</div><div style="font-size:11.5px;color:var(--text-faint)">'+esc(s.org)+'</div></div><div class="source-focus">'+esc(s.focus)+'</div></div>'+
+      '<div class="source-basis">'+esc(s.basis)+'</div>'+
+      '<ul class="source-insights">'+s.insights.map(function(i){return '<li>'+esc(i)+'</li>';}).join('')+'</ul>'+
+      '<a class="source-link" href="'+esc(s.url)+'" target="_blank" rel="noopener noreferrer">Xem trang chính thức ↗</a>'+
+    '</div>';
+  }).join('');
+}
+renderSources();
+
+/* =========================================================
+   INIT
+========================================================= */
+document.addEventListener('change', function(ev){
+  var sel = ev.target && ev.target.closest ? ev.target.closest('.js-swap-select') : null;
+  if(!sel) return;
+  var newExId = sel.value;
+  if(!newExId) return;
+  P12.swapExercise(sel.getAttribute('data-exid'), newExId);
+});
+showPage(STATE.profile ? 'dashboard' : 'profile');
+
+})();
+</script>
