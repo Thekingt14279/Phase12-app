@@ -974,8 +974,8 @@ function renderDashboard(){
   html += '<div class="card"><h3 style="font-size:15px;margin-bottom:8px">Việc cần làm</h3><ul class="plain">';
   if(!cyc) html += '<li>Tạo chu kỳ tập luyện đầu tiên trong mục Hồ sơ.</li>';
   else{
-    var needCheckin = cyc.checkins.length < Math.floor((wk-1)/4);
-    if(wk%4===0 || needCheckin) html += '<li>Đã đến hạn <b>check-in 4 tuần</b> — cập nhật số liệu để nâng cấp bài tập.</li>';
+    var needCheckin = cyc.checkins.length < Math.floor(wk/4);
+    if(needCheckin) html += '<li>Đã đến hạn <b>check-in 4 tuần</b> — cập nhật số liệu để nâng cấp bài tập.</li>';
     var wkAdh = weekAdherence(cyc, wk);
     if(wkAdh.done<wkAdh.total) html += '<li>Còn <b>'+(wkAdh.total-wkAdh.done)+' buổi</b> chưa ghi log trong tuần này.</li>';
     html += '<li>Xem buổi tập hôm nay trong mục Chu kỳ tập luyện.</li>';
